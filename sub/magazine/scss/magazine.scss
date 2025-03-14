@@ -1,0 +1,546 @@
+@import "../../../scss/style.scss";
+@import "../../../scss/reset.scss";
+@import "../../../scss/mixin.scss";
+
+@include main-ani;
+@include lf-to-rt;
+@include rt-to-lf;
+@include dw-to-up;
+
+
+.container {
+    @include grid-sys-moblie;
+    @include responsive(large-screens) {
+        @include grid-sys-desktop;
+    }
+}
+
+main {
+    .title {
+        position: relative;
+        width: 100%; height: 250px;
+        margin-bottom: 35px;
+        background: url(../../../images/main_bg.webp);
+        background-size: cover;
+
+        @include responsive(large-screens) {
+            height: 500px;
+            margin-bottom: 150px;
+        }
+
+        .title-txt {
+            text-align: center;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+
+            @include main-ani;
+            animation: main-animation 1.5s ease forwards; /* 애니메이션 적용 */
+
+            h2 {
+                font-size: $mobile-title-main;
+                font-family: $font-sub;
+                font-weight: 400;
+                color: $color-white;
+
+                @include responsive(large-screens) {
+                    font-size: $desktop-title-main;
+                }
+            }
+            p {
+                font-size: $mobile-title-sub;
+                font-family: $font-sub;
+                font-weight: 400;
+                color: $color-white;
+
+                @include responsive(large-screens) {
+                    font-size: $desktop-title-sub;
+                }
+            }
+        } //title-txt
+    } //title
+
+    .intro {
+        margin-bottom: 75px;
+        h3 {
+            margin-bottom: 30px;
+            font-size: $mobie-content-main;
+            font-weight: 900;
+            font-family: $font-main;
+
+            @include responsive(large-screens) {
+                font-size: $desktop-content-main;
+                margin-bottom: 55px;
+            }
+        }
+        strong {
+            margin-bottom: 55px;
+            font-size: $mobie-content-sub1;
+            font-weight: 600;
+            font-family: $font-sub;
+
+            @include responsive(large-screens) {
+                font-size: $desktop-content-sub2;
+                margin-bottom: 40px;
+            }
+        }
+        p {
+            text-align: right;
+            font-size: 14px;
+            font-weight: 400;
+            font-family: $font-main;
+            letter-spacing: -0.2px;
+            display: none;
+
+            @include rt-to-lf;
+            animation: none;
+
+            @include responsive(large-screens) {
+                font-size: 22px;
+                letter-spacing: 0;
+                margin-bottom: 145px;
+            }
+        }
+
+        p.animation { // 애니메이션 효과를 줄 클래스
+            animation: slide-rt-to-lf 1s ease forwards; /* 애니메이션 적용 */
+        }
+    } //intro
+
+    .meals,
+    .cafe,
+    .tour {
+        margin-bottom: 90px;
+
+        @include responsive(large-screens) {
+            margin-bottom: 150px;
+        }
+        h3 {
+            margin-bottom: 13px;
+            font-size: $mobie-content-sub1;
+            font-weight: 800;
+            font-family: $font-main;
+        }
+        .collage {
+            overflow: scroll;
+            margin-right: -16px;
+
+            ul {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 78.08% 78.08% 78.09%;
+
+                @include responsive(large-screens) {
+                    overflow: hidden;
+                }
+                
+                li {
+                    width: 95%; height: calc(247px + 5vh);
+                    background-color: #efefef;
+                    border: 1px solid #e0e0e0;
+                    border-radius: 10px; 
+                        animation: none;
+
+
+                    // &:nth-child(1) {
+                    //     @include lf-to-rt;
+                    //     animation: none;
+                    //     // animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+                    // }
+
+                    // &:nth-child(2),
+                    // &:nth-child(3) {
+                    //     @include rt-to-lf;
+                    //     animation: none;
+                    //     // animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+
+                    //     @include responsive(large-screens) {
+                    //         @include dw-to-up;
+                    //         animation: none;
+                    //         // animation: slide-dw-to-up 1.5s ease forwards; /* 애니메이션 적용 */
+                    //     }
+                    // }
+
+
+                    a {
+                        margin: 2.5%;
+
+                        @include responsive(large-screens) {
+                            margin: 0;
+                            width: 100%; height: 100%;
+                        }
+
+                        img {
+                            height: calc(152px + 5vh);
+                            border-radius: 10px;
+                        }
+                        .meals-txt,
+                        .cafe-txt,
+                        .tour-txt {
+                            padding: 0 1%;
+                            p {
+                                margin-top: 2px;
+                                font-size: 14px;
+                                font-weight: 800;
+                                font-family: $font-main;
+                                color: #8d8d8d;
+                            }
+                            strong {
+                                margin-top: 8px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                font-family: $font-main;
+                                color: $color-sub1;
+                            }
+                            h4 {
+                                text-align: left;
+                                margin-top: -4px;
+                                font-size: $mobie-content-sub1;
+                                font-weight: 700;
+                                font-family: $font-main;
+                            }
+                        } //meals-txt
+                    } //a
+                } //li
+            } //ul
+        } //collage
+    } //meals, cafe, tour
+
+    @include responsive(large-screens) {
+        /*desktop 공통소스*/
+        .meals,
+        .cafe,
+        .tour {
+            h3 {
+                font-size: $desktop-content-main;
+                font-weight: 900;
+                margin-bottom: 16px;
+            }
+            .collage {
+                overflow: auto;
+                margin-right: 0;
+                width: 100%; height: 549px;
+                border: 7px solid $color-main;
+                border-left: none; border-right: none;
+            }
+        }
+        
+        .meals {
+            .collage {
+                .meals-list {
+                    width: 100%; height: 535px;
+                    padding: 25px 0;
+                    grid-template-columns: 28.8% 69.43%;
+                    grid-template-rows: min-content(485px auto);
+                    grid-gap: 25px;
+                    grid-template-areas: 
+                    "a b "
+                    "a c ";
+
+                    li {
+                        border: none;
+                        border-radius: 0;
+                        background-color: transparent;
+
+                        &:first-child {
+                            grid-area: a;
+                            height: 485px; width: 100%;
+                            a {
+                                img {
+                                    width: 100%; height: 70.51%;
+                                }
+                                .meals-txt {
+                                    padding: 0;
+                                }
+                            } //a
+                        }
+
+                        &:nth-child(2) {
+                            grid-area: b;
+                            height: 230px; width: 100%;
+
+                            a {
+                                display: flex;
+                                flex-direction: row-reverse;
+
+                                img {
+                                    width: 58.62%; height: 100%;
+                                }
+                                .meals-txt {
+                                    text-align: right;
+                                    p {
+                                        margin-bottom: 30px;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            grid-area: c;
+                            height: 230px; width: 100%;
+
+                            a {
+                                display: flex;
+                            
+                                img {
+                                    width: 58.62%; height: 100%;
+                                }
+                                .meals-txt {
+                                    p {
+                                        margin-bottom: 75px;
+                                    }
+                                }
+                            }
+                        }
+
+                        a {
+                            margin: 0;
+                            width: 100%; height: 100%;
+                            img {
+                                object-fit: cover;
+                                border-radius: 0;
+                            }
+                            .meals-txt {
+                                padding: 10px;
+                                p {
+                                    font-size: $desktop-content-sub2;
+                                }
+                                strong {
+                                    font-size: 20px;
+                                }
+                                h4 {
+                                    font-size: $desktop-content-sub1;
+                                }
+                            }//meals-txt
+                        }
+                    } //li
+                } //meals-list
+            } //collage
+        } //meals
+
+        .cafe {
+            .collage {
+                .cafe-list {
+                    width: 100%; height: 100%;
+                    padding: 25px 0;
+                    display: grid;
+                    grid-template-columns: 32.15% 32.15% 32.15%;
+                    height: 100%;
+                    grid-gap: 25px;
+
+                    li {
+                        width: 100%; height: 485px;
+                        border: none;
+                        border-radius: 0;
+                        background-color: transparent;
+
+                        &:first-child {
+
+                            a {
+                                img {
+                                    width: 100%; height: 70%;
+                                    border-radius: 0;
+                                }
+                                .cafe-txt {
+                                    padding: 10px;
+                                    p {
+                                        font-size: $desktop-content-sub2;
+                                    }
+                                    strong {
+                                        font-size: 20px;
+                                    }
+                                    h4 {
+                                        font-size: $desktop-content-sub1;
+                                    }
+                                } //cafe-txt
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            a {
+                                display: flex;
+                                flex-direction: column-reverse;
+
+                                img {
+                                    width: 100%; height: 70%;
+                                    border-radius: 0;
+                                }
+                                .cafe-txt {
+                                    padding: 10px;
+
+                                    p {
+                                        font-size: $desktop-content-sub2;
+                                    }
+
+                                    strong {
+                                        font-size: 20px;
+                                    }
+
+                                    h4 {
+                                        font-size: $desktop-content-sub1;
+                                    }
+                                } //cafe-txt
+                            }
+                        }
+
+                        &:last-child {
+                            a {
+                                img {
+                                    width: 100%; height: 70%;
+                                    border-radius: 0;
+                                }
+                                .cafe-txt {
+                                    padding: 10px;
+                                    
+                                    p {
+                                        font-size: $desktop-content-sub2;
+                                    }
+
+                                    strong {
+                                        font-size: 20px;
+                                    }
+
+                                    h4 {
+                                        font-size: $desktop-content-sub1;
+                                    }
+                                }
+                            }
+                        }
+                    } //li
+                }//cafe-list
+            }//collage
+        }//cafe
+
+        .tour {
+            .collage {
+                .tour-list {
+                    width: 100%; height: 100%;
+                    padding: 25px 0;
+                    grid-template-columns: 49.11% 49.11%; 
+                    grid-template-rows: 47.42% 47.42%; 
+                    grid-template-areas: 
+                    "a a"
+                    "b c";
+                    grid-gap: 25px;
+                    li {
+                        width: 100%; height: 100%;
+                        &:first-child {
+                            grid-area: a;
+                            border: none;
+                            border-radius: 0;
+                            background-color: transparent;
+                            a {
+                                display: flex;
+
+                                img {
+                                    width: 71.19%; height: 100%;
+                                    object-fit: cover;
+                                    border-radius: 0;
+                                }
+
+                                .tour-txt {
+                                    padding: 10px;
+                                    p {
+                                        font-size: $desktop-content-sub2;
+                                        margin-bottom: 78px;
+                                    }
+                                    strong {
+                                        font-size: 20px;
+                                    }
+                                    h4 {
+                                        font-size: $desktop-content-sub1;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            grid-area: b;
+                            border: none;
+                            border-radius: 0;
+                            background-color: transparent;
+                            a {
+                                display: flex;
+
+                                img {
+                                    width: 41.345%; height: 100%;
+                                    object-fit: cover;
+                                    border-radius: 0;
+                                }
+
+                                .tour-txt {
+                                    padding: 10px;
+                                    p {
+                                        font-size: $desktop-content-sub2;
+                                        margin-bottom: 78px;
+                                    }
+                                    strong {
+                                        font-size: 20px;
+                                    }
+                                    h4 {
+                                        font-size: $desktop-content-sub1;
+                                    }
+                                } //tour-txt
+                            }//a
+                        }
+
+                        &:last-child {
+                            grid-area: c;
+                            border: none;
+                            border-radius: 0;
+                            background-color: transparent;
+                            a {
+                                display: flex;
+
+                                img {
+                                    width: 41.345%; height: 100%;
+                                    object-fit: cover;
+                                    border-radius: 0;
+                                }
+
+                                .tour-txt {
+                                    padding: 10px;
+                                    p {
+                                        font-size: $desktop-content-sub2;
+                                        margin-bottom: 78px;
+                                    }
+                                    strong {
+                                        font-size: 20px;
+                                    }
+                                    h4 {
+                                        font-size: $desktop-content-sub1;
+                                    }
+                                } //tour-txt
+                            }//a
+                        }
+                    } //li
+                } //tour-list
+            } //collage
+        } //tour
+    }
+    .meals,
+    .cafe,
+    .tour { // 애니메이션 적용할 클래스 설정
+        opacity: 0;
+        transform: translateY(-100px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
+        .collage {
+
+            ul {
+
+                li.lf-to-rt-ani { // 왼쪽에서 오른쪽으로 이동
+                    animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+                }
+
+                li.rt-to-lf-ani { // 오른쪽에서 왼쪽으로 이동
+                    animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+                }
+
+                li.dw-to-up-ani { // 아래쪽에서 위쪽으로 이동
+                    animation: slide-dw-to-up 1.5s ease forwards; /* 애니메이션 적용 */
+                }
+            }
+        }
+    }  
+
+} //main
