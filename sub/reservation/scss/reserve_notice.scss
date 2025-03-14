@@ -1,0 +1,191 @@
+@import "../../../scss/style.scss";
+@import "../../../scss/reset.scss";
+@import "../../../scss/mixin.scss";
+@import "../../../scss/header.scss";
+@import "../../../scss/footer.scss";
+
+
+@include main-ani; 
+@include lf-to-rt; 
+
+.container {
+    // background-color: aquamarine;
+    @include grid-sys-moblie;
+
+    @include responsive(large-screens) {
+        @include grid-sys-desktop;
+    }
+}
+
+main {
+    article {
+        position: relative;
+        height: 250px;
+        background: url(../images/reserve_main_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 35px;
+
+        @include responsive(large-screens) {
+            height: 500px;
+            margin-bottom: 150px;
+        }
+
+        .main-title {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+
+            @include main-ani;
+            animation: main-animation 1.5s ease forwards; /* 애니메이션 적용 */
+
+            h2 {
+                font-size: $mobile-title-main;
+                margin-bottom: 5px;
+                color: $color-white;
+    
+                @include responsive(large-screens) {
+                    font-size: $desktop-content-main;
+                    margin-bottom: 10px;
+                }
+            }
+
+            span {
+                font-size: $mobile-title-sub;
+                text-align: center;
+                color: $color-white;
+    
+               // background-color: red;
+
+                @include responsive(large-screens) {
+
+                    font-size: $desktop-content-sub2;
+                }
+            }
+        }
+    }// article
+
+    .payment-notice {
+
+        .container {
+            padding: 0;
+
+            .message-contact {
+
+                span {
+                    font-size: 10px;
+
+                    @include responsive(large-screens) {
+                        font-size: 18px;
+                    }
+                }
+
+                h3 {
+                    width: 50%;
+                    font-size: 18px;
+                    margin-bottom: 34px;
+
+                    @include lf-to-rt; 
+                    animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+    
+                    @include responsive(large-screens) {
+                        width: 40%;
+                        font-size: 30px;
+                        margin-bottom: 50px;
+                    }
+                }
+
+                .message-img-btn {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 268px;   
+                    margin: 0 16px;
+                    overflow: hidden;
+                    
+                    @include responsive(large-screens) {
+                        height: 435px; 
+                        margin: 0 160px;
+                    }
+                    
+                    .message-img {
+                        width: 158px;
+
+                        @include responsive(large-screens) {
+                            width: 340px;
+                            margin-right: 90px;
+                        }
+                    }
+
+                    .message-btn {
+                        width: 158px;
+
+                        @include responsive(large-screens) {
+                            width: 850px;
+                            height: 435px; 
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+
+                        .btn-txt {
+                            text-align: center;
+                            margin-top: 50px;
+
+                            @include responsive(large-screens) {
+                                margin-top: 0px;
+                            }
+
+                            label {
+                                font-size: 12px;
+                                cursor: pointer;
+
+                                @include responsive(large-screens) {
+                                    display: block;
+                                    font-size: 20px;
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            
+                            .check-btn {
+                                width: 100%;
+                                height: 46px;
+                                font-size: 14px;
+                                font-weight: bold;
+                                margin-bottom: 33px;
+                                border: none;
+                                border-radius: 23px;
+                                border: 1px solid $color-sub2;
+                                color: $color-sub2;
+                                background-color: transparent;
+                                cursor: pointer;
+
+                                @include responsive(large-screens) {
+                                    width: 340px;
+                                    height: 74px;
+                                    font-size: 32px;
+                                    margin-bottom: 0px;
+                                    border-radius: 97px;
+                                    border: 4px solid $color-sub2;
+                                }
+                            }
+
+                            &:last-child {
+                                margin-top: 0px;
+                            }
+
+                            &:hover label{
+                                font-weight: bold;
+                                text-decoration: underline;
+                            }
+
+                            &:hover .check-btn {
+                                color: $color-white;
+                                background-color: $color-main;
+                            }
+                        }
+                    }
+                }
+            } // .message-contact
+        } // .container
+    } // .payment-notice
+} // main
