@@ -1,0 +1,729 @@
+@import "../../../scss/style.scss";
+@import "../../../scss/reset.scss";
+@import "../../../scss/mixin.scss";
+
+
+.container {
+  @include grid-sys-moblie;
+
+  @include responsive(large-screens) {
+    @include grid-sys-desktop;
+  }
+}
+
+@include main-ani;
+@include lf-to-rt;
+@include dw-to-up;
+
+//main===================
+
+main {
+  overflow: hidden;
+  margin-top: 61px;
+  @include responsive(large-screens) {
+      margin-top: 100px;
+  }
+  article {
+    position: relative;
+    height: 300px;
+    background: url(../images/space-title.png) top no-repeat;
+    background-size: cover;
+
+    @include responsive(large-screens) {
+      height: 500px;
+    }
+
+    .room-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40%;
+      text-align: center;
+      font-family: $font-sub;
+      color: $color-white;
+      animation: main-animation 1.5s ease forwards;
+      @include responsive(large-screens) {
+        width: 20%;
+      }
+      h2 {
+        font-size: $mobile-title-main;
+
+        @include responsive(large-screens) {
+          font-size: $font-size-50;
+        }
+      }
+
+      p {
+        font-size: $mobile-title-strong;
+
+        @include responsive(large-screens) {
+          font-size: $desktop-title-strong;
+        }
+      }
+    }//room-title
+  }//article
+
+  .reservation {
+    margin-top: 45px;
+
+    @include responsive(large-screens) {
+      margin-top: 180px;
+    }
+
+    .reservation-flex-box {
+      @include responsive(large-screens) {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      h3 {
+        margin-bottom: 25px;
+        animation: slide-dw-to-up 1.5s ease forwards;
+
+        @include responsive(large-screens) {
+          font-size: $desktop-content-main;
+        }
+      }
+
+      .reservation-info {
+        animation: slide-dw-to-up 1s ease forwards;
+
+        @include responsive(large-screens) {
+          display: flex;
+          width: 1060px;
+          height: 337px;
+          border: 1px solid #888;
+          border-radius: 58px;
+        }
+
+        img {
+          border-radius: 10px;
+
+          @include responsive(large-screens) {
+            border-radius: 58px 0 0 58px;
+            width: 534px;
+          }
+        }
+      }
+
+      .txt-box {
+        position: relative;
+        @include responsive(large-screens) {
+          position: static;
+          margin: 50px 0;
+          margin-left: 55px;
+        }
+
+        strong {
+          font-size: $font-size-16;
+          margin-top: 35px;
+          margin-bottom: 20px;
+
+          @include responsive(large-screens) {
+            font-size: 20px;
+            margin: 0;
+            margin-bottom: 25px;
+          }
+        }
+
+        .price-btn {
+          position: absolute;
+          top: 15%; left: 0;
+          display: flex;
+          justify-content: space-between;
+          // margin-bottom: 23px;
+          width: 100%;
+
+          @include responsive(large-screens) {
+            position: static;
+            top: 0; left: 0;
+            margin-top: 25px;
+          }
+          p {
+            font-size: $font-size-16;
+            font-weight: 600;
+            line-height: 1;
+
+            @include responsive(large-screens) {
+              font-size: 19px;
+            }
+
+            sup {
+              color: red;
+
+              @include responsive(large-screens) {
+                font-size: 14px;
+              }
+            }
+
+            span {
+              display: inline-block;
+              font-size: $font-size-12;
+              color: red;
+              text-decoration: line-through;
+
+              @include responsive(large-screens) {
+                font-size: 14px;
+              }
+            }
+          }
+
+          #reservation-btn {
+            height: 39px;
+            width: 115px;
+            border: none;
+            outline: none;
+            border-radius: 30px;
+            background-color: $color-main;
+            color: $color-white;
+            cursor: pointer;
+
+            &:hover {
+              font-weight: 600;
+              background-color: $color-sub2;
+            }
+
+            @include responsive(large-screens) {
+              font-size: 18px;
+              width: 125px;
+              height: 48px;
+            }
+          }
+        }
+
+        // price-btn
+
+        ul.room_icon {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 35px;
+          margin-top: 90px;
+
+          @include responsive(large-screens) {
+            display: none;
+            margin-top: 0;
+          }
+
+          li {
+            text-align: center;
+            font-weight: 600;
+            width: 51px;
+
+            img {
+              width: 40px;
+            }
+          }
+        }
+
+        //room_icon
+        p {
+          @include responsive(large-screens) {
+            font-size: 19px;
+            line-height: 1.4;
+          }
+
+          .txt-bed {
+            @include responsive(large-screens) {
+              display: none;
+            }
+          }
+        }
+      }//txt-box
+    }//reservation-flex-box
+  }//reservation
+
+  .inside-the-room-img {
+    margin-top: 45px;
+    margin-bottom: 50px;
+
+    @include responsive(large-screens) {
+      margin-top: 200px;
+    }
+
+    h3 {
+      margin-bottom: 25px;
+
+      @include responsive(large-screens) {
+        font-size: $desktop-content-main;
+      }
+    }
+    .slide-box {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      @include responsive(large-screens) {
+        margin: 0 auto;
+        width: 500px;
+        height: 550px;
+        perspective: 1000px;
+        overflow: visible;
+      }
+      
+      .carousel {
+        display: flex;
+        width: calc(100% * 6);
+        transition: transform 0.5s ease;
+        @include responsive(large-screens) {
+          display: block;
+          margin-top: 20px;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          transform-style: preserve-3d;
+          transition: transform 1s;
+          animation: none;
+        }
+  
+        div {
+          @include responsive(large-screens) {
+            transform-style: preserve-3d;
+          }
+        }
+        .item {
+          min-width: 100%;
+          height: 100%;
+  
+          @include responsive(large-screens) {
+            min-width: none;
+            display: block;
+            position: absolute;
+            width:500px;
+            height: 550px;
+            border-radius: 10px;
+            transition: transform 1s, opacity 0.5s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include responsive(large-screens) {
+              width: 500px;
+              height: 550px;
+            }
+          }
+        }
+        .slide1 {
+          @include responsive(large-screens) {
+            transform: rotateY(0deg) translateZ(250px);
+          }
+        }
+  
+        .slide2 {
+          @include responsive(large-screens) {
+            transform: rotateY(60deg) translateZ(250px) rotateY(-60deg);
+          }
+        }
+    
+        .slide3 {
+          @include responsive(large-screens) {
+            transform: rotateY(120deg) translateZ(250px) rotateY(-120deg);
+          }
+        }
+    
+        .slide4 {
+          @include responsive(large-screens) {
+            transform: rotateY(180deg) translateZ(250px) rotateY(-180deg);
+          }
+        }
+    
+        .slide5 {
+          @include responsive(large-screens) {
+            transform: rotateY(240deg) translateZ(250px) rotateY(-240deg);
+          }
+        }
+    
+        .slide6 {
+          @include responsive(large-screens) {
+            transform: rotateY(300deg) translateZ(250px) rotateY(-300deg);
+          }
+        }
+      }
+      
+    }// slide
+  }
+  
+  .notification-book {
+    // background-color: aqua;
+    margin-top: 100px;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    @include responsive(large-screens) {
+      margin-top: 200px;
+    }
+
+    h3 {
+      font-size: 0;
+    }
+
+    .book {
+      // max-width:500px; 
+      margin: 50px auto;
+      // background-color: #888;
+
+      ul.scroll {
+        overflow-x: scroll;
+        white-space: nowrap;
+        /* 전체 스크롤바 스타일 */
+        ::-webkit-scrollbar {
+          width: 12px; /* 스크롤바의 너비 */
+          height: 12px; /* 수평 스크롤바의 높이 */
+        }
+
+        /* 스크롤바의 트랙 (배경) */
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1; /* 트랙의 배경색 */
+        }
+
+        /* 스크롤바의 핸들 (움직이는 부분) */
+        ::-webkit-scrollbar-thumb {
+          // background: #007bff; /* 핸들의 색상 (파란색 계열) */
+          border-radius: 6px; /* 핸들의 모서리 둥글게 */
+        }
+
+        /* 스크롤바 핸들에 마우스를 올렸을 때의 스타일 */
+        // ::-webkit-scrollbar-thumb:hover {
+        //   background: #0056b3; /* 핸들에 마우스를 올렸을 때의 색상 */
+        // }
+
+        /* 화살표 없애기 */
+        ::-webkit-scrollbar-button {
+          display: none; 
+        }
+
+        li {
+          display: inline-block;
+
+          opacity: 0.6;
+          &:hover {
+            opacity: 1;
+          }
+          @include responsive(large-screens) {
+            width: 460px;
+            height: 660px;
+            margin-right: 10px;
+          }
+          
+          img {
+            width: 117px;
+            height: 167px;
+
+            @include responsive(large-screens) {
+              width: 460px;
+              height: 660px;
+            }
+          }
+        }
+      }
+    }//book
+  } // notification-book
+
+  section.notification-room {
+    margin-top: 130px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    @include responsive(large-screens) {
+      margin-top: 230px;
+    }
+
+    .room-plan {
+      position: relative;
+      margin-bottom: 28px;
+
+      @include responsive(large-screens) {
+        display: flex;
+        justify-content: space-between;
+        font-size: $desktop-content-main;
+      }
+
+      h3 {
+        margin-top: 45px;
+        margin-bottom: 20px;
+
+        @include responsive(large-screens) {
+          font-size: $desktop-content-main;
+        }
+      }
+
+      .plan-img-point {
+        position: relative;
+        .plan-point {
+          li {
+            opacity: 0.4;
+          }
+          span {
+            width: 25px;
+            height: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 23.8px;
+            text-align: center;
+            background-color: $color-sub1;
+            border-radius: 30px;
+            margin-right: 20px;
+            cursor: pointer;
+
+            @include responsive(large-screens) {
+              width: 58px;
+              height: 58px;
+              line-height: 18px;
+              font-size: 40px;
+              padding: 17.5px 0;
+              border-radius: 50px;
+            }
+          }
+
+          
+          .point-1 {
+            position: absolute;
+            bottom: 35.5%;
+            left: 31.85975609756098%;
+
+            @include responsive(large-screens) {
+              bottom: 34.88372093023256%;
+              left: 32.57403189066059%;
+            }
+          }
+
+          .point-2 {
+            position: absolute;
+            bottom: 44.20731707317073%;
+            left: 12.19512195121951%;
+
+            @include responsive(large-screens) {
+              bottom: 45.93023255813953%;
+              left: 12.52847380410023%;
+            }
+          }
+
+          .point-3 {
+            position: absolute;
+            top: 17.3780487804878%;
+            left: 7.01219512195122%;
+
+            @include responsive(large-screens) {
+              top: 18.02325581395349%;
+              left: 7.403189066059226%;
+            }
+          }
+
+          .point-4 {
+            position: absolute;
+            top: 36.58536585365854%;
+            right: 25.60975609756098%;
+
+            @include responsive(large-screens) {
+              top: 37.7906976744186%;
+              right: 29.95444191343964%;
+            }
+          }
+
+          .point-5 {
+            position: absolute;
+            top: 21.34146341463415%;
+            right: 6.097560975609756%;
+
+            @include responsive(large-screens) {
+              top: 20.93023255813953%;
+              right: 11.38952164009112%;
+            }
+          }
+
+          .point-6 {
+            position: absolute;
+            bottom: 32.01219512195122%;
+            right: 21.34146341463415%;
+            @include responsive(large-screens) {
+              bottom: 33.72093023255814%;
+              right: 28.47380410022779%;
+            }
+          }
+
+        }
+
+        img {
+          @include responsive(large-screens) {
+            width: 878px;
+          }
+        }
+      }
+    }
+
+    ul.num-space-name {
+      
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      grid-auto-rows: minmax(75px, auto);
+      align-items: center;
+      grid-gap: 0 12px;
+      // opacity: 0.6;
+
+
+      @include responsive(large-screens) {
+        position: absolute;
+        bottom: 0;
+        width: 460px;
+        // grid-template-columns: repeat(2, 230px);
+        // grid-gap: 0 20px;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        cursor: pointer;
+        opacity: 0.4;
+
+        .num {
+          width: 45px;
+          height: 45px;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 45px;
+          text-align: center;
+          background-color: $color-sub1;
+          border-radius: 30px;
+          margin-right: 20px;
+          
+
+          @include responsive(large-screens) {
+            width: 60px;
+            height: 60px;
+            line-height: 20px;
+            font-size: 40px;
+            padding: 17.5px 0;
+            border-radius: 50px;
+          }
+        }
+
+        .txt-group {
+          width: 94px;
+          padding: 5px 0;
+          font-weight: 600;
+
+          @include responsive(large-screens) {
+            // display: flex;
+            width: 130px;
+            font-size: 30px;
+            padding: 5px 0;
+            // width: 366px;
+          }
+
+          p {
+            line-height: 1.2;
+
+            @include responsive(large-screens) {
+              font-size: 30px;
+            }
+          }
+
+          p.txt-eng {
+            font-size: 14px;
+
+            @include responsive(large-screens) {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }// ul.num-space-name
+
+    .room-other {
+      
+      margin-top: 33px;
+      opacity: 0;
+      transform: translateX(100px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+      @include responsive(large-screens) {
+        margin-top: 150px;
+        margin-bottom: 182px;
+      }
+
+      ul {
+        @include responsive(large-screens) {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        li {
+          .img-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 320px;
+            @include responsive(large-screens) {
+              width: 460px;
+              height: 659px;
+            }
+
+            img {
+              width: 100%;
+              height: 320px;
+              margin-bottom: 24px;
+              transition: transform 0.2s ease;
+              
+              &:hover {
+                  transform: scale(1.3);
+                  transform-origin: center;
+              }
+  
+              @include responsive(large-screens) {
+                width: 460px;
+                height: 659px;
+              }
+            }
+          }
+
+          .txt-box {
+            display: flex;
+            justify-content: space-between;
+            text-align: justify;
+            margin: 25px 0;
+
+            @include responsive(large-screens) {
+              display: block;
+              width: 460px;
+            }
+
+            strong {
+              width: 117px;
+              height: 45px;
+              text-align: center;
+              padding: 11.5px 0;
+              font-size: 20px;
+              line-height: 1;
+              border: 1px solid $color-main;
+              border-radius: 30px;
+
+              @include responsive(large-screens) {
+                width: 168px;
+                height: 54px;
+                border-radius: 30px;
+                padding: 16px 0;
+              }
+            }
+
+            p {
+              width: 59.14634146341463%;
+
+              @include responsive(large-screens) {
+                width: 100%;
+                margin-top: 35px;
+                font-size: $font-size-16;
+                text-align: justify;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // section.notification-room
+}
+
+// main

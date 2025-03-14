@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Noto Sans KR";
+  color: #1c1814;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #1c1814;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+span,
+strong {
+  display: block;
+  color: #1c1814;
+}
+
+address {
+  font-style: normal;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Gowun Batang";
+}
+
+h2 {
+  font-size: calc(24px + 0.3vw);
+  text-align: center;
+  color: #fff;
+  font-family: "Gowun Batang";
+  text-shadow: 1px 0 8px #252525;
+}
+
+h3 {
+  font-size: calc(24px + 0.5vw);
+  font-family: "Noto Sans KR";
+}
+
+h4 {
+  font-size: calc(18px + 0.5vw);
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+.container {
+  margin-top: 45px;
+  margin-bottom: 50px;
+}
+@media (min-width: 1440px) {
+  .container {
+    margin-top: 200px;
+  }
+}
+.container .slide-box {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+@media (min-width: 1440px) {
+  .container .slide-box {
+    margin: 0 auto;
+    width: 500px;
+    height: 550px;
+    perspective: 1000px;
+    overflow: visible;
+  }
+}
+.container .slide-box .carousel {
+  display: flex;
+  width: 600%;
+  transition: transform 0.5s ease;
+}
+@media (min-width: 1440px) {
+  .container .slide-box .carousel {
+    display: none;
+    margin-top: 20px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    animation: none;
+  }
+}
+@media (min-width: 1440px) {
+  .container .slide-box .carousel div {
+    transform-style: preserve-3d;
+  }
+}
+.container .slide-box .item {
+  min-width: 100%;
+  height: 100%;
+}
+@media (min-width: 1440px) {
+  .container .slide-box .item {
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 550px;
+    border-radius: 10px;
+    transition: transform 1s, opacity 0.5s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+.container .slide-box .item img {
+  width: 100%;
+  height: 100% px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 1440px) {
+  .container .slide-box .item img {
+    width: 500px;
+    height: 550px;
+  }
+}/*# sourceMappingURL=test.css.map */
