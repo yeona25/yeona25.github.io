@@ -1,0 +1,303 @@
+@import "../../../scss/style.scss";
+@import "../../../scss/reset.scss";
+@import "../../../scss/mixin.scss";
+
+@include main-ani;
+@include lf-to-rt;
+@include rt-to-lf;
+
+.container {
+    position: relative;
+    width: $width-wide;
+    max-width: $break-large;
+    margin: 0 auto;
+    padding: 0 16px;
+    // background-color: cadetblue;  
+
+    @include responsive(large-screens) {
+        @include grid-sys-desktop;
+    }
+}
+
+//// ***************** main *****************
+main {
+    margin-bottom: 230px;
+    article.stroy {
+        position: relative;
+        height: 300px;
+        background: url(../images/goyohwa_stroy.jpg) no-repeat top;
+        background-size: cover;
+    
+        @include responsive(large-screens) {
+            height: 1200px;
+        }
+    
+        .stroy-title {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            // width: 40%;
+            text-align: center;
+            font-family: $font-sub;
+            font-size: $mobie-content-sub1;
+            color: $color-white;
+            // background-color: aquamarine;
+    
+            @include main-ani;
+            animation: main-animation 1.5s ease forwards; /* 애니메이션 적용 */
+    
+            @include responsive(large-screens) {
+                font-size: $font-size-50;
+                top: 500px;
+            }
+    
+            h1 {
+                font-size: $mobile-title-main;
+    
+                @include responsive(large-screens) {
+                    font-size: $desktop-content-main;
+                }
+            }
+    
+            p {
+                &:first-child {
+                    font-size: $mobile-title-sub;
+    
+                    @include responsive(large-screens) {
+                        font-size: $desktop-content-sub2;
+                    }
+                }
+    
+                &:last-child {
+                    font-size: calc(14px + 0.2vw);
+    
+                    @include responsive(large-screens) {
+                        font-size: calc(18px + 0.2vw);
+                    }
+                }
+            }
+        }
+    }
+    
+    .title-logo {
+        position: relative;
+    
+        .intro1 {
+            margin-bottom: 26px;
+    
+            @include responsive(large-screens) {
+                margin-bottom: 245px
+            }
+    
+            .rtg {
+                position: absolute;
+                // width: 96.6%; height: 300px;
+                // top: -50px; left: 0;
+                width: 96%; height: 212px; //360기준
+                top: -10%; left: 0;
+                margin: 0 auto;
+                background-color: $color-main;
+    
+                @include responsive(large-screens) {
+                    position: absolute;
+                    width: 2150px; height: 837px;
+                    top: -274px; left: -50%;
+                }
+            }
+            .main-img {
+                // @include rt-to-lf;
+                animation: none;
+                
+                img {
+                    // position: relative;
+                    width: 100%;
+                }
+            }
+    
+            .main-img.img-ani { // 애니메이션 적용할 클래스
+                animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+            }
+    
+            .logo1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                @include lf-to-rt;
+                animation: none;
+    
+                img {
+                    width: 70px;
+                    margin-top: 40px;
+                    margin-bottom: 36px;
+    
+                    @include responsive(large-screens) {
+                        display: none;
+                    }
+                }
+            }
+    
+            .logo1.lf-ani { // 애니메이션 적용할 클래스 
+                animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+            }
+    
+            .logo2 {
+                position: relative;
+                display: none;
+    
+                @include responsive(large-screens) {
+                    position: absolute;
+                    display: block;
+                    width: 140px; height: 140px;
+                    top: -210px;
+                    opacity: 0.4;
+                }
+
+                img {
+                    filter: invert(99%) sepia(100%) saturate(15%) hue-rotate(240deg) brightness(104%) contrast(100%);
+                   }
+            } // .logo2
+            .title-intro {
+                @include rt-to-lf;
+                animation: none;
+    
+                @include responsive(large-screens) {
+                    position: absolute;
+                    width: 800px; 
+                    top: -190px; left: 250px;
+                    color: $color-white;
+    
+                    p {
+                        @include responsive(large-screens) {
+                            font-size: 16px;
+                        }
+                    }
+                }// 포지션 위로 
+    
+            }
+    
+            .title-intro.rt-ani { // 애니메이션 적용할 클래스
+                animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+            }
+    
+            .intro2 {
+                h3 {
+                    position: relative;
+                    display: none;  
+    
+            
+                    @include responsive(large-screens) {
+                        position: absolute;
+                        display: block;
+                        font-family: $font-sub;
+                        font-weight: 100;
+                        top: 0px; left: -35px;
+                        white-space: normal; /* 줄바꿈을 유지하기 위해 */
+                        writing-mode: vertical-rl; /* 세로로 글자를 표시 */
+                        color: $color-white;
+                    }
+                    
+                }
+            } // .intro2
+        } //.intro1
+    
+    } //.title-logo
+    
+    .title-logo2 {
+        .part1 {
+            display: flex;
+            justify-content: space-between;
+    
+            li {
+                position: relative;
+                width: 32%;
+    
+                @include responsive(large-screens) {
+                    position: relative;
+                    width: 33%;
+                }
+    
+                .part1-1 {
+                    position: absolute;
+                    // left: -10px; 
+                    // top: 200px;
+                    left: -8px; //360 기준
+                    top: 145px;
+    
+                    @include responsive(large-screens) {
+                        position: absolute;
+                        width: $width-wide;
+                        left: -8px; 
+                        top: 650px;
+                    }
+                }
+            }
+        }
+    
+        .part2 {
+            margin-top: 180px;
+    
+            li {
+                @include responsive(large-screens) {
+                    display: flex;
+                    width: 900px;
+                    margin-top: 340px;
+                }
+    
+                img {
+                    width: 262px;
+                    display: none;
+        
+                    @include responsive(large-screens) {
+                        position: relative;
+                        display: block;
+                        width: 262px; height: 260px;
+                        top: 50px;
+                        margin-right: 50px;
+    
+                        @include lf-to-rt;
+                        animation: none;
+                    }
+                }
+                .part2-2 {
+    
+                    @include lf-to-rt;
+                    animation: none;
+    
+                    h3 {
+                        font-size: $mobile-title-main;
+                        font-family: $font-main;
+                        text-align: left;
+                        margin-bottom: 10px;
+            
+                        @include responsive(large-screens) {
+                            font-size: $desktop-content-main;
+                        }
+                    }
+                    p {
+                        @include responsive(large-screens) {
+                            font-size: $font-size-16;
+                        }
+                    }
+                }
+    
+                .part2-2.anime {
+                animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+                }
+            } 
+        }
+        .part2.ani { // 애니메이션 적용할 클래스 
+        animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+        }
+    }
+}
+
+//// ***************** footer *****************
+footer {
+    margin-top: -150px;
+    
+    @include responsive(large-screens) {
+        margin-top: 0px;
+    }
+}
