@@ -1,0 +1,756 @@
+@import "./mixin.scss";
+@import "../../../scss/style.scss";
+@import "../../../scss/reset.scss";
+@import "../../../scss/mixin.scss";
+
+
+
+@include main-ani; 
+@include lf-to-rt; 
+
+.container {
+   // background-color: aquamarine;
+   @include grid-sys-moblie;
+
+   @include responsive(large-screens) {
+      @include grid-sys-desktop;
+   }
+}
+
+main {
+   // margin-top: 61px;
+   // @include responsive(large-screens) {
+   //    margin-top: 100px;
+   // }
+   article {
+      position: relative;
+      height: 250px;
+      background: url(../images/reserve_main_bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 35px;
+
+      @include responsive(large-screens) {
+         height: 500px;
+         margin-bottom: 150px;
+      }
+
+      .main-title {
+         position: absolute;
+         left: 50%; top: 50%;
+         transform: translate(-50%, -50%);
+
+         @include main-ani;
+         animation: main-animation 1.5s ease forwards; /* 애니메이션 적용 */
+
+         h2 {
+            font-size: $mobile-title-main;
+            margin-bottom: 5px;
+            color: $color-white;
+
+            @include responsive(large-screens) {
+               font-size: $desktop-content-main;
+               margin-bottom: 10px;
+            }
+         }
+
+         span {
+            font-size: $mobile-title-sub;
+            text-align: center;
+            color: $color-white;
+
+            // background-color: red;
+
+            @include responsive(large-screens) {
+
+               font-size: $desktop-content-sub2;
+            }
+         }
+      }
+   }// article
+
+   .reserve-notice {
+
+      .container {
+         padding: 0;
+
+         .reserve-help {
+            padding: 0px;
+            margin-bottom: 35px;
+
+            @include responsive(large-screens) {
+               height: 285px;
+               display: flex;
+               justify-content: space-between;
+               margin-bottom: 140px;
+            }
+
+            .reserve-help-txt {
+               text-align: left;
+               padding-left: 10px;
+
+               h3 {
+                  text-align: left;
+                  font-size: 24px;
+                  margin-bottom: 30px;
+
+                  @include lf-to-rt; 
+                  animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+
+                  @include responsive(large-screens) {
+                     width: 760px;
+                     font-size: 50px;
+                     margin-bottom: 80px;
+                  }
+               }
+
+               p {
+                  font-size: 12px;
+                  margin-bottom: 45px;
+
+                  @include responsive(large-screens) {
+                     font-size: 24px;
+                     margin-bottom: 140px;
+                  }
+               }
+            }
+
+            .reserve-img {
+
+               @include responsive(large-screens) {
+                  width: 40.27777777777778%;
+                  height: 285px;
+               }
+
+               img {
+                  height: 100px;
+
+                  @include responsive(large-screens) {
+                     height: 285px;
+                  }
+               }
+            }
+         }
+      }// container
+   }// reserve-notice
+
+   .reserve-schedule-num-people {
+
+      .container {
+
+         @include responsive(large-screens) {
+            padding: 0;
+         }
+
+         #reserve-form {
+
+            span {
+               font-size: 10px;
+
+               @include responsive(large-screens) {
+                  font-size: 18px;
+               }
+            }
+
+            h3 {
+               font-size: 18px;
+               margin-bottom: 15px;
+
+               @include responsive(large-screens) {
+                  font-size: 30px;
+                  margin-bottom: 40px;
+               }
+            }
+
+            .schedule-num-people-box {
+               margin-bottom: 150px;
+
+               @include responsive(large-screens) {
+                  display: flex;
+                  justify-content: space-evenly;
+               }
+
+               div {// .schedule
+
+                  @include responsive(large-screens) {
+                     width: 580px;
+                  }
+
+                  h3 {
+                     font-size: 0;
+
+                     @include responsive(large-screens) {
+                        font-size: 30px;
+                        margin-bottom: 26px;
+                     }
+                  }
+
+                  span {
+                     font-size: 14px;
+                     font-weight: bold;
+                     color: $color-white;
+
+                     @include responsive(large-screens) {
+                        font-size: 24px;
+                     }
+                  }// schedule-num-people-box의 span 공통 부분 
+
+                  div.cpb { // check-in-btn
+                     position: relative;
+                     width: $width-wide;
+                     height: 40px;
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     padding: 0 13px;
+
+                     @include btn-style();
+                     transition: all 0.1s;
+                     cursor: pointer;
+
+                     // display: none;
+                     
+                     @include responsive(large-screens) {
+                        height: 60px;
+                     }
+                     
+                     &:hover {  
+                        @include btn-hover();
+                     }
+
+                     .chk-txt {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 270px;
+
+                        @include responsive(large-screens) {
+                           width: 470px;
+                        }
+
+                        .val-input-box {
+                           width: 170px;
+                           display: flex;
+                           justify-content: space-between;
+                           align-items: center;
+
+                           @include responsive(large-screens) {
+                              width: 220px;
+                           }
+                        }
+
+                     }
+                     
+                     .up-btn {
+                        display: none;
+                     }
+                  } // check-in-btn과 check-out-btn의 공통 부분 
+
+                  .calendal-wrapper {
+                     display: flex;
+                     justify-content: space-between;
+                     margin-bottom: 50px;
+                     
+                     // display: none; 
+                     // display: none;으로 숨기면, flex가 풀려서 제이쿼리로 hide 줘야함.
+                     
+                     div {
+                        // Year / Mon / Date
+                        display: flex;
+                        flex-direction: column;
+                        width: 36.89024390243903%;
+                        cursor: pointer;
+                        
+                        input {
+                           height: 36px;
+                           font-size: 12px;
+                           font-weight: bold;
+                           text-align: center;
+                           padding-top: 5px;
+                           color: $color-main;
+                           border: none;
+                           background-color: #F2EDE2;
+
+                           @include responsive(large-screens) {
+                              height: 53px;
+                              font-size: 28px;
+                           }
+
+                           &:nth-child(odd) {
+                              opacity: 0.7;
+                              cursor: pointer;
+                           }
+                        }
+
+                        &:hover {
+                           text-decoration: underline;
+                        }
+                     }// check-in-btn과 check-out-btn의 공통 calendal-wrapper      
+
+                     .Year {
+                        input {
+                           border-right: 1px solid $color-sub1;
+
+                           @include responsive(large-screens) {
+                              border-right: 0;
+                           }
+                        }
+                     }
+
+                     .Mon {
+                        width: 26.21951219512195%;
+                     }
+
+                     .Date {
+                        input {
+                           border-left: 1px solid $color-sub1;
+
+                           @include responsive(large-screens) {
+                              border-left: 0;
+                           }
+                        }
+                     }
+                  } 
+
+                  .check-out-btn {
+                     margin-top: 50px;
+                  }
+               } // schedule
+
+               .num-people {
+                  margin-top: 36px;
+
+                  @include responsive(large-screens) {
+                     margin-top: 0px;
+                  }
+
+                  .people-num-btn {
+                     margin-top: 36px;
+                     // display: none;
+
+                     @include responsive(large-screens) {
+                        margin-top: 0px;
+                     }
+
+                     .people-input-box {
+                        font-weight: bold;
+                     }
+                  } // people-num-btn
+
+                  .people-num-notice {
+                     height: 250px;
+                     text-align: justify;
+                     padding: 16px 45px 0px;
+                     background-color: #F2EDE2;
+
+                     // display: none;  
+
+                     @include responsive(large-screens) {
+                        height: 330px;
+                        background-color: #e3ddd0;
+                     }
+
+                     .p-num-notice {
+                        margin-bottom: 35px;
+                        
+                        @include responsive(large-screens) {
+                           width: $width-wide; height: 150px;
+                           padding: 5px;
+                           color: $color-white;
+                           background-color: $color-main;
+                           margin-bottom: 40px;
+                        }
+
+                        strong {
+                           font-size: 14px;
+                           padding-bottom: 10px;
+   
+                           @include responsive(large-screens) {
+                              font-size: 20px;
+                              color: $color-white;
+                           }
+                        }
+   
+                        p {
+                           font-size: 12px;
+   
+                           @include responsive(large-screens) {
+                              font-size: 14px;
+                           }
+                        }
+                     }
+
+                     .adult-kid-box {
+                        margin-bottom: 20px;
+
+                        @include responsive(large-screens) {
+                           display: flex;
+                           justify-content: space-between;
+                           width: $width-wide;
+                           // background-color: skyblue;
+                        }
+
+                        div { //adult-box / kid-box
+                           display: flex;
+                           justify-content: space-between;
+                           align-items: center;
+                           // background-color: red;
+
+                           @include responsive(large-screens) {
+                              width: 220px;
+                              // background-color: red;
+                           }
+
+                           img {
+                              display: none;
+
+                              @include responsive(large-screens) {
+                                 display: block;
+                                 width: 100px;
+                                 height: 100px;
+                              }
+                           }
+
+                           .p-num-box {
+                              width: $width-wide;
+                              // background-color: aqua;
+                              
+                              @include responsive(large-screens) {
+                                 width: 105px;
+                                 height: 100px;
+                                 display: flex;
+                                 flex-direction: column;
+                              }
+
+                              span {
+                                 font-weight: bold;
+                                 font-size: 16px;
+                                 color: $color-main;
+                                 // background-color: purple;
+
+                                 @include responsive(large-screens) {
+                                    width: 105px;
+                                    font-size: 20px;
+                                 }
+                              }
+                              
+                              .num-choice {
+                                 // background-color: yellowgreen;
+                                 
+                                 @include responsive(large-screens) {
+                                    width: $width-wide;
+
+                                 }
+
+                                 button {
+                                    width: 24px; height: 24px;
+                                    font-size: 14px;
+                                    padding: 0;
+                                    color: $color-main;
+                                    border: 0;
+                                    background-color: transparent;
+                                    cursor: pointer;
+
+                                    @include responsive(large-screens) {
+                                       font-size: 28px;
+                                    }
+
+                                    &:hover {
+                                       text-decoration: underline;
+                                       color: $color-sub1;
+                                       
+                                       @include responsive(large-screens) {
+                                          color: $color-white;
+                                       }
+                                    }
+                                 }
+                                 
+                                 input.person {
+                                    width: 30px; 
+                                    height: 30px;
+                                    font-size: 12px;
+                                    font-weight: bold;
+                                    font-family: $font-main;
+                                    margin: 0 20px;
+                                    padding-left: 10px;
+                                    border: none;
+                                    color: $color-main;
+                                    background: transparent;
+                                    
+                                    @include responsive(large-screens) {
+                                       font-size: 28px;
+                                       text-align: center;
+                                       padding-left: 0;
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  } // people-num-notice
+               } // num-people
+
+               div.cpb.click { // .click check-in-btn / #check-out-btn / people-num-btn  *** 클릭 이벤트시 넣을 클래스 스타일 ***
+                  height: 68px;
+                  border-radius: 0;
+                  border-top-left-radius: 10px;
+                  border-top-right-radius: 10px;
+                  transition: all 0.5;
+                  // display: none;
+                  
+                  .chk-txt {
+                     display: flex;
+                     flex-direction: column;
+                     text-align: left;
+                     line-height: 1.6;
+                     
+                     @include responsive(large-screens) {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                     }
+                     
+                     span {
+                        font-size: 12px;
+                        
+                        @include responsive(large-screens) {
+                           font-size: 30px;
+                        }
+                     }
+                     
+                     .val-input-box {
+                        
+                        span {
+                           font-size: 17px;
+                           
+                           @include responsive(large-screens) {
+                              font-size: 30px;
+                           }
+                           
+                           &:nth-child(even) {
+                              font-size: 10px;
+                              
+                              @include responsive(large-screens) {
+                                 font-size: 16px;
+                              }
+                           }
+                        }
+                     }
+                  }
+                  
+                  .down-btn {
+                     display: none;
+                  }
+
+                  .up-btn {
+                     display: block;
+                     
+                     @include responsive(large-screens) {
+                        font-size: 24px;
+                     }
+                  }
+
+                  .chk-txt {
+
+                     .np {
+
+                        span {
+
+                           @include responsive(large-screens) {
+
+                              font-size: 26px;
+                           }
+
+                           &:nth-child(even) {
+                              font-size: 17px;
+
+                              @include responsive(large-screens) {
+
+                                 font-size: 26px;
+                              }
+                           }
+                        }
+                     }
+                  }
+                  
+
+               } // div.cpb.click
+            } // schedule-num-people-box
+
+            .chk-sub {
+               width: $width-wide;
+               height: 44px;
+               font-size: 12px;
+               font-weight: bold;
+               margin-bottom: 115px;
+               border: none;
+               border-radius: 10px;
+               color: $color-white;
+               background-color: $color-main;
+               cursor: pointer;
+
+               @include responsive(large-screens) {
+                  display: block;
+                  width: 1260px;
+                  height: 70px;
+                  margin: 0 auto 150px;
+                  font-size: 24px;  
+               }
+
+               &:hover {
+                  @include btn-hover();
+               }
+            }
+
+            .modal {
+               position: fixed;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background-color: rgba(0, 0, 0, 0.8); 
+               z-index: 1;
+               display: none; 
+
+               .reserve-check-box {
+                  position: fixed;
+                  left: 50%; top: 50%;
+                  transform: translate(-50%, -50%);
+                  width: $width-wide;
+                  height: 250px;
+                  padding: 5px;
+                  overflow: hidden;
+                  border: 4px solid $color-sub2;
+                  border-radius: 10px;
+                  // background-color: $color-white;
+                  background-color: #F2EDE2;
+                  z-index: 2;
+   
+                  @include responsive(large-screens) {
+                     width: 1260px;
+                     height: 400px;
+                     margin: 0 auto;
+                     padding: 10px;
+                  }
+   
+                  h4 {
+                     font-size: 16px;
+                     text-decoration: underline;
+                     text-underline-offset: 5px;
+                     margin-bottom: 25px;
+   
+                     @include responsive(large-screens) {
+                        font-size: 26px;  
+                     }
+                  }
+   
+                  .date-numpeople-check-box {
+                     @include responsive(large-screens) {
+                        font-size: 24px;  
+                     }
+                     label {
+                        display: inline-block;
+                        width: 75px;
+                        padding-bottom: 7px;
+                        // border-right: 0.5px solid rgba($color-main, 0.5);
+   
+                        @include responsive(large-screens) {
+                           width: 150px;
+                           height: 45px;
+                        }
+                     }
+   
+                     input {
+                        width: 200px;
+                        font-weight: bold;
+                        margin-left: 20px;
+                        border: none;
+                        background: none;
+   
+                        @include responsive(large-screens) {
+                           width: 400px;
+                           height: 43px;
+                           font-size: 24px;  
+                           margin-left: 60px;
+                        }
+                     }
+                  }
+   
+                  .reserve-complet-btn {
+                     position: absolute;
+                     right: 10px;
+                     bottom: 10px;
+                     width: 25%;
+                     height: 40px;
+                     font-size: 14px;
+                     text-align: center;
+                     line-height: 40px;
+                     @include btn-style;
+                     cursor: pointer;
+   
+                     @include responsive(large-screens) {
+                        height: 70px;
+                        font-size: 24px;  
+                        line-height: 70px;
+                     }
+   
+                     &:hover {
+                        @include btn-hover;
+                     }
+                  }
+               }
+            }
+            // .reserve-check {
+            //    margin-bottom: 88px;
+   
+            //    // display: none;
+   
+            //    @include responsive(large-screens) {
+            //       margin-bottom: 135px;
+            //    }
+   
+            //    div { //check-ok-box / check-not-ok-box
+            //       margin-bottom: 100px;  
+                  
+            //       @include responsive(large-screens) {
+            //          display: flex;
+            //          justify-content: space-between;
+            //       }
+                  
+            //       strong { // check-ok / check-not-ok
+            //          font-size: 18px;
+            //          font-weight: bold;
+            //          margin-bottom: 35px;
+   
+            //          @include responsive(large-screens) {
+            //             font-size: 50px;
+            //             margin-bottom: 0px;
+            //          }
+            //       }
+   
+            //       input {
+            //          width: $width-half;
+            //          height: 45px;
+            //          font-weight: bold;
+            //          margin-left: 50%;
+            //          border: none;
+            //          border-radius: 10px;
+            //          color: $color-white;
+            //          background-color: $color-main;
+   
+            //          @include responsive(large-screens) {
+            //             width: 340px;
+            //             height: 90px;
+            //             font-size: 26px;
+            //             margin-left: 0%;
+            //          }
+                     
+            //          &:hover {
+            //             @include btn-hover();
+            //          }
+            //       }
+            //    }
+            // }
+         } // reserve-form
+      }// container
+   }// reserve-schedule-num-people
+}// main

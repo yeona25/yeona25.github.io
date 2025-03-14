@@ -1,0 +1,78 @@
+@mixin form-style()  {  // 폼인풋박스 스타일   
+    position: relative;
+    margin: 0 auto 30px;
+    font-family: $font-main;
+
+    input {
+        position: relative;
+        width: $width-wide; 
+        font-size: 15px;
+        padding-bottom: 5px;
+        z-index: 5;
+        border: none;
+        border-bottom: 1px solid $color-main;
+        background: none;
+        color: $color-main;
+
+        &::placeholder {
+            color: #717171;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    label {
+        position: absolute;
+        left: 0px;
+        font-size: 12px;
+        font-weight: bold;
+        bottom: 7px;
+        transition: all .2s;
+        color: $color-main;
+
+        @include responsive(large-screens) {
+            bottom: 10px;
+        }
+    }
+
+    span {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0%;  /* right로만 바꿔주면 오 - 왼 */
+        width: 0;
+        height: 2px;
+        border-radius: 2px;
+        transition: 0.5s;
+        background-color: #717171;
+    }
+
+    input {
+
+        &:focus ~ label, 
+        &:valid ~ label {
+            font-size: 10px;
+            bottom: 25px;
+            color: #717171;
+        }
+
+        &:focus ~ span,
+        &:valid ~ span {
+            width: $width-wide;
+        }
+    }
+} 
+
+@mixin btn-style {
+    border: none;
+    border-radius: 10px;
+    color: $color-white;
+    background-color: $color-main;
+}
+
+@mixin btn-hover {
+    color: $color-sub2;
+    background-color: $color-sub1;
+}
