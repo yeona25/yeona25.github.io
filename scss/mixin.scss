@@ -1,0 +1,138 @@
+// 화면 사이즈
+@mixin responsive($break) {
+    @if $break == small-screens {
+        @media (min-width: $break-small) {
+            @content;
+        }
+    }
+    @else if $break == medium-screens {
+        @media (min-width: $break-mediunm) {
+            @content;
+        }
+    }
+    @else if $break == large-screens {
+        @media (min-width: $break-large) {
+            @content;
+        }
+    }
+}
+
+//그리드 시스템
+@mixin grid-sys-moblie { // 모바일 그리드 시스템
+    width: $width-wide;
+    max-width: $break-large;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+@mixin grid-sys-desktop { // 데스크탑 그리드 시스템
+    width: $width-wide;
+    max-width: $break-large;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+//플렉스
+@mixin flex-space-between($w) { 
+    display: flex;
+    justify-content: space-between;
+    width: $w;
+}
+@mixin flex-space-around($w) {
+    display: flex;
+    justify-content: space-around;
+    width: $w;
+}
+
+
+
+@mixin main-bg-img() {
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+
+@mixin main-title() {
+    padding-top: 160px;
+    text-align: center;
+    color: $color-white;
+    h2 {
+        // font-family: $font-sub;
+        font-size: 50px;
+        margin-bottom: 10px;
+        background-color: aqua;
+    }
+    span {
+        // font-family: $font-main;
+        font-size: 24px;
+        background-color: red;
+    }
+}
+
+
+// 애니메이션
+
+@mixin main-ani {
+    @keyframes main-animation { // 메인타이틀에 적용할 애니메이션
+        from {
+            transform: translate(-100%, -50%); /* 화면 왼쪽 밖으로 */
+            opacity: 0; /* 투명도 0 */
+        }
+        to {
+            transform: translate(-50%, -50%); /* 정중앙으로 */
+            opacity: 1; /* 완전 불투명 */
+        }
+    }
+}
+
+@mixin lf-to-rt {
+    @keyframes slide-lf-to-rt { // 왼쪽에서 오른쪽으로 가도록하는 애니메이션
+        from {
+            transform: translateX(-50%); /* 화면 왼쪽 밖으로 */
+            opacity: 0; /* 투명도 0 */
+        }
+        to {
+            transform: translateX(0); /* 정중앙으로 */
+            opacity: 1; /* 완전 불투명 */
+        }
+    }
+}
+
+@mixin rt-to-lf {
+    @keyframes slide-rt-to-lf { // 오른쪽에서 왼쪽으로 가도록하는 애니메이션
+        from {
+            transform: translateX(50%); /* 화면 오른쪽 밖으로 */
+            opacity: 0; /* 투명도 0 */
+        }
+        to {
+            transform: translateX(0); /* 정중앙으로 */
+            opacity: 1; /* 완전 불투명 */
+        }
+    }
+}
+
+@mixin dw-to-up {
+    @keyframes slide-dw-to-up { // 아래에서 위로 가도록하는 애니메이션
+        from {
+            transform: translateY(50%); /* 화면 아래 쪽으로 */
+            opacity: 0; /* 투명도 0 */
+        }
+        to {
+            transform: translateY(0); /* 정중앙으로 */
+            opacity: 1; /* 완전 불투명 */
+        }
+    }
+}
+
+@mixin up-to-dw {
+    @keyframes slide-up-to-dw { // 아래에서 위로 가도록하는 애니메이션
+        from {
+            transform: translateY(-50%); /* 화면 위 쪽으로 */
+            opacity: 0; /* 투명도 0 */
+        }
+        to {
+            transform: translateY(0); /* 정중앙으로 */
+            opacity: 1; /* 완전 불투명 */
+        }
+    }
+}

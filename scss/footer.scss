@@ -1,0 +1,185 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+
+.container {
+    @include grid-sys-moblie;
+    @include responsive(large-screens) {
+        @include grid-sys-desktop;
+    }
+}
+
+footer {
+    background-color: $color-main;
+    height: 362px;
+    padding: 20px 0 31px 0;
+
+    @include responsive(large-screens) {
+        height: 450px;
+        padding: 27px 0px 30px 0px;
+    }
+
+    .info-menu-sns {
+        position: relative;
+
+        .footer-menu {
+            margin-bottom: 15px;
+
+            .gnb {
+                @include flex-space-between(86%);
+                font-size: $font-size-12;
+                color: $color-white;
+
+                @include responsive(medium-screens) {
+                    font-size: $font-size-13;
+                    width: 42.5%;
+                }
+                @include responsive(large-screens) {
+                    position: absolute;
+                    right: 0;
+                    top: 2px;
+                    width: 30.5%;
+                    font-size: $font-size-16;
+                }
+
+                li {
+                    padding-right: 10px;
+                    border-right: 1px solid $color-white;
+
+                    @include responsive(large-screens) {
+                        padding-right: 22px;
+                        margin: 0;
+                    }
+
+                    &:last-child {
+                        border-right: 0;
+                        @include responsive(large-screens) {
+                            padding-right: 0;
+                        }
+                    }
+                    
+                    a {
+                        color: $color-white;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            } // gnb
+        } //footer-menu
+
+        .info {
+            width: 78%;
+            @include responsive(large-screens) {
+                width: 30%;
+            }
+
+            strong {
+                color: $color-white;
+                font-size: $font-size-18;
+                margin-bottom: 5px;
+                margin-top: 15px;
+
+                @include responsive(large-screens) {
+                    font-size: $font-size-30;
+                }
+            }
+
+            span {
+                font-size: 14px;
+                color: $color-white;
+                line-height: 1.5;
+
+                @include responsive(large-screens) {
+                    font-size: 16px;
+                }
+            }
+
+            a {
+                width: 30%;
+                font-size: 14px;
+                color: $color-white;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                @include responsive(large-screens) {
+                    font-size: 16px;
+                    width: 28%;
+                }
+            }
+
+            address {
+                color: $color-white;
+                font-size: 14px;
+            }
+        } //info
+
+        .sns {
+            position: absolute;
+            top: 31px;
+            right: 0;
+            text-align: right;
+
+            @include responsive(large-screens) {
+                top: 89px;
+                right: 10px;
+                text-align: right;
+            }
+
+            strong {
+                font-size: 18px;
+                margin-bottom: 7px;
+                color: $color-white;
+                
+
+                @include responsive(large-screens) {
+                    font-size: 30px;
+                }
+            }
+
+            ul {
+                @include flex-space-around(140px);
+
+                @include responsive(large-screens) {
+                    justify-content: space-between;
+                    width: 400px;
+                }
+
+                li {
+                    img {
+                        height: 16px;
+
+                        @include responsive(large-screens) {
+                            height: 48px;
+                            margin-top: 5px;
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        width: 60px;
+                        @include responsive(large-screens) {
+                            width: 178px;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        width: 35px;
+                        @include responsive(large-screens) {
+                            width: 110px;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        width: 16px;
+                        @include responsive(large-screens) {
+                            width: 48px;
+                        }
+                    }
+                }
+            } // ul
+        } //sns
+
+    }  //nfo-menu
+} // footer
