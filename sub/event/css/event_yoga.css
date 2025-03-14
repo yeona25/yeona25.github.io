@@ -1,0 +1,488 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Noto Sans KR";
+  color: #1c1814;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #1c1814;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+span,
+strong {
+  display: block;
+  color: #1c1814;
+}
+
+address {
+  font-style: normal;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Gowun Batang";
+}
+
+h2 {
+  font-size: calc(24px + 0.3vw);
+  text-align: center;
+  color: #fff;
+  font-family: "Gowun Batang";
+  text-shadow: 1px 0 8px #252525;
+}
+
+h3 {
+  font-size: calc(24px + 0.5vw);
+  font-family: "Noto Sans KR";
+}
+
+h4 {
+  font-size: calc(18px + 0.5vw);
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+main article {
+  position: relative;
+  height: 300px;
+  background: url(../images/header.png) top no-repeat;
+  background-size: cover;
+}
+@media (min-width: 1440px) {
+  main article {
+    height: 500px;
+  }
+}
+main .yoga-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55%;
+  text-align: center;
+  font-family: "Gowun Batang";
+  color: #fff;
+  animation: main-animation 1.5s ease forwards;
+}
+@media (min-width: 1440px) {
+  main .yoga-title {
+    width: 27%;
+  }
+}
+@media (min-width: 1440px) {
+  main .yoga-title h2 {
+    font-size: calc(50px + 0.2vw);
+  }
+}
+main .yoga-top h3 {
+  font-size: 0;
+}
+main .yoga-top .navi ul {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+@media (min-width: 1440px) {
+  main .yoga-top .navi ul {
+    margin-bottom: 100px;
+  }
+}
+main .yoga-top .navi ul li {
+  width: 50%;
+  color: #1c1814;
+  border: 1px solid #1c1814;
+}
+main .yoga-top .navi ul li:first-child {
+  border-right: 0;
+}
+main .yoga-top .navi ul li:first-child a {
+  background-color: #1c1814;
+  color: #fff;
+}
+main .yoga-top .navi ul li a {
+  padding: 16px;
+}
+main .yoga-top .navi ul li a:hover {
+  color: #fff;
+  background-color: #1c1814;
+}
+@media (min-width: 1440px) {
+  main .yoga-top .navi ul li a {
+    width: 710px;
+    font-size: 20px;
+  }
+}
+main .yoga-img {
+  opacity: 0;
+  animation: dw-up-ani 0.9s ease forwards;
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+main .yoga-img h3 {
+  font-size: 0;
+}
+main .yoga-img img {
+  width: 100%;
+  height: 150px;
+}
+@media (min-width: 768px) {
+  main .yoga-img img {
+    width: 100%;
+    height: 300px;
+  }
+}
+@media (min-width: 1440px) {
+  main .yoga-img img {
+    height: 700px;
+  }
+}
+main .info-instructor-flex {
+  margin-top: 30px;
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+  }
+}
+main .info-instructor-flex .yoga-info {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .yoga-info {
+    width: 45%;
+  }
+}
+main .info-instructor-flex .yoga-info h3 {
+  display: none;
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .yoga-info h3 {
+    display: block;
+    margin-bottom: 45px;
+  }
+}
+main .info-instructor-flex .yoga-info p {
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .yoga-info p {
+    font-size: 16px;
+  }
+}
+main .info-instructor-flex .yoga-info .yoga-curriculum {
+  margin-bottom: 7cqi;
+}
+main .info-instructor-flex .yoga-info .yoga-curriculum li strong {
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 3px solid #a79277;
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .yoga-info .yoga-curriculum li strong {
+    font-size: 20px;
+  }
+}
+main .info-instructor-flex .yoga-info .yoga-curriculum li:first-child ul {
+  list-style: decimal;
+  list-style-position: inside;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  padding-left: 10px;
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .yoga-info .yoga-curriculum li:first-child ul li {
+    font-size: 16px;
+  }
+}
+main .info-instructor-flex .yoga-info .yoga-curriculum li:last-child ul {
+  list-style: disc;
+  list-style-position: inside;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  padding-left: 10px;
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .yoga-info .yoga-curriculum li:last-child ul li {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .instructor-inquiry-fixed {
+    width: 480px;
+    height: 330px;
+    margin-right: 100px;
+    background-color: #fff;
+    box-shadow: 0px 0px 6px 0.4px #1c1814;
+    border-radius: 18.5px;
+    padding-top: 40px;
+    position: sticky;
+    right: 100px;
+    top: 120px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+}
+main .info-instructor-flex .instructor-inquiry-fixed .instructor {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  padding: 20px 10px;
+  border: 1px solid #a79277;
+  border-radius: 15px;
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .instructor-inquiry-fixed .instructor {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+}
+main .info-instructor-flex .instructor-inquiry-fixed .instructor img {
+  width: 100px;
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .instructor-inquiry-fixed .instructor img {
+    width: 130px;
+  }
+}
+main .info-instructor-flex .instructor-inquiry-fixed .instructor .name-txt strong {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .instructor-inquiry-fixed .instructor .name-txt strong {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .instructor-inquiry-fixed .instructor .name-txt p {
+    font-size: 16px;
+  }
+}
+main .info-instructor-flex .instructor-inquiry-fixed .inquiry-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 8px;
+  text-align: center;
+  box-shadow: 0px -2px 4px -3px #1c1814;
+  z-index: 100;
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .instructor-inquiry-fixed .inquiry-fixed {
+    position: static;
+    box-shadow: none;
+    background: none;
+    padding: 0 15px;
+    margin-bottom: 50px;
+  }
+}
+main .info-instructor-flex .instructor-inquiry-fixed .inquiry-fixed p {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .instructor-inquiry-fixed .inquiry-fixed p {
+    font-size: 16px;
+  }
+}
+main .info-instructor-flex .instructor-inquiry-fixed .inquiry-fixed #inquiry-btn {
+  padding: 12.5px 120px;
+  border: none;
+  border-radius: 30px;
+  background-color: #1c1814;
+  color: #fff;
+  cursor: pointer;
+}
+@media (min-width: 1440px) {
+  main .info-instructor-flex .instructor-inquiry-fixed .inquiry-fixed #inquiry-btn {
+    font-size: 18px;
+  }
+}
+main .info-instructor-flex .instructor-inquiry-fixed .inquiry-fixed #inquiry-btn:hover {
+  background-color: #4b3a23;
+}
+main .tuition .yoga-tuition {
+  margin-bottom: 100px;
+}
+@media (min-width: 1440px) {
+  main .tuition .yoga-tuition {
+    margin-left: 100px;
+    width: 40%;
+  }
+}
+main .tuition .yoga-tuition h4 {
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+main .tuition .yoga-tuition table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+@media (min-width: 1440px) {
+  main .tuition .yoga-tuition table {
+    font-size: 16px;
+  }
+}
+main .tuition .yoga-tuition table thead {
+  background-color: #a79277;
+}
+main .tuition .yoga-tuition table thead th {
+  padding: 5.5px;
+  color: #fff;
+}
+main .tuition .yoga-tuition table tbody {
+  text-align: center;
+}
+main .tuition .yoga-tuition table tbody tr {
+  border-bottom: 1px solid #a79277;
+}
+@media (min-width: 1440px) {
+  main .tuition .yoga-tuition table tbody tr {
+    border-bottom: 3px solid #a79277;
+  }
+}
+main .tuition .yoga-tuition table tbody tr td {
+  padding: 5.5px;
+}
+main .tuition .reservation-step {
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+@media (min-width: 1440px) {
+  main .tuition .reservation-step {
+    margin-left: 100px;
+    width: 40%;
+  }
+}
+main .tuition .reservation-step h4 {
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+main .tuition .reservation-step ul {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+@media (min-width: 1440px) {
+  main .tuition .reservation-step ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+main .tuition .reservation-step ul li {
+  margin: 10px 0;
+}
+main .tuition .reservation-step ul .step {
+  text-align: center;
+  background-color: #4b3a23;
+  padding: 15px;
+  border-radius: 20px;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .tuition .reservation-step ul .step {
+    width: 120px;
+    height: 80px;
+    font-size: 18px;
+    border-radius: 3px;
+  }
+}
+main .tuition .reservation-step ul .arrow {
+  width: 24px;
+  margin: 4px auto;
+}
+@media (min-width: 1440px) {
+  main .tuition .reservation-step ul .arrow {
+    height: 15px;
+    rotate: -90deg;
+    transform: translateX(-33px);
+  }
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(-100%, -50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translate(-50%, -50%); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@keyframes up-dw-ani {
+  from {
+    transform: translateY(20%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateY(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@keyframes dw-up-ani {
+  from {
+    transform: translateY(20%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateY(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}/*# sourceMappingURL=event_yoga.css.map */

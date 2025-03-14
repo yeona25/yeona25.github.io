@@ -1,0 +1,244 @@
+@import "../../../scss/style.scss";
+@import "../../../scss/reset.scss";
+@import "../../../scss/mixin.scss";
+@import "../../../scss/header.scss";
+@import "../../../scss/footer.scss";
+
+.container {
+  position: relative;
+  width: $width-wide;
+  max-width: $break-large;
+  margin: 0 auto;
+  padding: 0 16px;
+  // background-color: cadetblue;
+
+  @include responsive(large-screens) {
+    @include grid-sys-desktop;
+  }
+}
+
+@include main-ani;
+@include lf-to-rt;
+
+
+
+@keyframes slide-l-r {
+  from {
+    transform: translateX(-5%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-t-d {
+  from {
+    transform: translateY(-5%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+//// ***************** main *****************
+main {
+
+  article {
+    position: relative;
+    height: 250px;
+    background: url(../images/header.png) no-repeat top;
+    background-size: cover;
+
+    @include responsive(large-screens) {
+      height: 500px;
+    }
+
+    h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: $font-sub;
+      font-size: $mobile-title-main;
+      color: $color-white;
+
+      animation: main-animation 1.5s ease forwards;
+
+      @include responsive(large-screens) {
+        font-size: $desktop-content-main;
+      }
+    }
+  }
+
+  .contents-menu {
+    margin: 0 auto;
+    margin-top: 37px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(large-screens) {
+      margin-top: 100px;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        opacity: 0;
+        animation: slide-t-d 0.7s ease forwards;
+        padding: 14px;
+
+        &:nth-child(2) {
+          animation-delay: 0.2s;
+        }
+
+        &:nth-child(3) {
+          animation-delay: 0.4s;
+        }
+
+        a {
+          width: 100px;
+          height: 35px;
+          line-height: 28px;
+          text-align: center;
+          border: 2px solid $color-sub2;
+
+          @include responsive(large-screens) {
+            width: 220px;
+            height: 45px;
+            line-height: 38px;
+            font-size: 20px;
+          }
+
+          &:hover {
+            font-weight: 600;
+            color: $color-white;
+            background-color: $color-sub2;
+          }
+        }
+      }
+    }
+  }// .contents-menu
+
+  .question0 {
+    animation: slide-t-d 2s ease forwards;
+
+    h3 {
+      font-family: $font-main;
+      font-size: $mobie-content-sub1;
+      margin-top: 48px;
+      margin-bottom: 17px;
+      text-align: left;
+
+
+
+      @include responsive(large-screens) {
+        font-size: $desktop-content-sub2;
+      }
+    }
+
+    .beige {
+      background-color: $color-sub1;
+
+      strong {
+        color: white;
+      }
+    }
+
+    ul {
+      background-color: $color-sub3;
+
+      li {
+
+        a {
+          padding: 16px;
+          background-image: url(../images/icon_qq.png);
+          background-repeat: no-repeat;
+          background-position: 10px center;
+          background-blend-mode: difference;
+
+          &:hover {
+            font-size: 15px;
+          }
+        }
+
+        strong {
+          margin-left: 26px;
+          font-weight: normal;
+          &:hover {
+            font-weight: 800;
+          }
+
+          @include responsive(large-screens) {
+            font-size: $font-size-18;
+          }
+        }
+      }
+    }
+  }
+
+  #question1 {
+    .answer {
+      display: none;
+
+      p {
+        padding: 35px;
+
+        @include responsive(large-screens) {
+          font-size: $font-size-18;
+        }
+      }
+    }
+
+  }
+
+  #question2 {
+
+    .answer {
+      display: none;
+
+      p {
+        padding: 35px;
+
+        @include responsive(large-screens) {
+          font-size: $font-size-18;
+        }
+      }
+    }
+
+  }
+
+
+
+  #question3 {
+    margin-bottom: 64px;
+
+    @include responsive(large-screens) {
+      margin-bottom: 140px;
+    }
+
+    .answer {
+      display: none; // 답변 
+
+      p {
+        padding: 35px;
+
+        @include responsive(large-screens) {
+          font-size: $font-size-18;
+        }
+      }
+
+      // background-color: blueviolet;
+    }
+  }
+}
+
+// .question0

@@ -1,0 +1,684 @@
+@import "../../../scss/style.scss";
+@import "../../../scss/reset.scss";
+@import "../../../scss/mixin.scss";
+
+.container {
+  position: relative;
+  width: $width-wide;
+  max-width: $break-large;
+  margin: 0 auto;
+  padding: 0 16px;
+  // background-color: cadetblue;  
+
+  @include responsive(large-screens) {
+    @include grid-sys-desktop;
+  }
+}
+
+@include main-ani;
+
+@keyframes up-dw-ani {
+
+  // 메인타이틀에 적용할 애니메이션
+  from {
+    transform: translateY(20%);
+    /* 화면 왼쪽 밖으로 */
+    opacity: 0;
+    /* 투명도 0 */
+  }
+
+  to {
+    transform: translateY(0);
+    /* 정중앙으로 */
+    opacity: 1;
+    /* 완전 불투명 */
+  }
+}
+
+//// ***************** main *****************
+main {
+  article {
+    position: relative;
+    height: 250px;
+    background: url(../images/header.png) no-repeat top;
+    background-size: cover;
+
+    @include responsive(large-screens) {
+      height: 500px;
+    }
+
+    .rental {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      text-align: center;
+      font-family: $font-sub;
+      font-size: $mobie-content-sub1;
+      color: $color-white;
+      animation: main-animation 1.5s ease forwards;
+
+      @include responsive(large-screens) {
+        top: 250px;
+        width: 20%;
+      }
+
+      h2 {
+        @include responsive(large-screens) {
+          font-size: $desktop-content-main;
+        }
+      }
+    }
+  }
+
+  .rental-top {
+    .navi {
+      h3 {
+        font-size: 0;
+      }
+
+      ul {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        border: 1px solid $color-main;
+        margin-bottom: 30px;
+        // background-color: cadetblue;
+
+        @include responsive(large-screens) {
+          margin-bottom: 100px;
+        }
+
+
+        li {
+          width: 250px;
+
+
+          &:first-child {
+            color: $color-main;
+            border-right: 1px solid $color-main;
+          }
+
+          &:last-child {
+
+            a {
+              color: $color-white;
+              background-color: $color-main;
+            }
+          }
+
+          a {
+            padding: 16px;
+            color: $color-main;
+
+            &:hover {
+              color: $color-white;
+              background-color: $color-main;
+            }
+          }
+
+          @include responsive(large-screens) {
+            width: 710px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  // .rental-top
+
+  .rental-img {
+    animation: up-dw-ani 0.5s ease forwards;
+
+    .slide-btn {
+      position: relative;
+      overflow: hidden;
+
+      .slide {
+        width: 100%;
+        height: 150px;
+
+        @include responsive(large-screens) {
+          width: 1420px;
+          height: 700px;
+
+        }
+
+        .first {
+          position: absolute;
+          display: flex;
+          width: 984px;
+          height: 150px;
+
+          @include responsive(large-screens) {
+            width: 4260px;
+            height: 700px;
+
+          }
+
+          img {
+            width: 328px;
+            height: 100%;
+
+            @include responsive(large-screens) {
+              width: 1420px;
+              height: 703px;
+            }
+          }
+        }
+      }
+
+      .arrow-btn {
+        display: flex;
+        justify-content: space-between;
+
+        .lt-btn {
+          position: absolute;
+          left: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer;
+
+          img {
+            width: 7px;
+            height: 20px;
+
+            @include responsive(large-screens) {
+              opacity: 50%;
+              width: 25px;
+              height: 60px;
+            }
+          }
+        }
+
+        .gt-btn {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer;
+
+          img {
+            width: 7px;
+            height: 20px;
+
+            @include responsive(large-screens) {
+              opacity: 50%;
+              width: 25px;
+              height: 60px;
+            }
+          }
+        }
+      }
+    }
+
+    // .slide-btn
+
+    .img-2 {
+      margin-top: 12px;
+
+      // background-color: aquamarine;
+      @include responsive(large-screens) {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .second {
+        display: flex;
+        justify-content: space-between;
+        // background-color: bisque;
+        width: 100%;
+
+        li {
+          img {
+            width: 158px;
+
+            @include responsive(large-screens) {
+              width: 340px;
+            }
+          }
+
+          &:nth-child(3) {
+            display: none;
+
+            @include responsive(large-screens) {
+              display: block;
+            }
+          }
+
+          &:nth-child(4) {
+            display: none;
+
+            @include responsive(large-screens) {
+              display: block;
+            }
+          }
+
+          .second-modal {
+            //// 이미지 1,2,3,4 모달 창
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -0%);
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+            cursor: pointer;
+
+            @include responsive(large-screens) {
+              transform: translate(-50%, 50%);
+            }
+
+
+            img {
+              width: 250px;
+              height: 100%;
+
+              @include responsive(large-screens) {
+                width: 700px;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .rental-info {
+
+    h3 {
+      display: none;
+      transition: opacity 0.9s ease, transform 0.9s ease;
+
+      @include responsive(large-screens) {
+        display: block;
+        font-size: 40px;
+        margin-top: 50px;
+      }
+    }
+
+    .in {
+      margin-top: 22px;
+
+      @include responsive(large-screens) {
+        font-size: $font-size-16;
+      }
+    }
+  }
+
+  .flex-box,
+  .rental-step {
+    opacity: 0;
+    /* 초기 상태에서 숨김 */
+    transform: translateY(20px);
+    /* 아래로 이동 */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* 애니메이션 효과 */
+  }
+
+  .flex-box.visible,
+  .rental-step.visible {
+    opacity: 1;
+    /* 보이게 설정 */
+    transform: translateY(0);
+    /* 원래 위치로 이동 */
+  }
+
+  .flex-box {
+    @include responsive(large-screens) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .space-title {
+      @include responsive(large-screens) {
+        width: 680px;
+      }
+
+      h4 {
+        font-size: $mobie-content-sub2;
+        margin-top: 38px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: $font-size-14;
+
+        @include responsive(large-screens) {
+          font-size: $font-size-16;
+        }
+      }
+
+      .space-info {
+        h4 {
+          border-bottom: 1px solid $color-main;
+          line-height: 40px;
+
+          @include responsive(large-screens) {
+            font-size: $desktop-title-sub;
+            padding: 10px;
+          }
+        }
+
+      }
+
+      .space-info2 {
+        table {
+          width: 100%;
+          margin: 0 auto;
+          border-collapse: collapse;
+
+          thead {
+            background-color: $color-main;
+
+            tr {
+              th {
+                color: $color-white;
+                margin: 0;
+                padding: 8px;
+
+                @include responsive(large-screens) {
+                  font-size: $font-size-16;
+                }
+
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              text-align: center;
+
+              &:first-of-type {
+                border-bottom: 1px solid $color-main;
+
+                @include responsive(large-screens) {
+                  border-bottom: 3px solid $color-main;
+                }
+              }
+
+              &:last-of-type {
+                border-bottom: 1px solid $color-main;
+
+                @include responsive(large-screens) {
+                  border-bottom: 3px solid $color-main;
+                }
+              }
+
+              th,
+              td {
+                padding: 8px;
+
+                @include responsive(large-screens) {
+                  font-size: $font-size-16;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    .rules {
+      h4 {
+        font-size: $mobie-content-sub2;
+        border-bottom: 1px solid $color-main;
+        line-height: 40px;
+        margin-top: 38px;
+        margin-bottom: 10px;
+
+        @include responsive(large-screens) {
+          font-size: $desktop-title-sub;
+          width: 680px;
+          padding: 10px;
+        }
+      }
+
+      .rules-list {
+        strong {
+          font-size: $font-size-16;
+
+          @include responsive(large-screens) {
+            font-size: $font-size-16;
+          }
+        }
+
+        ul {
+          margin-bottom: 20px;
+          font-size: $font-size-16;
+        }
+      }
+    }
+
+
+  }
+
+  .rental-step {
+    h4 {
+      font-size: $mobie-content-sub2;
+      margin-top: 38px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      height: 105px;
+
+      .num {
+        display: flow-root;
+        width: 400px;
+        text-align: center;
+        border: 1px solid $color-main;
+
+        @include responsive(large-screens) {
+          height: 170px;
+        }
+
+        p {
+          padding: 3px;
+          align-content: center;
+          font-size: $font-size-16;
+          color: $color-white;
+          background-color: $color-main;
+
+          @include responsive(large-screens) {
+            height: 70px;
+            font-size: $font-size-24;
+          }
+        }
+
+        span {
+          margin-top: 7px;
+
+          @include responsive(large-screens) {
+            font-size: $font-size-24;
+            line-height: 77px;
+          }
+        }
+      }
+
+      .gt {
+        margin: 4px;
+        align-content: center;
+
+        strong {
+          @include responsive(large-screens) {
+            transform: scaleY(3);
+            margin: 3px;
+            margin-top: 70px;
+          }
+        }
+      }
+    }
+  }
+
+  // .rental-step
+
+  .rental-ex {
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+    @include responsive(large-screens) {
+      display: flex;
+    }
+
+    .ex-1 {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100px;
+      background: url(../images/drama_1.png) no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+
+      @include responsive(large-screens) {
+        height: 150px;
+        margin-top: 80px;
+      }
+
+      h3 {
+        font-size: 0;
+      }
+
+      p {
+        font-size: $mobie-content-sub2;
+        text-align: center;
+        line-height: 100px;
+        color: $color-white;
+        text-shadow: 0 0 5px #000;
+        // z-index: 20;
+
+        @include responsive(large-screens) {
+          margin-top: 20px;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0; top: 0;
+        height: 100%;
+        background-color: $color-main;
+        transform: translateY(100%); /* 초기 위치를 왼쪽으로 이동 */
+        transition: transform 0.5s ease; /* 부드러운 전환 효과 */
+        opacity: 0;
+      }
+      &:hover::before {
+        width: $width-wide;
+        opacity: 0.8;
+        transform: translateY(0);
+        color: $color-sub2;
+      }
+      &:hover {
+        p {
+          opacity: 0;
+        }
+        strong {
+            top: 30px;
+            left: 100px;
+            opacity: 1;
+        }
+    }
+      strong {
+        position: absolute;
+        top: 50px;
+        left: 100px;
+        z-index: 1;
+        font-size: 20px;
+
+
+        opacity: 0;
+        transition: all 0.6s;
+        color: $color-white;
+      }
+    }
+
+    .ex-2 {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100px;
+      background: url(../images/drama_2.png) no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0; top: 0;
+        height: 100%;
+        background-color: $color-main;
+        transform: translateY(100%); /* 초기 위치를 왼쪽으로 이동 */
+        transition: transform 0.5s ease; /* 부드러운 전환 효과 */
+        opacity: 0;
+      }
+      &:hover::before {
+        width: $width-wide;
+        opacity: 0.8;
+        transform: translateY(0);
+        color: $color-sub2;
+      }
+      &:hover {
+        p {
+          opacity: 0;
+        }
+        strong {
+            top: 30px;
+            left: 100px;
+            opacity: 1;
+        }
+      }
+      @include responsive(large-screens) {
+        height: 150px;
+        margin-top: 80px;
+      }
+
+      p {
+        font-size: $mobie-content-sub2;
+        text-align: center;
+        line-height: 100px;
+        color: $color-white;
+        text-shadow: 0 0 5px #000;
+
+        @include responsive(large-screens) {
+          margin-top: 20px;
+        }
+
+      }
+      strong {
+        position: absolute;
+        top: 50px;
+        left: 100px;
+        z-index: 1;
+        font-size: 20px;
+
+        opacity: 0;
+        transition: all 0.6s;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+// main
+
+footer {
+  @include responsive(large-screens) {
+    margin-top: 100px;
+  }
+}

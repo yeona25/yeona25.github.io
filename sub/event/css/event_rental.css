@@ -1,0 +1,666 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Noto Sans KR";
+  color: #1c1814;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #1c1814;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+span,
+strong {
+  display: block;
+  color: #1c1814;
+}
+
+address {
+  font-style: normal;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Gowun Batang";
+}
+
+h2 {
+  font-size: calc(24px + 0.3vw);
+  text-align: center;
+  color: #fff;
+  font-family: "Gowun Batang";
+  text-shadow: 1px 0 8px #252525;
+}
+
+h3 {
+  font-size: calc(24px + 0.5vw);
+  font-family: "Noto Sans KR";
+}
+
+h4 {
+  font-size: calc(18px + 0.5vw);
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(-100%, -50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translate(-50%, -50%); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@keyframes up-dw-ani {
+  from {
+    transform: translateY(20%);
+    /* 화면 왼쪽 밖으로 */
+    opacity: 0;
+    /* 투명도 0 */
+  }
+  to {
+    transform: translateY(0);
+    /* 정중앙으로 */
+    opacity: 1;
+    /* 완전 불투명 */
+  }
+}
+main article {
+  position: relative;
+  height: 250px;
+  background: url(../images/header.png) no-repeat top;
+  background-size: cover;
+}
+@media (min-width: 1440px) {
+  main article {
+    height: 500px;
+  }
+}
+main article .rental {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  text-align: center;
+  font-family: "Gowun Batang";
+  font-size: calc(18px + 0.5vw);
+  color: #fff;
+  animation: main-animation 1.5s ease forwards;
+}
+@media (min-width: 1440px) {
+  main article .rental {
+    top: 250px;
+    width: 20%;
+  }
+}
+@media (min-width: 1440px) {
+  main article .rental h2 {
+    font-size: calc(50px + 0.2vw);
+  }
+}
+main .rental-top .navi h3 {
+  font-size: 0;
+}
+main .rental-top .navi ul {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid #1c1814;
+  margin-bottom: 30px;
+}
+@media (min-width: 1440px) {
+  main .rental-top .navi ul {
+    margin-bottom: 100px;
+  }
+}
+main .rental-top .navi ul li {
+  width: 250px;
+}
+main .rental-top .navi ul li:first-child {
+  color: #1c1814;
+  border-right: 1px solid #1c1814;
+}
+main .rental-top .navi ul li:last-child a {
+  color: #fff;
+  background-color: #1c1814;
+}
+main .rental-top .navi ul li a {
+  padding: 16px;
+  color: #1c1814;
+}
+main .rental-top .navi ul li a:hover {
+  color: #fff;
+  background-color: #1c1814;
+}
+@media (min-width: 1440px) {
+  main .rental-top .navi ul li {
+    width: 710px;
+    font-size: 20px;
+  }
+}
+main .rental-img {
+  animation: up-dw-ani 0.5s ease forwards;
+}
+main .rental-img .slide-btn {
+  position: relative;
+  overflow: hidden;
+}
+main .rental-img .slide-btn .slide {
+  width: 100%;
+  height: 150px;
+}
+@media (min-width: 1440px) {
+  main .rental-img .slide-btn .slide {
+    width: 1420px;
+    height: 700px;
+  }
+}
+main .rental-img .slide-btn .slide .first {
+  position: absolute;
+  display: flex;
+  width: 984px;
+  height: 150px;
+}
+@media (min-width: 1440px) {
+  main .rental-img .slide-btn .slide .first {
+    width: 4260px;
+    height: 700px;
+  }
+}
+main .rental-img .slide-btn .slide .first img {
+  width: 328px;
+  height: 100%;
+}
+@media (min-width: 1440px) {
+  main .rental-img .slide-btn .slide .first img {
+    width: 1420px;
+    height: 703px;
+  }
+}
+main .rental-img .slide-btn .arrow-btn {
+  display: flex;
+  justify-content: space-between;
+}
+main .rental-img .slide-btn .arrow-btn .lt-btn {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+main .rental-img .slide-btn .arrow-btn .lt-btn img {
+  width: 7px;
+  height: 20px;
+}
+@media (min-width: 1440px) {
+  main .rental-img .slide-btn .arrow-btn .lt-btn img {
+    opacity: 50%;
+    width: 25px;
+    height: 60px;
+  }
+}
+main .rental-img .slide-btn .arrow-btn .gt-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+main .rental-img .slide-btn .arrow-btn .gt-btn img {
+  width: 7px;
+  height: 20px;
+}
+@media (min-width: 1440px) {
+  main .rental-img .slide-btn .arrow-btn .gt-btn img {
+    opacity: 50%;
+    width: 25px;
+    height: 60px;
+  }
+}
+main .rental-img .img-2 {
+  margin-top: 12px;
+}
+@media (min-width: 1440px) {
+  main .rental-img .img-2 {
+    display: flex;
+    margin-top: 20px;
+  }
+}
+main .rental-img .img-2 .second {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+main .rental-img .img-2 .second li img {
+  width: 158px;
+}
+@media (min-width: 1440px) {
+  main .rental-img .img-2 .second li img {
+    width: 340px;
+  }
+}
+main .rental-img .img-2 .second li:nth-child(3) {
+  display: none;
+}
+@media (min-width: 1440px) {
+  main .rental-img .img-2 .second li:nth-child(3) {
+    display: block;
+  }
+}
+main .rental-img .img-2 .second li:nth-child(4) {
+  display: none;
+}
+@media (min-width: 1440px) {
+  main .rental-img .img-2 .second li:nth-child(4) {
+    display: block;
+  }
+}
+main .rental-img .img-2 .second li .second-modal {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0%);
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  cursor: pointer;
+}
+@media (min-width: 1440px) {
+  main .rental-img .img-2 .second li .second-modal {
+    transform: translate(-50%, 50%);
+  }
+}
+main .rental-img .img-2 .second li .second-modal img {
+  width: 250px;
+  height: 100%;
+}
+@media (min-width: 1440px) {
+  main .rental-img .img-2 .second li .second-modal img {
+    width: 700px;
+  }
+}
+main .rental-info h3 {
+  display: none;
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+@media (min-width: 1440px) {
+  main .rental-info h3 {
+    display: block;
+    font-size: 40px;
+    margin-top: 50px;
+  }
+}
+main .rental-info .in {
+  margin-top: 22px;
+}
+@media (min-width: 1440px) {
+  main .rental-info .in {
+    font-size: 16px;
+  }
+}
+main .flex-box,
+main .rental-step {
+  opacity: 0;
+  /* 초기 상태에서 숨김 */
+  transform: translateY(20px);
+  /* 아래로 이동 */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  /* 애니메이션 효과 */
+}
+main .flex-box.visible,
+main .rental-step.visible {
+  opacity: 1;
+  /* 보이게 설정 */
+  transform: translateY(0);
+  /* 원래 위치로 이동 */
+}
+@media (min-width: 1440px) {
+  main .flex-box {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1440px) {
+  main .flex-box .space-title {
+    width: 680px;
+  }
+}
+main .flex-box .space-title h4 {
+  font-size: calc(16px + 0.5vw);
+  margin-top: 38px;
+  margin-bottom: 10px;
+}
+main .flex-box .space-title p {
+  font-size: 14px;
+}
+@media (min-width: 1440px) {
+  main .flex-box .space-title p {
+    font-size: 16px;
+  }
+}
+main .flex-box .space-title .space-info h4 {
+  border-bottom: 1px solid #1c1814;
+  line-height: 40px;
+}
+@media (min-width: 1440px) {
+  main .flex-box .space-title .space-info h4 {
+    font-size: calc(30px + 0.2vw);
+    padding: 10px;
+  }
+}
+main .flex-box .space-title .space-info2 table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+main .flex-box .space-title .space-info2 table thead {
+  background-color: #1c1814;
+}
+main .flex-box .space-title .space-info2 table thead tr th {
+  color: #fff;
+  margin: 0;
+  padding: 8px;
+}
+@media (min-width: 1440px) {
+  main .flex-box .space-title .space-info2 table thead tr th {
+    font-size: 16px;
+  }
+}
+main .flex-box .space-title .space-info2 table tbody tr {
+  text-align: center;
+}
+main .flex-box .space-title .space-info2 table tbody tr:first-of-type {
+  border-bottom: 1px solid #1c1814;
+}
+@media (min-width: 1440px) {
+  main .flex-box .space-title .space-info2 table tbody tr:first-of-type {
+    border-bottom: 3px solid #1c1814;
+  }
+}
+main .flex-box .space-title .space-info2 table tbody tr:last-of-type {
+  border-bottom: 1px solid #1c1814;
+}
+@media (min-width: 1440px) {
+  main .flex-box .space-title .space-info2 table tbody tr:last-of-type {
+    border-bottom: 3px solid #1c1814;
+  }
+}
+main .flex-box .space-title .space-info2 table tbody tr th,
+main .flex-box .space-title .space-info2 table tbody tr td {
+  padding: 8px;
+}
+@media (min-width: 1440px) {
+  main .flex-box .space-title .space-info2 table tbody tr th,
+  main .flex-box .space-title .space-info2 table tbody tr td {
+    font-size: 16px;
+  }
+}
+main .flex-box .rules h4 {
+  font-size: calc(16px + 0.5vw);
+  border-bottom: 1px solid #1c1814;
+  line-height: 40px;
+  margin-top: 38px;
+  margin-bottom: 10px;
+}
+@media (min-width: 1440px) {
+  main .flex-box .rules h4 {
+    font-size: calc(30px + 0.2vw);
+    width: 680px;
+    padding: 10px;
+  }
+}
+main .flex-box .rules .rules-list strong {
+  font-size: 16px;
+}
+@media (min-width: 1440px) {
+  main .flex-box .rules .rules-list strong {
+    font-size: 16px;
+  }
+}
+main .flex-box .rules .rules-list ul {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+main .rental-step h4 {
+  font-size: calc(16px + 0.5vw);
+  margin-top: 38px;
+  margin-bottom: 10px;
+}
+main .rental-step ul {
+  display: flex;
+  justify-content: center;
+  height: 105px;
+}
+main .rental-step ul .num {
+  display: flow-root;
+  width: 400px;
+  text-align: center;
+  border: 1px solid #1c1814;
+}
+@media (min-width: 1440px) {
+  main .rental-step ul .num {
+    height: 170px;
+  }
+}
+main .rental-step ul .num p {
+  padding: 3px;
+  align-content: center;
+  font-size: 16px;
+  color: #fff;
+  background-color: #1c1814;
+}
+@media (min-width: 1440px) {
+  main .rental-step ul .num p {
+    height: 70px;
+    font-size: 24px;
+  }
+}
+main .rental-step ul .num span {
+  margin-top: 7px;
+}
+@media (min-width: 1440px) {
+  main .rental-step ul .num span {
+    font-size: 24px;
+    line-height: 77px;
+  }
+}
+main .rental-step ul .gt {
+  margin: 4px;
+  align-content: center;
+}
+@media (min-width: 1440px) {
+  main .rental-step ul .gt strong {
+    transform: scaleY(3);
+    margin: 3px;
+    margin-top: 70px;
+  }
+}
+main .rental-ex {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+@media (min-width: 1440px) {
+  main .rental-ex {
+    display: flex;
+  }
+}
+main .rental-ex .ex-1 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100px;
+  background: url(../images/drama_1.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+@media (min-width: 1440px) {
+  main .rental-ex .ex-1 {
+    height: 150px;
+    margin-top: 80px;
+  }
+}
+main .rental-ex .ex-1 h3 {
+  font-size: 0;
+}
+main .rental-ex .ex-1 p {
+  font-size: calc(16px + 0.5vw);
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+@media (min-width: 1440px) {
+  main .rental-ex .ex-1 p {
+    margin-top: 20px;
+  }
+}
+main .rental-ex .ex-1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #1c1814;
+  transform: translateY(100%); /* 초기 위치를 왼쪽으로 이동 */
+  transition: transform 0.5s ease; /* 부드러운 전환 효과 */
+  opacity: 0;
+}
+main .rental-ex .ex-1:hover::before {
+  width: 100%;
+  opacity: 0.8;
+  transform: translateY(0);
+  color: #4b3a23;
+}
+main .rental-ex .ex-1:hover p {
+  opacity: 0;
+}
+main .rental-ex .ex-1:hover strong {
+  top: 30px;
+  left: 100px;
+  opacity: 1;
+}
+main .rental-ex .ex-1 strong {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  z-index: 1;
+  font-size: 20px;
+  opacity: 0;
+  transition: all 0.6s;
+  color: #fff;
+}
+main .rental-ex .ex-2 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100px;
+  background: url(../images/drama_2.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+main .rental-ex .ex-2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #1c1814;
+  transform: translateY(100%); /* 초기 위치를 왼쪽으로 이동 */
+  transition: transform 0.5s ease; /* 부드러운 전환 효과 */
+  opacity: 0;
+}
+main .rental-ex .ex-2:hover::before {
+  width: 100%;
+  opacity: 0.8;
+  transform: translateY(0);
+  color: #4b3a23;
+}
+main .rental-ex .ex-2:hover p {
+  opacity: 0;
+}
+main .rental-ex .ex-2:hover strong {
+  top: 30px;
+  left: 100px;
+  opacity: 1;
+}
+@media (min-width: 1440px) {
+  main .rental-ex .ex-2 {
+    height: 150px;
+    margin-top: 80px;
+  }
+}
+main .rental-ex .ex-2 p {
+  font-size: calc(16px + 0.5vw);
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+@media (min-width: 1440px) {
+  main .rental-ex .ex-2 p {
+    margin-top: 20px;
+  }
+}
+main .rental-ex .ex-2 strong {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  z-index: 1;
+  font-size: 20px;
+  opacity: 0;
+  transition: all 0.6s;
+  color: #fff;
+}
+
+@media (min-width: 1440px) {
+  footer {
+    margin-top: 100px;
+  }
+}/*# sourceMappingURL=event_rental.css.map */

@@ -1,0 +1,868 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Noto Sans KR";
+  color: #1c1814;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #1c1814;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+span,
+strong {
+  display: block;
+  color: #1c1814;
+}
+
+address {
+  font-style: normal;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Gowun Batang";
+}
+
+h2 {
+  font-size: calc(24px + 0.3vw);
+  text-align: center;
+  color: #fff;
+  font-family: "Gowun Batang";
+  text-shadow: 1px 0 8px #252525;
+}
+
+h3 {
+  font-size: calc(24px + 0.5vw);
+  font-family: "Noto Sans KR";
+}
+
+h4 {
+  font-size: calc(18px + 0.5vw);
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Noto Sans KR";
+  color: #1c1814;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #1c1814;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+span,
+strong {
+  display: block;
+  color: #1c1814;
+}
+
+address {
+  font-style: normal;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Gowun Batang";
+}
+
+h2 {
+  font-size: calc(24px + 0.3vw);
+  text-align: center;
+  color: #fff;
+  font-family: "Gowun Batang";
+  text-shadow: 1px 0 8px #252525;
+}
+
+h3 {
+  font-size: calc(24px + 0.5vw);
+  font-family: "Noto Sans KR";
+}
+
+h4 {
+  font-size: calc(18px + 0.5vw);
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 61px;
+  font-family: "Gowun Batang";
+  background-color: #1c1814;
+  z-index: 200;
+}
+@media (min-width: 1440px) {
+  header {
+    height: 100px;
+  }
+}
+header .flexbox {
+  position: relative;
+}
+@media (min-width: 1440px) {
+  header .flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+header .flexbox .logo-menubtn {
+  height: 61px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 61px;
+}
+@media (min-width: 1440px) {
+  header .flexbox .logo-menubtn {
+    height: 100px;
+    line-height: 100px;
+  }
+}
+header .flexbox .logo-menubtn .logo {
+  font-size: 16px;
+  width: 100px;
+}
+@media (min-width: 1440px) {
+  header .flexbox .logo-menubtn .logo {
+    font-size: 26px;
+    width: 160px;
+  }
+}
+header .flexbox .logo-menubtn .logo a {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  color: #fff;
+}
+header .flexbox .logo-menubtn .logo a img {
+  width: 40px;
+  height: 40px;
+  filter: invert(99%) sepia(100%) saturate(15%) hue-rotate(240deg) brightness(104%) contrast(100%);
+}
+@media (min-width: 1440px) {
+  header .flexbox .logo-menubtn .logo a img {
+    width: 60px;
+    height: 60px;
+  }
+}
+header .flexbox .logo-menubtn #btn-open {
+  color: #fff;
+  cursor: pointer;
+}
+header .flexbox .logo-menubtn #btn-open:hover {
+  font-weight: 600;
+}
+@media (min-width: 1440px) {
+  header .flexbox .logo-menubtn #btn-open {
+    display: none;
+  }
+}
+header .flexbox #main-menu-mypage {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: #1c1814;
+  transition: all 0.4s;
+}
+@media (min-width: 1440px) {
+  header .flexbox #main-menu-mypage {
+    position: static;
+    display: block;
+    right: 0;
+    height: 100px;
+    width: 60%;
+    background-color: transparent;
+  }
+}
+header .flexbox #main-menu-mypage #btn-close {
+  width: 8.5%;
+  margin-left: 50px;
+  margin-top: 10px;
+  font-size: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+header .flexbox #main-menu-mypage #btn-close:hover {
+  font-weight: 800;
+}
+@media (min-width: 1440px) {
+  header .flexbox #main-menu-mypage #btn-close {
+    display: none;
+  }
+}
+header .flexbox #main-menu-mypage #menu-box {
+  width: 38%;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 50px;
+}
+@media (min-width: 1440px) {
+  header .flexbox #main-menu-mypage #menu-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+  }
+}
+@media (min-width: 1440px) {
+  header .flexbox #main-menu-mypage #menu-box .gnb {
+    width: 83.8709677419%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+header .flexbox #main-menu-mypage #menu-box .gnb li {
+  font-size: 18px;
+}
+header .flexbox #main-menu-mypage #menu-box .gnb li .main-menu-a {
+  font-size: 24px;
+  color: #fff;
+  text-align: right;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+@media (min-width: 1440px) {
+  header .flexbox #main-menu-mypage #menu-box .gnb li .main-menu-a {
+    font-size: 16px;
+    text-align: center;
+    width: 120px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 38px 0;
+  }
+}
+header .flexbox #main-menu-mypage #menu-box .gnb li .main-menu-a:hover {
+  font-weight: 800;
+  color: #a79277;
+}
+header .flexbox #main-menu-mypage #menu-box .gnb li .submenu {
+  display: none;
+  text-align: right;
+  margin-bottom: 10px;
+  z-index: 100;
+}
+@media (min-width: 1440px) {
+  header .flexbox #main-menu-mypage #menu-box .gnb li .submenu {
+    display: block;
+    text-align: center;
+  }
+}
+@media (min-width: 1440px) {
+  header .flexbox #main-menu-mypage #menu-box .gnb li .submenu li {
+    padding: 10px;
+    background-color: #1c1814;
+    opacity: 0.9;
+  }
+}
+header .flexbox #main-menu-mypage #menu-box .gnb li .submenu li a {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.6;
+}
+header .flexbox #main-menu-mypage #menu-box .gnb li .submenu li a:hover {
+  color: #a79277;
+}
+@media (min-width: 1440px) {
+  header .flexbox #main-menu-mypage #menu-box .gnb li .submenu li a {
+    font-size: 15px;
+  }
+}
+header .flexbox #main-menu-mypage #menu-box .mypage {
+  position: absolute;
+  right: 45%;
+  bottom: 61px;
+  width: 35%;
+}
+@media (min-width: 1440px) {
+  header .flexbox #main-menu-mypage #menu-box .mypage {
+    position: static;
+    right: 0;
+    bottom: 0;
+    width: 12.1290322581%;
+    padding: 38px 0;
+  }
+}
+header .flexbox #main-menu-mypage #menu-box .mypage ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (min-width: 1440px) {
+  header .flexbox #main-menu-mypage #menu-box .mypage ul {
+    text-align: right;
+  }
+}
+header .flexbox #main-menu-mypage #menu-box .mypage ul li {
+  margin-bottom: 10px;
+}
+@media (min-width: 1440px) {
+  header .flexbox #main-menu-mypage #menu-box .mypage ul li {
+    margin-bottom: 0;
+  }
+}
+header .flexbox #main-menu-mypage #menu-box .mypage ul li a {
+  color: #fff;
+  font-size: 16px;
+}
+@media (min-width: 1440px) {
+  header .flexbox #main-menu-mypage #menu-box .mypage ul li a {
+    font-size: 14px;
+  }
+}
+header .flexbox #main-menu-mypage #menu-box .mypage ul li a:hover {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+main {
+  margin-top: 60px;
+}
+@media (min-width: 1440px) {
+  main {
+    margin-top: 99px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Noto Sans KR";
+  color: #1c1814;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #1c1814;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+span,
+strong {
+  display: block;
+  color: #1c1814;
+}
+
+address {
+  font-style: normal;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Gowun Batang";
+}
+
+h2 {
+  font-size: calc(24px + 0.3vw);
+  text-align: center;
+  color: #fff;
+  font-family: "Gowun Batang";
+  text-shadow: 1px 0 8px #252525;
+}
+
+h3 {
+  font-size: calc(24px + 0.5vw);
+  font-family: "Noto Sans KR";
+}
+
+h4 {
+  font-size: calc(18px + 0.5vw);
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+footer {
+  background-color: #1c1814;
+  height: 362px;
+  padding: 20px 0 31px 0;
+}
+@media (min-width: 1440px) {
+  footer {
+    height: 450px;
+    padding: 27px 0px 30px 0px;
+  }
+}
+footer .info-menu-sns {
+  position: relative;
+}
+footer .info-menu-sns .footer-menu {
+  margin-bottom: 15px;
+}
+footer .info-menu-sns .footer-menu .gnb {
+  display: flex;
+  justify-content: space-between;
+  width: 86%;
+  font-size: 12px;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  footer .info-menu-sns .footer-menu .gnb {
+    font-size: 13px;
+    width: 42.5%;
+  }
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .footer-menu .gnb {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 30.5%;
+    font-size: 16px;
+  }
+}
+footer .info-menu-sns .footer-menu .gnb li {
+  padding-right: 10px;
+  border-right: 1px solid #fff;
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .footer-menu .gnb li {
+    padding-right: 22px;
+    margin: 0;
+  }
+}
+footer .info-menu-sns .footer-menu .gnb li:last-child {
+  border-right: 0;
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .footer-menu .gnb li:last-child {
+    padding-right: 0;
+  }
+}
+footer .info-menu-sns .footer-menu .gnb li a {
+  color: #fff;
+}
+footer .info-menu-sns .footer-menu .gnb li a:hover {
+  text-decoration: underline;
+}
+footer .info-menu-sns .info {
+  width: 78%;
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .info {
+    width: 30%;
+  }
+}
+footer .info-menu-sns .info strong {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .info strong {
+    font-size: 30px;
+  }
+}
+footer .info-menu-sns .info span {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .info span {
+    font-size: 16px;
+  }
+}
+footer .info-menu-sns .info a {
+  width: 30%;
+  font-size: 14px;
+  color: #fff;
+}
+footer .info-menu-sns .info a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .info a {
+    font-size: 16px;
+    width: 28%;
+  }
+}
+footer .info-menu-sns .info address {
+  color: #fff;
+  font-size: 14px;
+}
+footer .info-menu-sns .sns {
+  position: absolute;
+  top: 31px;
+  right: 0;
+  text-align: right;
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .sns {
+    top: 89px;
+    right: 10px;
+    text-align: right;
+  }
+}
+footer .info-menu-sns .sns strong {
+  font-size: 18px;
+  margin-bottom: 7px;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .sns strong {
+    font-size: 30px;
+  }
+}
+footer .info-menu-sns .sns ul {
+  display: flex;
+  justify-content: space-around;
+  width: 140px;
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .sns ul {
+    justify-content: space-between;
+    width: 400px;
+  }
+}
+footer .info-menu-sns .sns ul li img {
+  height: 16px;
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .sns ul li img {
+    height: 48px;
+    margin-top: 5px;
+  }
+}
+footer .info-menu-sns .sns ul li:nth-child(1) {
+  width: 60px;
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .sns ul li:nth-child(1) {
+    width: 178px;
+  }
+}
+footer .info-menu-sns .sns ul li:nth-child(2) {
+  width: 35px;
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .sns ul li:nth-child(2) {
+    width: 110px;
+  }
+}
+footer .info-menu-sns .sns ul li:nth-child(3) {
+  width: 16px;
+}
+@media (min-width: 1440px) {
+  footer .info-menu-sns .sns ul li:nth-child(3) {
+    width: 48px;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(-100%, -50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translate(-50%, -50%); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@keyframes slide-lf-to-rt {
+  from {
+    transform: translateX(-50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateX(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@keyframes slide-l-r {
+  from {
+    transform: translateX(-5%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-t-d {
+  from {
+    transform: translateY(-5%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+main article {
+  position: relative;
+  height: 250px;
+  background: url(../images/header.png) no-repeat top;
+  background-size: cover;
+}
+@media (min-width: 1440px) {
+  main article {
+    height: 500px;
+  }
+}
+main article h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Gowun Batang";
+  font-size: calc(24px + 0.3vw);
+  color: #fff;
+  animation: main-animation 1.5s ease forwards;
+}
+@media (min-width: 1440px) {
+  main article h2 {
+    font-size: calc(50px + 0.2vw);
+  }
+}
+main .contents-menu {
+  margin: 0 auto;
+  margin-top: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1440px) {
+  main .contents-menu {
+    margin-top: 100px;
+  }
+}
+main .contents-menu ul {
+  display: flex;
+}
+main .contents-menu ul li {
+  opacity: 0;
+  animation: slide-t-d 0.7s ease forwards;
+  padding: 14px;
+}
+main .contents-menu ul li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+main .contents-menu ul li:nth-child(3) {
+  animation-delay: 0.4s;
+}
+main .contents-menu ul li a {
+  width: 100px;
+  height: 35px;
+  line-height: 28px;
+  text-align: center;
+  border: 2px solid #4b3a23;
+}
+@media (min-width: 1440px) {
+  main .contents-menu ul li a {
+    width: 220px;
+    height: 45px;
+    line-height: 38px;
+    font-size: 20px;
+  }
+}
+main .contents-menu ul li a:hover {
+  font-weight: 600;
+  color: #fff;
+  background-color: #4b3a23;
+}
+main .question0 {
+  animation: slide-t-d 2s ease forwards;
+}
+main .question0 h3 {
+  font-family: "Noto Sans KR";
+  font-size: calc(18px + 0.5vw);
+  margin-top: 48px;
+  margin-bottom: 17px;
+  text-align: left;
+}
+@media (min-width: 1440px) {
+  main .question0 h3 {
+    font-size: calc(24px + 0.2vw);
+  }
+}
+main .question0 .beige {
+  background-color: #a79277;
+}
+main .question0 .beige strong {
+  color: white;
+}
+main .question0 ul {
+  background-color: #FFF1E0;
+}
+main .question0 ul li a {
+  padding: 16px;
+  background-image: url(../images/icon_qq.png);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-blend-mode: difference;
+}
+main .question0 ul li a:hover {
+  font-size: 15px;
+}
+main .question0 ul li strong {
+  margin-left: 26px;
+  font-weight: normal;
+}
+main .question0 ul li strong:hover {
+  font-weight: 800;
+}
+@media (min-width: 1440px) {
+  main .question0 ul li strong {
+    font-size: 18px;
+  }
+}
+main #question1 .answer {
+  display: none;
+}
+main #question1 .answer p {
+  padding: 35px;
+}
+@media (min-width: 1440px) {
+  main #question1 .answer p {
+    font-size: 18px;
+  }
+}
+main #question2 .answer {
+  display: none;
+}
+main #question2 .answer p {
+  padding: 35px;
+}
+@media (min-width: 1440px) {
+  main #question2 .answer p {
+    font-size: 18px;
+  }
+}
+main #question3 {
+  margin-bottom: 64px;
+}
+@media (min-width: 1440px) {
+  main #question3 {
+    margin-bottom: 140px;
+  }
+}
+main #question3 .answer {
+  display: none;
+}
+main #question3 .answer p {
+  padding: 35px;
+}
+@media (min-width: 1440px) {
+  main #question3 .answer p {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=about_question.css.map */
