@@ -1,0 +1,656 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Noto Sans KR";
+  color: #1c1814;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #1c1814;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+span,
+strong {
+  display: block;
+  color: #1c1814;
+}
+
+address {
+  font-style: normal;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Gowun Batang";
+}
+
+h2 {
+  font-size: calc(24px + 0.3vw);
+  text-align: center;
+  color: #fff;
+  font-family: "Gowun Batang";
+  text-shadow: 1px 0 8px #252525;
+}
+
+h3 {
+  font-size: calc(24px + 0.5vw);
+  font-family: "Noto Sans KR";
+}
+
+h4 {
+  font-size: calc(18px + 0.5vw);
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(-100%, -50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translate(-50%, -50%); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@keyframes slide-lf-to-rt {
+  from {
+    transform: translateX(-50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateX(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@keyframes slide-rt-to-lf {
+  from {
+    transform: translateX(50%); /* 화면 오른쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateX(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@keyframes slide-dw-to-up {
+  from {
+    transform: translateY(50%); /* 화면 아래 쪽으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateY(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+main .title {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 35px;
+  background: url(../../../images/main_bg.webp);
+  background-size: cover;
+}
+@media (min-width: 1440px) {
+  main .title {
+    height: 500px;
+    margin-bottom: 150px;
+  }
+}
+main .title .title-txt {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: main-animation 1.5s ease forwards; /* 애니메이션 적용 */
+}
+@keyframes main-animation {
+  from {
+    transform: translate(-100%, -50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translate(-50%, -50%); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+main .title .title-txt h2 {
+  font-size: calc(24px + 0.3vw);
+  font-family: "Gowun Batang";
+  font-weight: 400;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .title .title-txt h2 {
+    font-size: calc(60px + 0.2vw);
+  }
+}
+main .title .title-txt p {
+  font-size: calc(12px + 0.5vw);
+  font-family: "Gowun Batang";
+  font-weight: 400;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .title .title-txt p {
+    font-size: calc(30px + 0.2vw);
+  }
+}
+main .intro {
+  margin-bottom: 75px;
+}
+main .intro h3 {
+  margin-bottom: 30px;
+  font-size: calc(24px + 0.5vw);
+  font-weight: 900;
+  font-family: "Noto Sans KR";
+}
+@media (min-width: 1440px) {
+  main .intro h3 {
+    font-size: calc(50px + 0.2vw);
+    margin-bottom: 55px;
+  }
+}
+main .intro strong {
+  margin-bottom: 55px;
+  font-size: calc(18px + 0.5vw);
+  font-weight: 600;
+  font-family: "Gowun Batang";
+}
+@media (min-width: 1440px) {
+  main .intro strong {
+    font-size: calc(24px + 0.2vw);
+    margin-bottom: 40px;
+  }
+}
+main .intro p {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Noto Sans KR";
+  letter-spacing: -0.2px;
+  display: none;
+  animation: none;
+}
+@keyframes slide-rt-to-lf {
+  from {
+    transform: translateX(50%); /* 화면 오른쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateX(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@media (min-width: 1440px) {
+  main .intro p {
+    font-size: 22px;
+    letter-spacing: 0;
+    margin-bottom: 145px;
+  }
+}
+main .intro p.animation {
+  animation: slide-rt-to-lf 1s ease forwards; /* 애니메이션 적용 */
+}
+main .meals,
+main .cafe,
+main .tour {
+  margin-bottom: 90px;
+}
+@media (min-width: 1440px) {
+  main .meals,
+  main .cafe,
+  main .tour {
+    margin-bottom: 150px;
+  }
+}
+main .meals h3,
+main .cafe h3,
+main .tour h3 {
+  margin-bottom: 13px;
+  font-size: calc(18px + 0.5vw);
+  font-weight: 800;
+  font-family: "Noto Sans KR";
+}
+main .meals .collage,
+main .cafe .collage,
+main .tour .collage {
+  overflow: scroll;
+  margin-right: -16px;
+}
+main .meals .collage ul,
+main .cafe .collage ul,
+main .tour .collage ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 78.08% 78.08% 78.09%;
+}
+@media (min-width: 1440px) {
+  main .meals .collage ul,
+  main .cafe .collage ul,
+  main .tour .collage ul {
+    overflow: hidden;
+  }
+}
+main .meals .collage ul li,
+main .cafe .collage ul li,
+main .tour .collage ul li {
+  width: 95%;
+  height: calc(247px + 5vh);
+  background-color: #efefef;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  animation: none;
+}
+main .meals .collage ul li a,
+main .cafe .collage ul li a,
+main .tour .collage ul li a {
+  margin: 2.5%;
+}
+@media (min-width: 1440px) {
+  main .meals .collage ul li a,
+  main .cafe .collage ul li a,
+  main .tour .collage ul li a {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+main .meals .collage ul li a img,
+main .cafe .collage ul li a img,
+main .tour .collage ul li a img {
+  height: calc(152px + 5vh);
+  border-radius: 10px;
+}
+main .meals .collage ul li a .meals-txt,
+main .meals .collage ul li a .cafe-txt,
+main .meals .collage ul li a .tour-txt,
+main .cafe .collage ul li a .meals-txt,
+main .cafe .collage ul li a .cafe-txt,
+main .cafe .collage ul li a .tour-txt,
+main .tour .collage ul li a .meals-txt,
+main .tour .collage ul li a .cafe-txt,
+main .tour .collage ul li a .tour-txt {
+  padding: 0 1%;
+}
+main .meals .collage ul li a .meals-txt p,
+main .meals .collage ul li a .cafe-txt p,
+main .meals .collage ul li a .tour-txt p,
+main .cafe .collage ul li a .meals-txt p,
+main .cafe .collage ul li a .cafe-txt p,
+main .cafe .collage ul li a .tour-txt p,
+main .tour .collage ul li a .meals-txt p,
+main .tour .collage ul li a .cafe-txt p,
+main .tour .collage ul li a .tour-txt p {
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: "Noto Sans KR";
+  color: #8d8d8d;
+}
+main .meals .collage ul li a .meals-txt strong,
+main .meals .collage ul li a .cafe-txt strong,
+main .meals .collage ul li a .tour-txt strong,
+main .cafe .collage ul li a .meals-txt strong,
+main .cafe .collage ul li a .cafe-txt strong,
+main .cafe .collage ul li a .tour-txt strong,
+main .tour .collage ul li a .meals-txt strong,
+main .tour .collage ul li a .cafe-txt strong,
+main .tour .collage ul li a .tour-txt strong {
+  margin-top: 8px;
+  font-size: 10px;
+  font-weight: 400;
+  font-family: "Noto Sans KR";
+  color: #a79277;
+}
+main .meals .collage ul li a .meals-txt h4,
+main .meals .collage ul li a .cafe-txt h4,
+main .meals .collage ul li a .tour-txt h4,
+main .cafe .collage ul li a .meals-txt h4,
+main .cafe .collage ul li a .cafe-txt h4,
+main .cafe .collage ul li a .tour-txt h4,
+main .tour .collage ul li a .meals-txt h4,
+main .tour .collage ul li a .cafe-txt h4,
+main .tour .collage ul li a .tour-txt h4 {
+  text-align: left;
+  margin-top: -4px;
+  font-size: calc(18px + 0.5vw);
+  font-weight: 700;
+  font-family: "Noto Sans KR";
+}
+@media (min-width: 1440px) {
+  main {
+    /*desktop 공통소스*/
+  }
+  main .meals h3,
+  main .cafe h3,
+  main .tour h3 {
+    font-size: calc(50px + 0.2vw);
+    font-weight: 900;
+    margin-bottom: 16px;
+  }
+  main .meals .collage,
+  main .cafe .collage,
+  main .tour .collage {
+    overflow: auto;
+    margin-right: 0;
+    width: 100%;
+    height: 549px;
+    border: 7px solid #1c1814;
+    border-left: none;
+    border-right: none;
+  }
+  main .meals .collage .meals-list {
+    width: 100%;
+    height: 535px;
+    padding: 25px 0;
+    grid-template-columns: 28.8% 69.43%;
+    grid-template-rows: min-content(485px auto);
+    grid-gap: 25px;
+    grid-template-areas: "a b " "a c ";
+  }
+  main .meals .collage .meals-list li {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  main .meals .collage .meals-list li:first-child {
+    grid-area: a;
+    height: 485px;
+    width: 100%;
+  }
+  main .meals .collage .meals-list li:first-child a img {
+    width: 100%;
+    height: 70.51%;
+  }
+  main .meals .collage .meals-list li:first-child a .meals-txt {
+    padding: 0;
+  }
+  main .meals .collage .meals-list li:nth-child(2) {
+    grid-area: b;
+    height: 230px;
+    width: 100%;
+  }
+  main .meals .collage .meals-list li:nth-child(2) a {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  main .meals .collage .meals-list li:nth-child(2) a img {
+    width: 58.62%;
+    height: 100%;
+  }
+  main .meals .collage .meals-list li:nth-child(2) a .meals-txt {
+    text-align: right;
+  }
+  main .meals .collage .meals-list li:nth-child(2) a .meals-txt p {
+    margin-bottom: 30px;
+  }
+  main .meals .collage .meals-list li:last-child {
+    grid-area: c;
+    height: 230px;
+    width: 100%;
+  }
+  main .meals .collage .meals-list li:last-child a {
+    display: flex;
+  }
+  main .meals .collage .meals-list li:last-child a img {
+    width: 58.62%;
+    height: 100%;
+  }
+  main .meals .collage .meals-list li:last-child a .meals-txt p {
+    margin-bottom: 75px;
+  }
+  main .meals .collage .meals-list li a {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  main .meals .collage .meals-list li a img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0;
+  }
+  main .meals .collage .meals-list li a .meals-txt {
+    padding: 10px;
+  }
+  main .meals .collage .meals-list li a .meals-txt p {
+    font-size: calc(24px + 0.2vw);
+  }
+  main .meals .collage .meals-list li a .meals-txt strong {
+    font-size: 20px;
+  }
+  main .meals .collage .meals-list li a .meals-txt h4 {
+    font-size: calc(30px + 0.2vw);
+  }
+  main .cafe .collage .cafe-list {
+    width: 100%;
+    height: 100%;
+    padding: 25px 0;
+    display: grid;
+    grid-template-columns: 32.15% 32.15% 32.15%;
+    height: 100%;
+    grid-gap: 25px;
+  }
+  main .cafe .collage .cafe-list li {
+    width: 100%;
+    height: 485px;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  main .cafe .collage .cafe-list li:first-child a img {
+    width: 100%;
+    height: 70%;
+    border-radius: 0;
+  }
+  main .cafe .collage .cafe-list li:first-child a .cafe-txt {
+    padding: 10px;
+  }
+  main .cafe .collage .cafe-list li:first-child a .cafe-txt p {
+    font-size: calc(24px + 0.2vw);
+  }
+  main .cafe .collage .cafe-list li:first-child a .cafe-txt strong {
+    font-size: 20px;
+  }
+  main .cafe .collage .cafe-list li:first-child a .cafe-txt h4 {
+    font-size: calc(30px + 0.2vw);
+  }
+  main .cafe .collage .cafe-list li:nth-child(2) a {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  main .cafe .collage .cafe-list li:nth-child(2) a img {
+    width: 100%;
+    height: 70%;
+    border-radius: 0;
+  }
+  main .cafe .collage .cafe-list li:nth-child(2) a .cafe-txt {
+    padding: 10px;
+  }
+  main .cafe .collage .cafe-list li:nth-child(2) a .cafe-txt p {
+    font-size: calc(24px + 0.2vw);
+  }
+  main .cafe .collage .cafe-list li:nth-child(2) a .cafe-txt strong {
+    font-size: 20px;
+  }
+  main .cafe .collage .cafe-list li:nth-child(2) a .cafe-txt h4 {
+    font-size: calc(30px + 0.2vw);
+  }
+  main .cafe .collage .cafe-list li:last-child a img {
+    width: 100%;
+    height: 70%;
+    border-radius: 0;
+  }
+  main .cafe .collage .cafe-list li:last-child a .cafe-txt {
+    padding: 10px;
+  }
+  main .cafe .collage .cafe-list li:last-child a .cafe-txt p {
+    font-size: calc(24px + 0.2vw);
+  }
+  main .cafe .collage .cafe-list li:last-child a .cafe-txt strong {
+    font-size: 20px;
+  }
+  main .cafe .collage .cafe-list li:last-child a .cafe-txt h4 {
+    font-size: calc(30px + 0.2vw);
+  }
+  main .tour .collage .tour-list {
+    width: 100%;
+    height: 100%;
+    padding: 25px 0;
+    grid-template-columns: 49.11% 49.11%;
+    grid-template-rows: 47.42% 47.42%;
+    grid-template-areas: "a a" "b c";
+    grid-gap: 25px;
+  }
+  main .tour .collage .tour-list li {
+    width: 100%;
+    height: 100%;
+  }
+  main .tour .collage .tour-list li:first-child {
+    grid-area: a;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  main .tour .collage .tour-list li:first-child a {
+    display: flex;
+  }
+  main .tour .collage .tour-list li:first-child a img {
+    width: 71.19%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0;
+  }
+  main .tour .collage .tour-list li:first-child a .tour-txt {
+    padding: 10px;
+  }
+  main .tour .collage .tour-list li:first-child a .tour-txt p {
+    font-size: calc(24px + 0.2vw);
+    margin-bottom: 78px;
+  }
+  main .tour .collage .tour-list li:first-child a .tour-txt strong {
+    font-size: 20px;
+  }
+  main .tour .collage .tour-list li:first-child a .tour-txt h4 {
+    font-size: calc(30px + 0.2vw);
+  }
+  main .tour .collage .tour-list li:nth-child(2) {
+    grid-area: b;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  main .tour .collage .tour-list li:nth-child(2) a {
+    display: flex;
+  }
+  main .tour .collage .tour-list li:nth-child(2) a img {
+    width: 41.345%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0;
+  }
+  main .tour .collage .tour-list li:nth-child(2) a .tour-txt {
+    padding: 10px;
+  }
+  main .tour .collage .tour-list li:nth-child(2) a .tour-txt p {
+    font-size: calc(24px + 0.2vw);
+    margin-bottom: 78px;
+  }
+  main .tour .collage .tour-list li:nth-child(2) a .tour-txt strong {
+    font-size: 20px;
+  }
+  main .tour .collage .tour-list li:nth-child(2) a .tour-txt h4 {
+    font-size: calc(30px + 0.2vw);
+  }
+  main .tour .collage .tour-list li:last-child {
+    grid-area: c;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  main .tour .collage .tour-list li:last-child a {
+    display: flex;
+  }
+  main .tour .collage .tour-list li:last-child a img {
+    width: 41.345%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0;
+  }
+  main .tour .collage .tour-list li:last-child a .tour-txt {
+    padding: 10px;
+  }
+  main .tour .collage .tour-list li:last-child a .tour-txt p {
+    font-size: calc(24px + 0.2vw);
+    margin-bottom: 78px;
+  }
+  main .tour .collage .tour-list li:last-child a .tour-txt strong {
+    font-size: 20px;
+  }
+  main .tour .collage .tour-list li:last-child a .tour-txt h4 {
+    font-size: calc(30px + 0.2vw);
+  }
+}
+main .meals,
+main .cafe,
+main .tour {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+main .meals .collage ul li.lf-to-rt-ani,
+main .cafe .collage ul li.lf-to-rt-ani,
+main .tour .collage ul li.lf-to-rt-ani {
+  animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+}
+main .meals .collage ul li.rt-to-lf-ani,
+main .cafe .collage ul li.rt-to-lf-ani,
+main .tour .collage ul li.rt-to-lf-ani {
+  animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+}
+main .meals .collage ul li.dw-to-up-ani,
+main .cafe .collage ul li.dw-to-up-ani,
+main .tour .collage ul li.dw-to-up-ani {
+  animation: slide-dw-to-up 1.5s ease forwards; /* 애니메이션 적용 */
+}/*# sourceMappingURL=magazine.css.map */

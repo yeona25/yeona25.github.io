@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- [if lt IE 9]>
+    <script src="./js/html5shiv.js"></script>
+    <![endif]-->
+  <link rel="shortcut icon" href="../../images/favicon/favicon.ico">
+  <link rel="stylesheet" href="./css/magazine.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+  <script src="../../js/jquery-3.6.0.min.js"></script>
+  <script src="../../js/header.js"></script>
+  <script src="./js/magazine.js"></script>
+  <title>GOYOWHA</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo-main-menu-login">
+      <div class="container">
+        <div class="flexbox">
+          <div class="logo-menubtn">
+            <h1 class="logo"><a href="../../index.html"><img src="../../images/logo.svg" alt="logo">고요화</a></h1>
+            <div id="mobile-btn-open">
+              <span id="btn-open">MENU</span>
+            </div>
+          </div> <!-- logo-menubtn -->
+
+          <div id="main-menu-mypage">
+            <div id="mobile-btn-close">
+              <span id="btn-close"> &gt;</span>
+            </div>
+            <div id="menu-box">
+              <nav>
+                <ul class="gnb">
+                  <li>
+                    <a href="../story/stroy.html" class="main-menu-a">고요화</a>
+                  </li>
+                  <li>
+                    <a href="#none" class="main-menu-a">머무를공간</a>
+                    <ul class="submenu">
+                      <li><a href="../space/space_room.html">공간 소개<span></span></a></li>
+                      <li><a href="../space/space_amenities.html">편의시설</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="../reservation/reserve.html" class="main-menu-a">객실예약</a>
+                  </li>
+                  <li>
+                    <a href="#none" class="main-menu-a">열림의터</a>
+                    <ul class="submenu">
+                      <li><a href="../event/event_yoga.html">요가 클래스</a></li>
+                      <li><a href="../event/event_rental.html">촬영 대관</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="../magazine/_magazine.html" class="main-menu-a">고요화매거진</a>
+                  </li>
+                  <li>
+                    <a href="#none" class="main-menu-a">ABOUT</a>
+                    <ul class="submenu">
+                      <li><a href="../about/about_notice.html">공지사항</a></li>
+                      <li><a href="../about/about_question.html">자주 묻는 질문</a></li>
+                    </ul>
+                  </li>
+                </ul> <!-- gnb -->
+              </nav>
+
+              <div class="mypage">
+                <ul>
+                  <li><a href="../mypage/Login_page.html">로그인</a></li>
+                  <li><a href="../mypage/membership_page.html">예약 조회</a></li>
+                </ul>
+              </div>
+            </div> <!-- menu-box -->
+          </div> <!-- main-menu-mypage -->
+        </div> <!-- flexbox -->
+      </div> <!-- container -->
+    </div> <!-- logo-main-menu-login -->
+  </header>
+
+  <main>
+    <div class="title">
+      <div class="container">
+        <div class="title-txt">
+          <h2>고요화 매거진</h2>
+          <p>고요화가 제안하는 경주 스팟</p>
+        </div>
+      </div> <!--container-->
+    </div> <!--title-->
+
+    <div class="intro">
+      <div class="container">
+        <h3 id="typing-h3"></h3>
+        <strong id="typing-strong"></strong>
+        <p>
+          고요화를 찾아주신 손님들께서 저희 스태프에게 가장 많이 질문해주셨습니다. <br>
+          고요하고 차분한 쉼 끝에 행복을 느끼시길 바라며, <br>저희 팀 고요화가 엄선한 경주의 먹거리와 볼거리를 소개합니다.
+        </p>
+      </div> <!--container-->
+    </div> <!--intro-->
+
+    <div class="meals">
+      <div class="container">
+        <h3>입까지 즐거운 여행, 식사</h3>
+        <div class="collage">
+          <ul class="meals-list">
+            <li>
+              <a href="./sub_meal.html?meal=1" id="meal1">
+                <img src="./images/img1.jpg" alt="웰빙황토우렁이쌈밥">
+                <div class="meals-txt">
+                  <p>01</p>
+                  <strong>우렁 쌈밥</strong>
+                  <h4>웰빙황토우렁이쌈밥</h4>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./sub_meal.html?meal=2" id="meal2">
+                <img src="./images/img2.jpg" alt="보불어탕명가">
+                <div class="meals-txt">
+                  <p>02</p>
+                  <strong>어탕 수제비와 칼국수</strong>
+                  <h4>보불어탕명가</h4>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./sub_meal.html?meal=3" id="meal3">
+                <img src="./images/img3.jpg" alt="피자옥">
+                <div class="meals-txt">
+                  <p>03</p>
+                  <strong>수제 화덕 피자</strong>
+                  <h4>피자옥</h4>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div> <!--collage-->
+      </div> <!--conatainer-->
+    </div> <!--meals-->
+
+    <div class="cafe">
+      <div class="container">
+        <h3>커피부터 디저트까지, 경주 카페</h3>
+        <div class="collage">
+          <ul class="cafe-list">
+            <li>
+              <a href="./sub_cafe.html?cafe=1" id="cafe1">
+                <img src="./images/img4.jpg" alt="소소풍경 베이커리">
+                <div class="cafe-txt">
+                  <p>01</p>
+                  <strong>수제 발효종을 활용한 베이커리</strong>
+                  <h4>소소풍경 베이커리</h4>
+                </div>
+
+              </a>
+            </li>
+            <li>
+              <a href="./sub_cafe.html?cafe=2" id="cafe2">
+                <img src="./images/img5.jpeg" alt="커피 명가 보스케">
+                <div class="cafe-txt">
+                  <p>02</p>
+                  <strong>직접 내린 핸드드립 메뉴</strong>
+                  <h4>커피 명가 보스케</h4>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./sub_cafe.html?cafe=3" id="cafe3">
+                <img src="./images/img6.jpg" alt="르씨엘">
+                <div class="cafe-txt">
+                  <p>03</p>
+                  <strong>로스팅한 원두 커피와 수제 디저트</strong>
+                  <h4>르씨엘</h4>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div> <!--collage-->
+      </div> <!--conatainer-->
+    </div> <!--cafe-->
+
+    <div class="tour">
+      <div class="container">
+        <h3>경주의 이곳 저곳, 관광지</h3>
+        <div class="collage">
+          <ul class="tour-list">
+            <li>
+              <a href="./sub_tour.html?tour=1" id="tour1">
+                <img src="./images/img7.jpg" alt="동궁과 월지">
+                <div class="tour-txt">
+                  <p>01</p>
+                  <strong>경주의 야경 명소</strong>
+                  <h4>동궁과 월지</h4>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./sub_tour.html?tour=2" id="tour2">
+                <img src="./images/img8.jpg" alt="첨성대">
+                <div class="tour-txt">
+                  <p>02</p>
+                  <strong>신라의 천문관측소</strong>
+                  <h4>첨성대</h4>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./sub_tour.html?tour=3" id="tour3">
+                <img src="./images/img9.jpg" alt="신라왕경숲">
+                <div class="tour-txt">
+                  <p>03</p>
+                  <strong>녹지공간으로 산책하기 좋은</strong>
+                  <h4>신라왕경숲</h4>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div> <!--collage-->
+      </div> <!--conatainer-->
+    </div> <!--tour-->
+  </main>
+
+  <footer>
+    <div class="info-menu-sns">
+      <div class="container">
+        <div class="info-menu-sns">
+          <div class="footer-menu">
+            <nav>
+              <ul class="gnb">
+                <li><a href="../terms/terms_privacy.html">개인정보처리방침</a></li>
+                <li><a href="../terms/terms_service.html">이용약관</a></li>
+                <li><a href="#none">환불방침</a></li>
+                <li><a href="https://yexql.channel.io/home" target="_blank">고객센터</a></li>
+              </ul>
+            </nav>
+          </div> <!-- footer-menu -->
+
+          <div class="info">
+            <ul>
+              <li>
+                <strong>회사명</strong>
+                <span>고요화</span>
+              </li>
+              <li>
+                <strong>Tel</strong>
+                <a href="tel:010-5087-5051">010-5087-5051</a>
+              </li>
+              <li>
+                <strong>Address</strong>
+                <address>경북 경주시 양정로 50-51 (인왕동)</address>
+              </li>
+              <li>
+                <strong>REGISTRATION</strong>
+                <span>사업자 등록 번호 | 371-85-02926
+                  <br>
+                  통신판매업등록번호 | 제 2024-경주-0719호</span>
+              </li>
+            </ul>
+          </div> <!-- info -->
+
+          <div class="sns">
+            <strong>Follow Us</strong>
+            <ul>
+              <li><a href="https://www.staybility.co.kr/archi/13ce0ae3-e1c4-8157-8394-f76b8b19c112" target="_blank"><img
+                    src="../../images/sns_icon_1.png" alt="sns1"></a></li>
+              <li><a href="https://www.stayground.co.kr/stay/66dfde62bd22cb82970d4f6d" target="_blank"><img
+                    src="../../images/sns_icon_2.png" alt="sns2"></a></li>
+              <li><a href="https://www.instagram.com/stayground.official/p/DAz-S3sAZ16/?img_index=1"
+                  target="_blank"><img src="../../images/sns_icon_3.png" alt="sns3"></a></li>
+            </ul>
+          </div> <!-- sns -->
+        </div> <!-- info-menu -->
+      </div> <!-- container -->
+    </div> <!-- footer-info-menu-sns -->
+  </footer>
+</body>
+
+</html>
