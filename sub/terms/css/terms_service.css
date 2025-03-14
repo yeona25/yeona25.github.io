@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Noto Sans KR";
+  color: #1c1814;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #1c1814;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+span,
+strong {
+  display: block;
+  color: #1c1814;
+}
+
+address {
+  font-style: normal;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Gowun Batang";
+}
+
+h2 {
+  font-size: calc(24px + 0.3vw);
+  text-align: center;
+  color: #fff;
+  font-family: "Gowun Batang";
+  text-shadow: 1px 0 8px #252525;
+}
+
+h3 {
+  font-size: calc(24px + 0.5vw);
+  font-family: "Noto Sans KR";
+}
+
+h4 {
+  font-size: calc(18px + 0.5vw);
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+main {
+  margin: 50px auto;
+  text-align: justify;
+  padding-top: 100px;
+}
+@media (min-width: 1440px) {
+  main {
+    padding-top: 150px;
+  }
+}
+@media (min-width: 1440px) {
+  main {
+    width: 80%;
+    margin: 50px auto;
+  }
+}
+main h3 {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #1c1814;
+}
+main h4 {
+  font-size: 16px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=terms_service.css.map */
