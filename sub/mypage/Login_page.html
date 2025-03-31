@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- [if lt IE 9]>
+        <script src="./js/html5shiv.js"></script>
+    <![endif] -->
+  <link rel="shortcut icon" href="../../images/favicon/favicon.ico">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+  <link rel="stylesheet" href="./css/Login_page.css">
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="../../js/header.js"></script>
+  <script src="./js/Login_page.js"></script>
+  <title>GOYOWHA</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo-main-menu-login">
+      <div class="container">
+        <div class="flexbox">
+          <div class="logo-menubtn">
+            <h1 class="logo"><a href="../../index.html"><img src="../../images/logo.svg" alt="logo">고요화</a></h1>
+            <div id="mobile-btn-open">
+              <span id="btn-open">MENU</span>
+            </div>
+          </div> <!-- logo-menubtn -->
+
+          <div id="main-menu-mypage">
+            <div id="mobile-btn-close">
+              <span id="btn-close"> &gt;</span>
+            </div>
+            <div id="menu-box">
+              <nav>
+                <ul class="gnb">
+                  <li>
+                    <a href="../story/stroy.html" class="main-menu-a">고요화</a>
+                  </li>
+                  <li>
+                    <a href="#none" class="main-menu-a">머무를공간</a>
+                    <ul class="submenu">
+                      <li><a href="../space/space_room.html">공간 소개<span></span></a></li>
+                      <li><a href="../space/space_amenities.html">편의시설</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="../reservation/reserve.html" class="main-menu-a">객실예약</a>
+                  </li>
+                  <li>
+                    <a href="#none" class="main-menu-a">열림의터</a>
+                    <ul class="submenu">
+                      <li><a href="../event/event_yoga.html">요가 클래스</a></li>
+                      <li><a href="../event/event_rental.html">촬영 대관</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="../magazine/_magazine.html" class="main-menu-a">고요화매거진</a>
+                  </li>
+                  <li>
+                    <a href="#none" class="main-menu-a">ABOUT</a>
+                    <ul class="submenu">
+                      <li><a href="../about/about_notice.html">공지사항</a></li>
+                      <li><a href="../about/about_question.html">자주 묻는 질문</a></li>
+                    </ul>
+                  </li>
+                </ul> <!-- gnb -->
+              </nav>
+
+              <div class="mypage">
+                <ul>
+                  <li><a href="../mypage/Login_page.html">로그인</a></li>
+                  <li><a href="../mypage/Login_page.html">예약 조회</a></li>
+                </ul>
+              </div>
+            </div> <!-- menu-box -->
+          </div> <!-- main-menu-mypage -->
+        </div> <!-- flexbox -->
+      </div> <!-- container -->
+    </div> <!-- logo-main-menu-login -->
+  </header>
+
+  <main>
+    <div class="login-page">
+      <div class="container">
+        <div class="login-form-help">
+          <div class="welcome-txt">
+            <h2>WELCOME IN</h2>
+            <p>모든 안온한 머뭄의 시작, <br>
+              고요화 입니다.</p>
+          </div>
+          <div class="login-form-box">
+            <form action="./Login_ok.php" id="login-form" method="post">
+              <div class="id-pw-login-btn">
+                <h3>LOGIN</h3>
+                <ul class="id-pw-box">
+                  <li>
+                    <div class="id-pw-input-box">
+                      <input type="text" name="user_id" id="user_id" title="goyohwa123" required>
+                      <label for="user_id">ID</label>
+                      <span></span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="id-pw-input-box">
+                      <input type="password" name="user_pw" id="user_pw" required>
+                      <label for="user_pw">PassWord</label>
+                      <span></span>
+                    </div>
+                  </li>
+                  <li>
+                    <input type="submit" id="login-btn" value="LOGIN">
+                  </li>
+                </ul>
+                <ul class="help-box">
+                  <li>
+                    <div class="help-btn-box">
+                      <a href=""><img src="./images/ID_PW_search.png" alt="임시 아이콘 사진">
+                        <span>아이디 / 비밀번호를 잊으셨나요? </span>
+                        <strong>아이디/비밀번호 찾기 &gt;</strong>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="help-btn-box">
+                      <a href="./membership_page.html"><img src="./images/Join_Membership.png" alt="임시 아이콘 사진">
+                        <span>고요화가 처음이신가요?</span>
+                        <strong>회원가입 하기 &gt;</strong>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div> <!-- id-pw-login-btn -->
+            </form>
+          </div> <!-- login-form-box -->
+        </div> <!-- login-form-help -->
+      </div> <!-- container -->
+    </div> <!-- login-page" -->
+  </main>
+
+  <footer>
+    <div class="info-menu-sns">
+      <div class="container">
+        <div class="info-menu-sns">
+          <div class="footer-menu">
+            <nav>
+              <ul class="gnb">
+                <li><a href="../terms/terms_privacy.html">개인정보처리방침</a></li>
+                <li><a href="../terms/terms_service.html">이용약관</a></li>
+                <li><a href="#none">환불방침</a></li>
+                <li><a href="https://yexql.channel.io/home" target="_blank">고객센터</a></li>
+              </ul>
+            </nav>
+          </div> <!-- footer-menu -->
+  
+          <div class="info">
+            <ul>
+              <li>
+                <strong>회사명</strong>
+                <span>고요화</span>
+              </li>
+              <li>
+                <strong>Tel</strong>
+                <a href="tel:010-5087-5051">010-5087-5051</a>
+              </li>
+              <li>
+                <strong>Address</strong>
+                <address>경북 경주시 양정로 50-51 (인왕동)</address>
+              </li>
+              <li>
+                <strong>REGISTRATION</strong>
+                <span>사업자 등록 번호 | 371-85-02926
+                  <br>
+                  통신판매업등록번호 | 제 2024-경주-0719호</span>
+              </li>
+            </ul>
+          </div> <!-- info -->
+  
+          <div class="sns">
+            <strong>Follow Us</strong>
+            <ul>
+              <li><a href="https://www.staybility.co.kr/archi/13ce0ae3-e1c4-8157-8394-f76b8b19c112" target="_blank"><img
+                    src="../../images/sns_icon_1.png" alt="sns1"></a></li>
+              <li><a href="https://www.stayground.co.kr/stay/66dfde62bd22cb82970d4f6d" target="_blank"><img
+                    src="../../images/sns_icon_2.png" alt="sns2"></a></li>
+              <li><a href="https://www.instagram.com/stayground.official/p/DAz-S3sAZ16/?img_index=1"
+                  target="_blank"><img src="../../images/sns_icon_3.png" alt="sns3"></a></li>
+            </ul>
+          </div> <!-- sns -->
+        </div> <!-- info-menu -->
+      </div> <!-- container -->
+    </div> <!-- footer-info-menu-sns -->
+  </footer>
+</body>
+
+</html>
