@@ -1,0 +1,813 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+
+
+
+.container {
+  @include grid-sys-moblie;
+
+  @include responsive(large-screens) {
+    @include grid-sys-desktop;
+  }
+}
+
+
+
+// ================================
+main {
+  overflow: hidden; // 추가 mian 어느 부분에 width: 100%를 넘어가는 내용물이 있음.
+
+  .title {
+    position: relative;
+    width: 100%;
+    height: 300px;
+
+    @include responsive(large-screens) {
+      // padding-bottom: 400px;
+      height: 1260px;
+    }
+
+    .title-txt-slide {
+      .circle-position {
+        transform: translate(0%, 20%);
+        z-index: 10;
+
+        @include responsive(large-screens) {
+          transform: translate(0%, 20%);
+        }
+
+        .circle {
+          position: relative;
+          width: 44.16%;
+          margin: 0 auto;
+
+          @include responsive(large-screens) {
+            width: 670px;
+          }
+
+          &::after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+          }
+
+          span {
+            //  애니메이션 적용한 부분 
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+
+            animation: move 2s linear forwards; // 애니메이션 추가
+          }
+        }
+      }
+
+      .title-txt {
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        z-index: 20;
+        animation: slide-up-to-dw 1.5s ease forwards;
+
+        @include responsive(large-screens) {
+          width: 1000px;
+          top: 430px;
+        }
+
+        p {
+          font-size: $mobile-title-sub;
+          font-family: $font-sub;
+          font-weight: 400;
+          color: $color-white;
+
+          @include responsive(large-screens) {
+            font-size: $desktop-title-sub;
+          }
+        }
+
+        h2 {
+          font-size: $mobile-title-main;
+          font-family: $font-sub;
+          font-weight: 400;
+          color: $color-white;
+
+          @include responsive(large-screens) {
+            font-size: $desktop-title-main;
+          }
+        }
+
+        strong {
+          font-size: $mobile-title-strong;
+          font-family: $font-sub;
+          font-weight: 400;
+          color: $color-white;
+
+          @include responsive(large-screens) {
+            font-size: $desktop-title-strong;
+          }
+        }
+      }
+    }
+
+    .main-slide-box {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120%;
+      height: 300px;
+      // overflow: hidden;
+      z-index: -1;
+
+      @include responsive(large-screens) {
+        height: 1260px;
+      }
+
+      #main-slide {
+        position: relative;
+        display: flex;
+        width: 300%;
+        height: 300px;
+        transition: transform 0.5s ease;
+
+        .slide-it {
+          width: 100%;
+
+          img {
+            width: 100%;
+            height: 300px;
+
+            @include responsive(large-screens) {
+              height: 1260px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .intro-box {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    // background-color: aqua;
+
+    @include responsive(large-screens) {
+      // height: 1200px;
+    }
+    .box-back {
+      position: absolute;
+      top: -57px;
+      left: 0;
+      z-index: 1;
+
+      opacity: 1;
+
+      // transform: translateY(30%);
+      // transform: translateX(-3%);
+      width: 95.8%;
+      height: 210px;
+      background-color: $color-main;
+
+      @include responsive(large-screens) {
+        // transform: translateY(10%);
+        // top: 500px;
+        top: -300px;
+        width: 95%;
+        height: 824px;
+      }
+    }
+
+    .brand-intro {
+      position: relative;
+      height: 600px;
+      z-index: 3;
+      opacity: 1;
+      // background-color: pink;
+      // border: 2px solid red; 
+
+      .logo-txt-box {
+        position: absolute;
+        bottom: 0;
+        padding: 8% 5%;
+        background-color: $color-main;
+
+        @include responsive(large-screens) {
+          bottom: 620px;
+          display: flex;
+          align-items: center;
+          padding: 3% 5%;
+          background-color: transparent;
+
+          opacity: 0;
+          transform: translateX(-100px);
+          transition: opacity 0.9s ease, transform 0.9s ease;
+
+        }
+
+        img { //logo
+          width: 60px;
+          height: 60px;
+          margin-bottom: 15px;
+          filter: invert(99%) sepia(100%) saturate(15%) hue-rotate(240deg) brightness(104%) contrast(100%);
+
+          @include responsive(large-screens) {
+            width: 140px;
+            height: 140px;
+            margin-right: 6.944%;
+          }
+        }
+
+        .intro-txt {
+          color: #fff;
+
+          @include responsive(large-screens) {
+            width: 70%;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .img-box {
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 40px;
+
+        @include responsive(large-screens) {
+          // left: 0;
+          margin: 0;
+          padding: 0 4%;
+
+          opacity: 0;
+          transform: translateX(100px);
+          transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+
+        .intro-img {
+          width: 100%;
+        }
+      }
+    } //brand-intro
+  }
+
+  .space-display {
+    // background-color: brown;
+    margin-top: -1px;
+    margin-bottom: 100px;
+
+    @include responsive(large-screens) {
+      margin-top: 400px;
+      margin-bottom: 50px;
+    }
+
+    .slide-txt-box {
+
+      @include responsive(large-screens) {
+        display: flex;
+        align-items: center;
+      }
+
+      .slides {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 400px;
+        overflow: hidden;
+
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
+
+        @include responsive(large-screens) {
+          height: 800px;
+          width: 50%;
+        }
+
+        ul {
+          position: absolute;
+          top: 0;
+          width: 50%;
+          /* list-style:none; */
+          display: flex;
+          flex-direction: column;
+          gap: 16px 0;
+
+          @include responsive(large-screens) {
+            gap: 16px;
+            width: 48%;
+          }
+
+          li {
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            height: 300px;
+
+            @include responsive(large-screens) {
+              height: 550px;
+            }
+
+            img {
+              width: 100%;
+              height: 300px;
+
+              @include responsive(large-screens) {
+                height: 550px;
+                width: 300px;
+              }
+            }
+          }
+        }
+
+        .up {
+          left: 0%;
+
+          @include responsive(large-screens) {
+            left: 7%;
+          }
+        }
+
+        .down {
+          left: 50%;
+          transform: translateY(-316px);
+
+          @include responsive(large-screens) {
+            left: 364px;
+            transform: translateY(-566px);
+          }
+        }
+      }
+
+      //img-list2
+
+      .display-txt {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
+
+        @include responsive(large-screens) {
+          margin-left: 9.72%;
+          width: 33.33%;
+        }
+
+        h3 {
+          text-align: left;
+          margin-bottom: 20px;
+          font-size: $mobie-content-main;
+          margin-top: 20px;
+
+          @include responsive(large-screens) {
+            font-size: $desktop-content-main;
+            margin-top: 0;
+            margin-bottom: 50px;
+          }
+        }
+
+        p {
+          width: 100%;
+          font-family: $font-main;
+          font-size: 14px;
+
+          @include responsive(large-screens) {
+            font-size: 16px;
+            margin-bottom: 24px;
+          }
+        }
+
+        .btn {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 35px;
+          width: 100%;
+
+
+          @include responsive(large-screens) {
+            margin-top: 237px;
+          }
+
+          button {
+            width: 47.865%;
+            height: 45px;
+            border: none;
+            outline: none;
+            border-radius: 22.5px;
+            font-family: $font-main;
+            font-size: $mobie-content-sub2;
+            font-weight: 600;
+            background-color: $color-main;
+            color: $color-white;
+            cursor: pointer;
+
+            &:hover {
+              background-color: $color-sub2;
+              color: $color-white;
+            }
+
+            @include responsive(large-screens) {
+              font-family: $font-sub;
+              font-size: 18px;
+              font-weight: 400;
+            }
+          }
+        }//btn
+      }// display-txt
+    }//slide-txt-box
+  }//space-display
+
+  #event {
+    width: 100%;
+    margin-top: 100px;
+    opacity: 0;
+    // background-color: green;
+    transform: translateY(100px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    
+    @include responsive(large-screens) {
+      margin-top: 300px;
+    }
+    .event-imgs {
+      position: relative;
+      height: 230px;
+      @include responsive(large-screens) {
+        height: 900px;
+      }
+      .space-rental-imgbox {
+        position: absolute; 
+        top: 0;
+        left: -20px;
+        width: 79.4444%;
+
+        @include responsive(large-screens) {
+          width: 70%;
+        }
+        @media (min-width:1450px) {
+          width: 68%;
+        }
+
+        .space-rental {
+          position: relative;
+          // width: 100%;
+          transition: z-index 0.3s ease-in-out;
+          z-index: 1;
+          cursor: pointer;
+          
+          &.active {
+            z-index: 3; 
+          }
+          img {
+            height: 192px;
+            width: 100%;
+            @include responsive(large-screens) {
+              height: 706px;
+            }
+            
+          }
+        }//space-rental
+      }
+      .yoga-imgbox{
+
+        height: 100%;
+        position: absolute;
+        right: -20px;
+        bottom: 0;
+        width: 79.4444%;
+        // background-color: aquamarine;
+          
+        @include responsive(large-screens) {
+          width: 70%;
+        }
+        @media (min-width:1450px) {
+          width: 68%;
+        }
+        .yoga {
+          position: relative;
+          height: 100%;
+          z-index: 2;
+          cursor: pointer;
+          transition: z-index 0.3s ease-in-out;
+
+          &.active {
+            z-index: 3; 
+          }
+
+          img {
+            position: absolute;
+            bottom: 0;
+            height: 192px;
+  
+            @include responsive(large-screens) {
+              height: 706px;
+            }
+          }
+        }
+      }
+    }
+
+    .event-txt {
+      position: relative;
+      z-index: 40;
+      .event-txt-yoga {
+        // position: relative;
+        display: block;
+        // padding: 16px;
+        // margin: 0 5%;
+        // margin-top: 60px;
+        z-index: 30;
+        @include responsive(large-screens) {
+          position: relative;
+        }
+        h3 {
+          text-align: left;
+          font-size: $mobie-content-main;
+          font-family: $font-main;
+          margin-bottom: 10px;
+          
+          @include responsive(large-screens) {
+            position: absolute;
+            left: 33%;
+            top: -840px;
+            
+            text-shadow: 1px 0 5px #2525258c;
+            font-size: $desktop-content-main;
+            color: $color-white;
+          }
+        }
+  
+        .reservation-btn {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          align-items: center;
+          border: none;
+          
+          @include responsive(large-screens) {
+            // background-color: blueviolet;
+            position: absolute;
+            top: -430px;
+            left: 0;
+            width: 400px;
+            flex-direction: column;
+            text-align: center;
+          }
+          p {
+            width: 35%;
+            font-family: $font-main;
+            font-size: 12px;
+            font-weight: 600;
+  
+            @include responsive(large-screens) {
+              width: 340px;
+              font-size: 20px;
+              color: $color-white;
+              margin-bottom: 10px;
+            }
+          }
+  
+          button {
+            width: 35%;
+            height: 45px;
+            border: none;
+            border-radius: 22.5px;
+            font-family: $font-main;
+            font-weight: 600;
+            font-size: 14px;
+            color: $color-white;
+            background-color: $color-main;
+            cursor: pointer;
+  
+            &:hover {
+              background-color: $color-sub2;
+              color: $color-white;
+            }
+  
+            @include responsive(large-screens) {
+              width: 330px;
+              height: 45px;
+              background-color: transparent;
+              border: 2px solid $color-white;
+              border-radius: 0;
+              font-size: 20px;
+  
+              &:hover {
+                background-color: $color-white;
+                color: $color-main;
+              }
+            }
+          }
+        }
+      }//event-txt-yoga
+  
+      .event-txt-rental {
+        // position: relative;
+        display: none;
+        // padding: 16px;
+        // margin: 0 5%;
+        // margin-top: 60px;
+        z-index: 30;
+  
+        h3 {
+          text-align: left;
+          font-size: $mobie-content-main;
+          font-family: $font-main;
+          margin-bottom: 10px;
+          
+          @include responsive(large-screens) {
+            // background-color: green;
+            position: absolute;
+            top: -980px;
+            right: 32%;
+            text-align: right;
+            
+            text-shadow: 1px 0 10px #2525258c;
+            font-size: $desktop-content-main;
+            color: $color-white;
+          }
+        }
+  
+        .reservation-btn {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          align-items: center;
+          border: none;
+  
+          @include responsive(large-screens) {
+            position: absolute;
+            top: -400px;
+            right: 0;
+            width: 400px;
+
+            flex-direction: column;
+            text-align: center;
+            // background-color: palevioletred;
+          }
+  
+          p {
+            width: 35%;
+            font-family: $font-main;
+            font-size: 12px;
+            font-weight: 600;
+  
+            @include responsive(large-screens) {
+              width: 330px;
+              font-size: 20px;
+              color: $color-white;
+              margin-bottom: 10px;
+            }
+          }
+  
+          button {
+            width: 35%;
+            height: 45px;
+            border: none;
+            border-radius: 22.5px;
+            font-family: $font-main;
+            font-weight: 600;
+            font-size: 14px;
+            color: $color-white;
+            background-color: $color-main;
+            cursor: pointer;
+  
+            &:hover {
+              background-color: $color-sub2;
+              color: $color-white;
+            }
+  
+            @include responsive(large-screens) {
+              width: 330px;
+              height: 45px;
+              background-color: transparent;
+              border: 2px solid $color-white;
+              border-radius: 0;
+              font-size: 20px;
+  
+              &:hover {
+                background-color: $color-white;
+                color: $color-main;
+              }
+            }
+          }
+        }
+      }//event-txt-yoga
+    }
+  }//event
+
+  .banner {
+    margin-top: 20px;
+    margin-bottom: -1px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.7s ease, transform 0.9s ease;
+
+
+    @include responsive(large-screens) {
+      margin-top: 200px;
+      margin-bottom: -3px;
+    }
+  }
+
+  .slide-banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.7s ease, transform 0.9s ease;
+  
+    .banner-img-list {
+      display: flex;
+      width: 100%;
+      transform: translateX(0);
+  
+      li {
+        width: 25%;
+        flex-shrink: 0;
+  
+        img {
+          width: 100%;
+          height: 98px;
+  
+          @include responsive(large-screens) {
+            height: 525px;
+          }
+        }
+      }
+    }
+    .txt-scroll-ani {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      /* 서서히 나타나는 효과 */
+      &.visible {
+        opacity: 1; // visible 클래스가 추가되면 보이도록 설정
+      }
+  
+      strong {
+        position: absolute;
+        left: 0;
+        top: 40.5px;
+        width: 100%;
+        text-align: center;
+  
+        font-family: $font-sub;
+        font-size: 12px;
+        font-weight: 600;
+        color: $color-white;
+  
+        @include responsive(large-screens) {
+          top: 234px;
+          font-size: $desktop-title-strong;
+          // background-color: red($color: #000000)
+        }
+      }
+    }
+  }
+}//main
+
+
+//====
+@keyframes move {
+
+  // 애니메이션 만들기 
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+    border: 0;
+  }
+  30% {
+    opacity: 0.5;
+    border: 1px solid #a0a0a0;
+  }
+  60% {
+    opacity: 0.75;
+    border: 2px solid #b0b0b0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+    border: 2.5px solid #c2c2c2;
+  }
+}
+
+@include main-ani;
+
+@keyframes slide-up-to-dw {
+  from {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -30%);
+    opacity: 1;
+  }
+}

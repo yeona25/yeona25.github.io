@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font: $font-size-14 $font-main;
+    color: $color-main;
+}
+ul,
+ol {
+    list-style: none;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: $color-main;
+}
+img {
+    display: block;
+    width: $width-wide;
+}
+span,
+strong {
+    display: block;
+    color: $color-main;
+}
+address {
+    font-style: normal;
+}
+h1 { // logo
+    font-size: $font-size-16;
+    font-family: $font-sub;
+
+}
+h2 { // page main title
+    font-size: $mobile-title-main;
+    text-align: center;
+    color: $color-white;
+    font-family: $font-sub;
+    text-shadow: 1px 0 8px #252525;
+}
+h3 {
+    font-size: $mobie-content-main;
+    font-family: $font-main;
+}
+h4 {
+    font-size: $mobie-content-sub1;
+}
+p {
+    font-size: $font-size-14;
+    line-height: 1.8;
+}

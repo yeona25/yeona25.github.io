@@ -1,0 +1,266 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+
+.container {
+  @include grid-sys-moblie;
+  @include responsive(large-screens) {
+    @include grid-sys-desktop;
+  }
+}
+
+// ********header*******
+header {
+  position: fixed; // ★ 화면 기준이므로 sticky에서 fiexed로 수정!
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 61px;
+  font-family: $font-sub;
+  background-color: $color-main;
+  z-index: 200;
+  // overflow: hidden; // ★ 추가
+  
+  @include responsive(large-screens) {
+    height: 100px;
+  }
+  
+  .flexbox {
+    position: relative; // ★ 주석처리 불필요!!
+    
+    @include responsive(large-screens) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo-menubtn {
+      height: 61px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 61px;
+      
+      @include responsive(large-screens) {
+        height: 100px;
+        line-height: 100px;
+        // width: 200px;
+      }
+      
+      .logo {
+        font-size: 16px;
+        width: 100px;
+        
+        @include responsive(large-screens) {
+          font-size: 26px;
+          width: 160px;
+        }
+        
+        a {
+          @include flex-space-between($width-wide);
+          align-items: center;
+          color: $color-white;
+          
+          img {
+            width: 40px;
+            height: 40px;
+            filter: invert(99%) sepia(100%) saturate(15%) hue-rotate(240deg) brightness(104%) contrast(100%);
+            
+            @include responsive(large-screens) {
+              width: 60px;
+              height: 60px;
+            }
+          }
+        }
+      }// logo
+      
+      #btn-open {
+        color: $color-white;
+        cursor: pointer;
+        
+        &:hover {
+          font-weight: 600;
+        }
+        
+        @include responsive(large-screens) {
+          display: none;
+        }
+      }
+    }//logo-menubtn
+    
+    #main-menu-mypage {
+      position: fixed; // ★ absolute에서 화면을 기준으로 봐야 하므로로 fiexed로 수정!
+      top: 0;
+      right: -100vw;
+      // display: none;
+      width: 100vw; // ★ %를 vw로 수정 
+      height: 100vh;
+      z-index: 100;
+      background-color: $color-main;
+      transition: all 0.4s;
+
+      @include responsive(large-screens) {
+        position: static;
+        display: block;
+        right: 0;
+        height: 100px;
+        width: 60%;
+        background-color: transparent; // 배경색 없애기
+      }
+
+      #btn-close {
+        width: 8.5%;
+        margin-left: 50px;
+        margin-top: 10px;
+        font-size: 50px;
+        color: $color-white;
+        cursor: pointer;
+
+        &:hover {
+          font-weight: 800;
+        }
+
+        @include responsive(large-screens) {
+          display: none;
+        }
+      }
+
+      #menu-box {
+        width: 38%;
+        text-align: right;
+        margin-left: auto;
+        margin-right: 50px;
+
+        @include responsive(large-screens) {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          height: 100px;
+        }
+
+        .gnb {
+          @include responsive(large-screens) {
+            width: 83.87096774193548%;
+            display: flex;
+            justify-content: space-between;
+          }
+
+          li {
+            font-size: 18px;
+
+            .main-menu-a {
+              font-size: 24px;
+              color: $color-white;
+              text-align: right;
+              margin-top: 15px;
+              margin-bottom: 5px;
+
+              @include responsive(large-screens) {
+                font-size: 16px;
+                text-align: center;
+                width: 120px;
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: 38px 0;
+              }
+
+              &:hover {
+                font-weight: 800;
+                color: $color-sub1;
+              }
+            }
+
+            .submenu {
+              display: none;
+
+              text-align: right;
+              margin-bottom: 10px;
+              z-index: 100;
+
+              @include responsive(large-screens) {
+                display: block;
+                text-align: center;
+              }
+
+              li {
+                @include responsive(large-screens) {
+                  padding: 10px;
+                  background-color: $color-main;
+                  opacity: 0.9;
+                }
+
+                a {
+                  color: $color-white;
+                  font-size: 18px;
+                  line-height: 1.6;
+
+                  &:hover {
+                    color: $color-sub1;
+                  }
+
+                  @include responsive(large-screens) {
+                    font-size: 15px;
+                  }
+                }
+              }
+            }// .submenu
+          }// li
+        }// gnb
+
+        .mypage {
+          position: absolute;
+          right: 45%;
+          bottom: 61px;
+          // background-color: aquamarine;
+          width: 35%;
+
+          @include responsive(large-screens) {
+            position: static;
+            right: 0;
+            bottom: 0;
+            width: 12.12903225806452%;
+            padding: 38px 0;
+          }
+
+          ul {
+            display: flex;
+            justify-content: space-between;
+
+            width: 100%;
+            @include responsive(large-screens) {
+              text-align: right;
+            }
+
+            li {
+              margin-bottom: 10px;
+              
+              @include responsive(large-screens) {
+                margin-bottom: 0;
+              }
+
+              a {
+                color: $color-white;
+                font-size: 16px;
+
+                @include responsive(large-screens) {
+                  font-size: 14px;
+                }
+
+                &:hover {
+                  text-decoration: underline;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }// mypage
+      }// #menu-box
+    }//main-menu-mypage
+  }//flexbox
+}// header
+
+main {
+  margin-top: 60px;
+  @include responsive(large-screens) {
+    margin-top: 99px;
+  }
+}

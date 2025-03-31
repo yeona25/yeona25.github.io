@@ -1,0 +1,825 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Noto Sans KR";
+  color: #1c1814;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #1c1814;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+span,
+strong {
+  display: block;
+  color: #1c1814;
+}
+
+address {
+  font-style: normal;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Gowun Batang";
+}
+
+h2 {
+  font-size: calc(24px + 0.3vw);
+  text-align: center;
+  color: #fff;
+  font-family: "Gowun Batang";
+  text-shadow: 1px 0 8px #252525;
+}
+
+h3 {
+  font-size: calc(24px + 0.5vw);
+  font-family: "Noto Sans KR";
+}
+
+h4 {
+  font-size: calc(18px + 0.5vw);
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+main {
+  overflow: hidden;
+}
+main .title {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+@media (min-width: 1440px) {
+  main .title {
+    height: 1260px;
+  }
+}
+main .title .title-txt-slide .circle-position {
+  transform: translate(0%, 20%);
+  z-index: 10;
+}
+@media (min-width: 1440px) {
+  main .title .title-txt-slide .circle-position {
+    transform: translate(0%, 20%);
+  }
+}
+main .title .title-txt-slide .circle-position .circle {
+  position: relative;
+  width: 44.16%;
+  margin: 0 auto;
+}
+@media (min-width: 1440px) {
+  main .title .title-txt-slide .circle-position .circle {
+    width: 670px;
+  }
+}
+main .title .title-txt-slide .circle-position .circle::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+main .title .title-txt-slide .circle-position .circle span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  animation: move 2s linear forwards;
+}
+main .title .title-txt-slide .title-txt {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 20;
+  animation: slide-up-to-dw 1.5s ease forwards;
+}
+@media (min-width: 1440px) {
+  main .title .title-txt-slide .title-txt {
+    width: 1000px;
+    top: 430px;
+  }
+}
+main .title .title-txt-slide .title-txt p {
+  font-size: calc(12px + 0.5vw);
+  font-family: "Gowun Batang";
+  font-weight: 400;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .title .title-txt-slide .title-txt p {
+    font-size: calc(30px + 0.2vw);
+  }
+}
+main .title .title-txt-slide .title-txt h2 {
+  font-size: calc(24px + 0.3vw);
+  font-family: "Gowun Batang";
+  font-weight: 400;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .title .title-txt-slide .title-txt h2 {
+    font-size: calc(60px + 0.2vw);
+  }
+}
+main .title .title-txt-slide .title-txt strong {
+  font-size: calc(12px + 0.5vw);
+  font-family: "Gowun Batang";
+  font-weight: 400;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .title .title-txt-slide .title-txt strong {
+    font-size: calc(36px + 0.2vw);
+  }
+}
+main .title .main-slide-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120%;
+  height: 300px;
+  z-index: -1;
+}
+@media (min-width: 1440px) {
+  main .title .main-slide-box {
+    height: 1260px;
+  }
+}
+main .title .main-slide-box #main-slide {
+  position: relative;
+  display: flex;
+  width: 300%;
+  height: 300px;
+  transition: transform 0.5s ease;
+}
+main .title .main-slide-box #main-slide .slide-it {
+  width: 100%;
+}
+main .title .main-slide-box #main-slide .slide-it img {
+  width: 100%;
+  height: 300px;
+}
+@media (min-width: 1440px) {
+  main .title .main-slide-box #main-slide .slide-it img {
+    height: 1260px;
+  }
+}
+main .intro-box {
+  position: relative;
+  height: 600px;
+  width: 100%;
+}
+main .intro-box .box-back {
+  position: absolute;
+  top: -57px;
+  left: 0;
+  z-index: 1;
+  opacity: 1;
+  width: 95.8%;
+  height: 210px;
+  background-color: #1c1814;
+}
+@media (min-width: 1440px) {
+  main .intro-box .box-back {
+    top: -300px;
+    width: 95%;
+    height: 824px;
+  }
+}
+main .intro-box .brand-intro {
+  position: relative;
+  height: 600px;
+  z-index: 3;
+  opacity: 1;
+}
+main .intro-box .brand-intro .logo-txt-box {
+  position: absolute;
+  bottom: 0;
+  padding: 8% 5%;
+  background-color: #1c1814;
+}
+@media (min-width: 1440px) {
+  main .intro-box .brand-intro .logo-txt-box {
+    bottom: 620px;
+    display: flex;
+    align-items: center;
+    padding: 3% 5%;
+    background-color: transparent;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+}
+main .intro-box .brand-intro .logo-txt-box img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  filter: invert(99%) sepia(100%) saturate(15%) hue-rotate(240deg) brightness(104%) contrast(100%);
+}
+@media (min-width: 1440px) {
+  main .intro-box .brand-intro .logo-txt-box img {
+    width: 140px;
+    height: 140px;
+    margin-right: 6.944%;
+  }
+}
+main .intro-box .brand-intro .logo-txt-box .intro-txt {
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .intro-box .brand-intro .logo-txt-box .intro-txt {
+    width: 70%;
+    font-size: 16px;
+  }
+}
+main .intro-box .brand-intro .img-box {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 40px;
+}
+@media (min-width: 1440px) {
+  main .intro-box .brand-intro .img-box {
+    margin: 0;
+    padding: 0 4%;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+}
+main .intro-box .brand-intro .img-box .intro-img {
+  width: 100%;
+}
+main .space-display {
+  margin-top: -1px;
+  margin-bottom: 100px;
+}
+@media (min-width: 1440px) {
+  main .space-display {
+    margin-top: 400px;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  main .space-display .slide-txt-box {
+    display: flex;
+    align-items: center;
+  }
+}
+main .space-display .slide-txt-box .slides {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+@media (min-width: 1440px) {
+  main .space-display .slide-txt-box .slides {
+    height: 800px;
+    width: 50%;
+  }
+}
+main .space-display .slide-txt-box .slides ul {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  /* list-style:none; */
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+}
+@media (min-width: 1440px) {
+  main .space-display .slide-txt-box .slides ul {
+    gap: 16px;
+    width: 48%;
+  }
+}
+main .space-display .slide-txt-box .slides ul li {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 300px;
+}
+@media (min-width: 1440px) {
+  main .space-display .slide-txt-box .slides ul li {
+    height: 550px;
+  }
+}
+main .space-display .slide-txt-box .slides ul li img {
+  width: 100%;
+  height: 300px;
+}
+@media (min-width: 1440px) {
+  main .space-display .slide-txt-box .slides ul li img {
+    height: 550px;
+    width: 300px;
+  }
+}
+main .space-display .slide-txt-box .slides .up {
+  left: 0%;
+}
+@media (min-width: 1440px) {
+  main .space-display .slide-txt-box .slides .up {
+    left: 7%;
+  }
+}
+main .space-display .slide-txt-box .slides .down {
+  left: 50%;
+  transform: translateY(-316px);
+}
+@media (min-width: 1440px) {
+  main .space-display .slide-txt-box .slides .down {
+    left: 364px;
+    transform: translateY(-566px);
+  }
+}
+main .space-display .slide-txt-box .display-txt {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+@media (min-width: 1440px) {
+  main .space-display .slide-txt-box .display-txt {
+    margin-left: 9.72%;
+    width: 33.33%;
+  }
+}
+main .space-display .slide-txt-box .display-txt h3 {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: calc(24px + 0.5vw);
+  margin-top: 20px;
+}
+@media (min-width: 1440px) {
+  main .space-display .slide-txt-box .display-txt h3 {
+    font-size: calc(50px + 0.2vw);
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+}
+main .space-display .slide-txt-box .display-txt p {
+  width: 100%;
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+}
+@media (min-width: 1440px) {
+  main .space-display .slide-txt-box .display-txt p {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+}
+main .space-display .slide-txt-box .display-txt .btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+  width: 100%;
+}
+@media (min-width: 1440px) {
+  main .space-display .slide-txt-box .display-txt .btn {
+    margin-top: 237px;
+  }
+}
+main .space-display .slide-txt-box .display-txt .btn button {
+  width: 47.865%;
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 22.5px;
+  font-family: "Noto Sans KR";
+  font-size: calc(16px + 0.5vw);
+  font-weight: 600;
+  background-color: #1c1814;
+  color: #fff;
+  cursor: pointer;
+}
+main .space-display .slide-txt-box .display-txt .btn button:hover {
+  background-color: #4b3a23;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .space-display .slide-txt-box .display-txt .btn button {
+    font-family: "Gowun Batang";
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+main #event {
+  width: 100%;
+  margin-top: 100px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+@media (min-width: 1440px) {
+  main #event {
+    margin-top: 300px;
+  }
+}
+main #event .event-imgs {
+  position: relative;
+  height: 230px;
+}
+@media (min-width: 1440px) {
+  main #event .event-imgs {
+    height: 900px;
+  }
+}
+main #event .event-imgs .space-rental-imgbox {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 79.4444%;
+}
+@media (min-width: 1440px) {
+  main #event .event-imgs .space-rental-imgbox {
+    width: 70%;
+  }
+}
+@media (min-width: 1450px) {
+  main #event .event-imgs .space-rental-imgbox {
+    width: 68%;
+  }
+}
+main #event .event-imgs .space-rental-imgbox .space-rental {
+  position: relative;
+  transition: z-index 0.3s ease-in-out;
+  z-index: 1;
+  cursor: pointer;
+}
+main #event .event-imgs .space-rental-imgbox .space-rental.active {
+  z-index: 3;
+}
+main #event .event-imgs .space-rental-imgbox .space-rental img {
+  height: 192px;
+  width: 100%;
+}
+@media (min-width: 1440px) {
+  main #event .event-imgs .space-rental-imgbox .space-rental img {
+    height: 706px;
+  }
+}
+main #event .event-imgs .yoga-imgbox {
+  height: 100%;
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 79.4444%;
+}
+@media (min-width: 1440px) {
+  main #event .event-imgs .yoga-imgbox {
+    width: 70%;
+  }
+}
+@media (min-width: 1450px) {
+  main #event .event-imgs .yoga-imgbox {
+    width: 68%;
+  }
+}
+main #event .event-imgs .yoga-imgbox .yoga {
+  position: relative;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+  transition: z-index 0.3s ease-in-out;
+}
+main #event .event-imgs .yoga-imgbox .yoga.active {
+  z-index: 3;
+}
+main #event .event-imgs .yoga-imgbox .yoga img {
+  position: absolute;
+  bottom: 0;
+  height: 192px;
+}
+@media (min-width: 1440px) {
+  main #event .event-imgs .yoga-imgbox .yoga img {
+    height: 706px;
+  }
+}
+main #event .event-txt {
+  position: relative;
+  z-index: 40;
+}
+main #event .event-txt .event-txt-yoga {
+  display: block;
+  z-index: 30;
+}
+@media (min-width: 1440px) {
+  main #event .event-txt .event-txt-yoga {
+    position: relative;
+  }
+}
+main #event .event-txt .event-txt-yoga h3 {
+  text-align: left;
+  font-size: calc(24px + 0.5vw);
+  font-family: "Noto Sans KR";
+  margin-bottom: 10px;
+}
+@media (min-width: 1440px) {
+  main #event .event-txt .event-txt-yoga h3 {
+    position: absolute;
+    left: 33%;
+    top: -840px;
+    text-shadow: 1px 0 5px rgba(37, 37, 37, 0.5490196078);
+    font-size: calc(50px + 0.2vw);
+    color: #fff;
+  }
+}
+main #event .event-txt .event-txt-yoga .reservation-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  border: none;
+}
+@media (min-width: 1440px) {
+  main #event .event-txt .event-txt-yoga .reservation-btn {
+    position: absolute;
+    top: -430px;
+    left: 0;
+    width: 400px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+main #event .event-txt .event-txt-yoga .reservation-btn p {
+  width: 35%;
+  font-family: "Noto Sans KR";
+  font-size: 12px;
+  font-weight: 600;
+}
+@media (min-width: 1440px) {
+  main #event .event-txt .event-txt-yoga .reservation-btn p {
+    width: 340px;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+}
+main #event .event-txt .event-txt-yoga .reservation-btn button {
+  width: 35%;
+  height: 45px;
+  border: none;
+  border-radius: 22.5px;
+  font-family: "Noto Sans KR";
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  background-color: #1c1814;
+  cursor: pointer;
+}
+main #event .event-txt .event-txt-yoga .reservation-btn button:hover {
+  background-color: #4b3a23;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main #event .event-txt .event-txt-yoga .reservation-btn button {
+    width: 330px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 0;
+    font-size: 20px;
+  }
+  main #event .event-txt .event-txt-yoga .reservation-btn button:hover {
+    background-color: #fff;
+    color: #1c1814;
+  }
+}
+main #event .event-txt .event-txt-rental {
+  display: none;
+  z-index: 30;
+}
+main #event .event-txt .event-txt-rental h3 {
+  text-align: left;
+  font-size: calc(24px + 0.5vw);
+  font-family: "Noto Sans KR";
+  margin-bottom: 10px;
+}
+@media (min-width: 1440px) {
+  main #event .event-txt .event-txt-rental h3 {
+    position: absolute;
+    top: -980px;
+    right: 32%;
+    text-align: right;
+    text-shadow: 1px 0 10px rgba(37, 37, 37, 0.5490196078);
+    font-size: calc(50px + 0.2vw);
+    color: #fff;
+  }
+}
+main #event .event-txt .event-txt-rental .reservation-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  border: none;
+}
+@media (min-width: 1440px) {
+  main #event .event-txt .event-txt-rental .reservation-btn {
+    position: absolute;
+    top: -400px;
+    right: 0;
+    width: 400px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+main #event .event-txt .event-txt-rental .reservation-btn p {
+  width: 35%;
+  font-family: "Noto Sans KR";
+  font-size: 12px;
+  font-weight: 600;
+}
+@media (min-width: 1440px) {
+  main #event .event-txt .event-txt-rental .reservation-btn p {
+    width: 330px;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+}
+main #event .event-txt .event-txt-rental .reservation-btn button {
+  width: 35%;
+  height: 45px;
+  border: none;
+  border-radius: 22.5px;
+  font-family: "Noto Sans KR";
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  background-color: #1c1814;
+  cursor: pointer;
+}
+main #event .event-txt .event-txt-rental .reservation-btn button:hover {
+  background-color: #4b3a23;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main #event .event-txt .event-txt-rental .reservation-btn button {
+    width: 330px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 0;
+    font-size: 20px;
+  }
+  main #event .event-txt .event-txt-rental .reservation-btn button:hover {
+    background-color: #fff;
+    color: #1c1814;
+  }
+}
+main .banner {
+  margin-top: 20px;
+  margin-bottom: -1px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.7s ease, transform 0.9s ease;
+}
+@media (min-width: 1440px) {
+  main .banner {
+    margin-top: 200px;
+    margin-bottom: -3px;
+  }
+}
+main .slide-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.7s ease, transform 0.9s ease;
+}
+main .slide-banner .banner-img-list {
+  display: flex;
+  width: 100%;
+  transform: translateX(0);
+}
+main .slide-banner .banner-img-list li {
+  width: 25%;
+  flex-shrink: 0;
+}
+main .slide-banner .banner-img-list li img {
+  width: 100%;
+  height: 98px;
+}
+@media (min-width: 1440px) {
+  main .slide-banner .banner-img-list li img {
+    height: 525px;
+  }
+}
+main .slide-banner .txt-scroll-ani {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  /* 서서히 나타나는 효과 */
+}
+main .slide-banner .txt-scroll-ani.visible {
+  opacity: 1;
+}
+main .slide-banner .txt-scroll-ani strong {
+  position: absolute;
+  left: 0;
+  top: 40.5px;
+  width: 100%;
+  text-align: center;
+  font-family: "Gowun Batang";
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .slide-banner .txt-scroll-ani strong {
+    top: 234px;
+    font-size: calc(36px + 0.2vw);
+  }
+}
+
+@keyframes move {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+    border: 0;
+  }
+  30% {
+    opacity: 0.5;
+    border: 1px solid #a0a0a0;
+  }
+  60% {
+    opacity: 0.75;
+    border: 2px solid #b0b0b0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+    border: 2.5px solid #c2c2c2;
+  }
+}
+@keyframes main-animation {
+  from {
+    transform: translate(-100%, -50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translate(-50%, -50%); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@keyframes slide-up-to-dw {
+  from {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -30%);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=index.css.map */
