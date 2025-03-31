@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- [if lt IE 9]>
+        <script src="./js/html5shiv.js"></script>
+    <![endif] -->
+    <link rel="shortcut icon" href="../../images/favicon/favicon.ico">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="./css/reserve.css">
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/header.js"></script>
+    <script src="./js/reserve.js"></script>
+    <title>GOYOWHA</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-main-menu-login">
+            <div class="container">
+                <div class="flexbox">
+                    <div class="logo-menubtn">
+                        <h1 class="logo"><a href="../../index.html"><img src="../../images/logo.svg" alt="logo">고요화</a>
+                        </h1>
+                        <div id="mobile-btn-open">
+                            <span id="btn-open">MENU</span>
+                        </div>
+                    </div> <!-- logo-menubtn -->
+
+                    <div id="main-menu-mypage">
+                        <div id="mobile-btn-close">
+                            <span id="btn-close"> &gt;</span>
+                        </div>
+                        <div id="menu-box">
+                            <nav>
+                                <ul class="gnb">
+                                    <li>
+                                        <a href="../story/stroy.html" class="main-menu-a">고요화</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="main-menu-a">머무를공간</a>
+                                        <ul class="submenu">
+                                            <li><a href="../space/space_room.html">공간 소개<span></span></a></li>
+                                            <li><a href="../space/space_amenities.html">편의시설</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="../reservation/reserve.html" class="main-menu-a">객실예약</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="main-menu-a">열림의터</a>
+                                        <ul class="submenu">
+                                            <li><a href="../event/event_yoga.html">요가 클래스</a></li>
+                                            <li><a href="../event/event_rental.html">촬영 대관</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="../magazine/_magazine.html" class="main-menu-a">고요화매거진</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="main-menu-a">ABOUT</a>
+                                        <ul class="submenu">
+                                            <li><a href="../about/about_notice.html">공지사항</a></li>
+                                            <li><a href="../about/about_question.html">자주 묻는 질문</a></li>
+                                        </ul>
+                                    </li>
+                                </ul> <!-- gnb -->
+                            </nav>
+
+                            <div class="mypage">
+                                <ul>
+                                    <li><a href="../mypage/Login_page.html">로그인</a></li>
+                                    <li><a href="../mypage/membership_page.html">예약 조회</a></li>
+                                </ul>
+                            </div>
+                        </div> <!-- menu-box -->
+                    </div> <!-- main-menu-mypage -->
+                </div> <!-- flexbox -->
+            </div> <!-- container -->
+        </div> <!-- logo-main-menu-login -->
+    </header>
+
+    <main>
+        <article>
+            <div class="main-title">
+                <h2>객실 예약하기</h2>
+                <span>안온한 머뭄의 시작</span>
+            </div>
+        </article>
+
+        <section>
+            <div class="reserve-notice">
+                <div class="container">
+                    <div class="reserve-help">
+                        <div class="reserve-help-txt">
+                            <h3>객실 예약을 도와드리겠습니다.</h3>
+                            <p>
+                                안녕하세요, 고요화 입니다. <br>
+                                고객님의 새로운 여정을 모시게 되어 영광입니다. <br>
+                                고요화에서 편안한 시간을 보내시길 바라며, 이용을 위한 객실 예약을 안내 드립니다.
+                            </p>
+                        </div>
+                        <div class="reserve-img">
+                            <img src="./images/3.jpg" alt="430px">
+                        </div>
+                    </div> <!-- reserve-help -->
+                </div> <!-- container -->
+            </div> <!-- reserve-notice -->
+        </section>
+
+        <section>
+            <div class="reserve-schedule-num-people">
+                <div class="container">
+                    <form action="#" id="reserve-form" method="post">
+                        <span>STEP1</span>
+                        <h3>일정과 투숙 인원을 선택해주세요.</h3>
+                        <div class="schedule-num-people-box">
+                            <div class="schedule">
+                                <h3>일정 선택</h3>
+                                <div class="cpb check-in-btn">
+                                    <div class="chk-txt">
+                                        <span>체크인</span>
+
+                                        <div class="val1 val-input-box">
+                                            <span class="year-Date">0</span>
+                                            <span>년</span>
+                                            <span class="mon-Date">0</span>
+                                            <span>월</span>
+                                            <span class="date-Date">0</span>
+                                            <span>일</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="down-btn">▼</span>
+                                    <span class="up-btn">▲</span>
+                                </div> <!-- check-in-btn -->
+
+                                <div class="cal1 calendal-wrapper">
+                                    <div class="Year">
+                                        <input type="text" class="pre-year" readonly></input>
+                                        <input type="text" class="today-year" readonly value="년"></input>
+                                        <input type="text" class="next-year" readonly></input>
+                                    </div> <!-- Year -->
+
+                                    <div class="Mon">
+                                        <input type="text" class="pre-mon" readonly></input>
+                                        <input type="text" class="today-mon" readonly value="월"></input>
+                                        <input type="text" class="next-mon" readonly></input>
+                                    </div> <!-- Mon -->
+
+                                    <div class="Date">
+                                        <input type="text" class="pre-date" readonly></input>
+                                        <input type="text" class="today-date" readonly value="일"></input>
+                                        <input type="text" class="next-date" readonly></input>
+                                    </div> <!-- Date -->
+                                </div> <!-- calendal-wrapper -->
+
+                                <div class="cpb check-out-btn">
+                                    <div class="chk-txt">
+                                        <span>체크아웃</span>
+
+                                        <div class="val2 val-input-box">
+                                            <span class="year-Date">2025</span>
+                                            <span>년</span>
+                                            <span class="mon-Date">02</span>
+                                            <span>월</span>
+                                            <span class="date-Date">10</span>
+                                            <span>일</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="down-btn">▼</span>
+                                    <span class="up-btn">▲</span>
+                                </div> <!-- check-out-btn -->
+
+                                <div class="cal2 calendal-wrapper">
+                                    <div class="Year">
+                                        <input type="text" class="pre-year" readonly></input>
+                                        <input type="text" class="today-year" readonly></input>
+                                        <input type="text" class="next-year" readonly></input>
+                                    </div> <!-- Year -->
+
+                                    <div class="Mon">
+                                        <input type="text" class="pre-mon" readonly></input>
+                                        <input type="text" class="today-mon" readonly></input>
+                                        <input type="text" class="next-mon" readonly></input>
+                                    </div> <!-- Mon -->
+
+                                    <div class="Date">
+                                        <input type="text" class="pre-date" readonly></input>
+                                        <input type="text" class="today-date" readonly></input>
+                                        <input type="text" class="next-date" readonly></input>
+                                    </div> <!-- Date -->
+                                </div> <!-- calendal-wrapper -->
+                            </div> <!-- schedule -->
+
+                            <div class="num-people">
+                                <h3>투숙 인원 선택</h3>
+                                <div class="cpb people-num-btn">
+                                    <div class="chk-txt">
+                                        <span>인원</span>
+
+                                        <div class="np val-input-box">
+                                            <span>성인</span>
+                                            <span class="adult-num">2</span>
+                                            <span>명</span><span>아동</span>
+                                            <span class="kid-num">0</span>
+                                            <span>명</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="down-btn">▼</span>
+                                    <span class="up-btn">▲</span>
+                                </div> <!-- people-num-btn -->
+
+                                <div class="people-num-notice">
+                                    <div class="p-num-notice">
+                                        <strong>인원 안내</strong>
+                                        <p>
+                                            본 객실의 기준 인원수는 2인 입니다.
+                                            인원 추가시 추가 요금이 있을 수 있습니다. <br>
+                                            본 객실은 반려동물 출입이 불가합니다. <br>
+                                            아동은 만 0세 ~ 만 7세에 해당하는 어린이입니다.
+                                            이 점 준수하시어 인원 선택 부탁드립니다.
+                                        </p>
+                                    </div>
+                                    <div class="adult-kid-box">
+                                        <div class="adult-box">
+                                            <img src="./images/adult_icon.png" alt="adult">
+                                            <div class="p-num-box">
+                                                <span>성인</span>
+                                                <div class="num-choice">
+                                                    <button class="minus1">-</button>
+                                                    <input type="text" class="adult person" value="2" disabled></input>
+                                                    <button class="plus1">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="kid-box">
+                                            <img src="./images/kids_icon.png" alt="adult">
+                                            <div class="p-num-box">
+                                                <span>아동</span>
+                                                <div class="num-choice">
+                                                    <button class="minus2">-</button>
+                                                    <input type="text" class="kid person" value="0" disabled></input>
+                                                    <button class="plus2">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- adult-kid-box -->
+                                </div> <!-- people-num-notice -->
+                            </div> <!-- num-people -->
+                        </div> <!-- schedule-num-people-box -->
+                        <input class="chk-sub" type="submit" value="설정한 일정과 투숙 인원으로 알아보겠습니다.">
+
+
+                        <div class="modal">
+                            <div class="reserve-check-box">
+                                <h3>예약 정보</h3>
+                                <h4>고요화</h4>
+                                <div class="date-numpeople-check-box">
+                                    <label for="chkin">체크인</label>
+                                    <input type="text" name="chkin" placeholder="체크인" readonly>
+                                </div>
+                                <div class="date-numpeople-check-box">
+                                    <label for="chkout">체크아웃</label>
+                                    <input type="text" name="chkout" placeholder="체크아웃" readonly>
+                                </div>
+                                <div class="date-numpeople-check-box">
+                                    <label for="people-num">인원 수</label>
+                                    <input type="text" name="people-num" placeholder="인원 수" readonly>
+                                </div>
+                                <span class="reserve-complet-btn">예약 완료</span>
+                            </div>
+                        </div>
+                        <!-- <div class="reserve-check">
+                            <div class="check-ok-box">
+                                <strong id="check-ok">선택하신 일정에 예약이 가능하네요. <br>
+                                    해당 날짜에 객실 예약을 완료할까요?</strong>
+                                <input type="submit" value="예약 완료하기">
+                            </div>
+
+                            <div class="check-not-ok-box">
+                                <strong id="check-not-ok">선택하신 일정에 예약이 불가능합니다. <br>
+                                    다른 날짜를 선택해주시겠어요?</strong>
+                                <input type="submit" value="날짜 다시 선택하기">
+                            </div>
+                        </div> -->
+                    </form>
+                </div> <!-- container  -->
+            </div> <!--reserve-schedule-num-people -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="info-menu-sns">
+            <div class="container">
+                <div class="info-menu-sns">
+                    <div class="footer-menu">
+                        <nav>
+                            <ul class="gnb">
+                                <li><a href="../terms/terms_privacy.html">개인정보처리방침</a></li>
+                                <li><a href="../terms/terms_service.html">이용약관</a></li>
+                                <li><a href="#none">환불방침</a></li>
+                                <li><a href="https://yexql.channel.io/home" target="_blank">고객센터</a></li>
+                            </ul>
+                        </nav>
+                    </div> <!-- footer-menu -->
+
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <strong>회사명</strong>
+                                <span>고요화</span>
+                            </li>
+                            <li>
+                                <strong>Tel</strong>
+                                <a href="tel:010-5087-5051">010-5087-5051</a>
+                            </li>
+                            <li>
+                                <strong>Address</strong>
+                                <address>경북 경주시 양정로 50-51 (인왕동)</address>
+                            </li>
+                            <li>
+                                <strong>REGISTRATION</strong>
+                                <span>사업자 등록 번호 | 371-85-02926
+                                    <br>
+                                    통신판매업등록번호 | 제 2024-경주-0719호</span>
+                            </li>
+                        </ul>
+                    </div> <!-- info -->
+
+                    <div class="sns">
+                        <strong>Follow Us</strong>
+                        <ul>
+                            <li><a href="https://www.staybility.co.kr/archi/13ce0ae3-e1c4-8157-8394-f76b8b19c112"
+                                    target="_blank"><img src="../../images/sns_icon_1.png" alt="sns1"></a></li>
+                            <li><a href="https://www.stayground.co.kr/stay/66dfde62bd22cb82970d4f6d"
+                                    target="_blank"><img src="../../images/sns_icon_2.png" alt="sns2"></a></li>
+                            <li><a href="https://www.instagram.com/stayground.official/p/DAz-S3sAZ16/?img_index=1"
+                                    target="_blank"><img src="../../images/sns_icon_3.png" alt="sns3"></a></li>
+                        </ul>
+                    </div> <!-- sns -->
+                </div> <!-- info-menu -->
+            </div> <!-- container -->
+        </div> <!-- footer-info-menu-sns -->
+    </footer>
+</body>
+
+</html>

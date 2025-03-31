@@ -1,0 +1,505 @@
+@import "../../../scss/style.scss";
+@import "../../../scss/reset.scss";
+@import "../../../scss/mixin.scss";
+
+.container {
+  @include grid-sys-moblie;
+
+  @include responsive(large-screens) {
+    @include grid-sys-desktop;
+  }
+}
+
+@include main-ani;
+
+@keyframes up-dw-ani {
+
+  // 메인타이틀에 적용할 애니메이션
+  from {
+    transform: translateY(20%);
+    /* 화면 왼쪽 밖으로 */
+    opacity: 0;
+    /* 투명도 0 */
+  }
+
+  to {
+    transform: translateY(0);
+    /* 정중앙으로 */
+    opacity: 1;
+    /* 완전 불투명 */
+  }
+}
+
+@keyframes lr-rt-ani {
+
+  // 메인타이틀에 적용할 애니메이션
+  from {
+    transform: translateX(-20%);
+    /* 화면 왼쪽 밖으로 */
+    opacity: 0;
+    /* 투명도 0 */
+  }
+
+  to {
+    transform: translateY(0);
+    /* 정중앙으로 */
+    opacity: 1;
+    /* 완전 불투명 */
+  }
+}
+
+// ===================
+main {
+  margin-top: 61px;
+  @include responsive(large-screens) {
+      margin-top: 100px;
+  }
+  article {
+    position: relative;
+    height: 300px;
+    background: url(../images/space-title.png) top no-repeat;
+    background-size: cover;
+
+    @include responsive(large-screens) {
+      height: 500px;
+    }
+
+    .amenities-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30%;
+      text-align: center;
+      font-family: $font-sub;
+      color: $color-white;
+
+      animation: main-animation 1.5s ease forwards;
+
+      @include responsive(large-screens) {
+        width: 20%;
+      }
+
+      h2 {
+        font-size: $mobile-title-main;
+
+        @include responsive(large-screens) {
+          font-size: $font-size-50;
+        }
+      }
+
+      p {
+        font-size: $mobile-title-strong;
+
+        @include responsive(large-screens) {
+          font-size: $desktop-title-strong;
+        }
+      }
+    }
+
+    //room-title
+  }
+
+  //article
+
+  section.ame-zakuzi-fire-garden {
+    overflow: hidden;
+    margin-top: 100px;
+
+    h3 {
+      margin-bottom: 25px;
+      animation: up-dw-ani 2s ease forwards;
+
+      @include responsive(large-screens) {
+        font-size: $font-size-50;
+      }
+    }
+
+    .amenities-zakuzi {
+      width: $width-wide;
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      // opacity: 0;
+      // transition: lr-rt-ani 2s ease transform;
+      @include responsive(large-screens) {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 140px;
+      }
+
+      img {
+        @include responsive(large-screens) {
+          width: 49.29577464788732%;
+          height: 400px;
+          z-index: 100;
+        }
+      }
+
+      .txt-1 {
+        display: flex;
+        justify-content: space-between;
+        text-align: justify;
+        margin-top: 25px;
+        padding: 25px 14px;
+        background-color: $color-main;
+        color: $color-white;
+        transition: lr-rt-ani 2s ease transform;
+
+
+        @include responsive(large-screens) {
+          display: block;
+          margin-top: 180px;
+          width: 50.70422535211268%;
+          height: 200px;
+          padding: 30px 138px;
+          border-radius: 0 10px 10px 0;
+        }
+
+        strong {
+          font-size: $mobie-content-sub2;
+          color: $color-white;
+
+          @include responsive(large-screens) {
+            font-size: $desktop-content-sub1;
+            margin-bottom: 30px;
+          }
+        }
+
+        p {
+          width: 65%;
+
+          @include responsive(large-screens) {
+            width: 70%;
+            font-size: $font-size-16;
+          }
+        }
+      }// txt-1
+    }
+
+    .amenities-fire {
+      width: $width-wide;
+      margin-top: 25px;
+      opacity: 0;
+      transform: translateX(100px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      @include responsive(large-screens) {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        margin-top: 0;
+        margin-bottom: 140px;
+      }
+
+      img {
+        @include responsive(large-screens) {
+          width: 49.29577464788732%;
+          height: 400px;
+          z-index: 100;
+        }
+      }
+
+      .txt-2 {
+        width: $width-wide;
+        display: flex;
+        justify-content: space-between;
+        text-align: justify;
+        margin-top: 25px;
+        padding: 25px 14px;
+        background-color: $color-main;
+        color: $color-white;
+
+        @include responsive(large-screens) {
+          display: block;
+          margin-top: 180px;
+          width: 50.70422535211268%;
+          height: 200px;
+          padding: 30px 138px;
+          border-radius: 10px 0 0 10px;
+        }
+
+        strong {
+          font-size: $mobie-content-sub2;
+          color: $color-white;
+
+          @include responsive(large-screens) {
+            font-size: $desktop-content-sub1;
+            margin-bottom: 30px;
+            width: $width-wide;
+            text-align: right;
+          }
+        }
+
+        p {
+          width: 65%;
+
+          @include responsive(large-screens) {
+            width: $width-wide;
+            text-align: right;
+            font-size: $font-size-16;
+          }
+        }
+      }
+    }
+
+    //menities-fire
+
+    .amenities-garden {
+      width: $width-wide;
+      margin-top: 25px;
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      @include responsive(large-screens) {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 0;
+      }
+
+      img {
+        @include responsive(large-screens) {
+          width: 49.29577464788732%;
+          height: 400px;
+          z-index: 100;
+        }
+      }
+
+      .txt-3 {
+        width: $width-wide;
+        display: flex;
+        justify-content: space-between;
+        text-align: justify;
+        margin-top: 25px;
+        padding: 25px 14px;
+        background-color: $color-main;
+        color: $color-white;
+
+        @include responsive(large-screens) {
+          display: block;
+          margin-top: 180px;
+          width: 50.70422535211268%;
+          height: 200px;
+          padding: 30px 138px;
+          border-radius: 0 10px 10px 0;
+        }
+
+        strong {
+          font-size: $mobie-content-sub2;
+          color: $color-white;
+
+          @include responsive(large-screens) {
+            font-size: $desktop-content-sub1;
+            margin-bottom: 30px;
+          }
+        }
+
+        p {
+          width: 65%;
+
+          @include responsive(large-screens) {
+            font-size: $font-size-16;
+            width: 65%;
+          }
+        }
+      }
+
+      // txt-3
+    }
+
+    //amenities-3
+  }
+
+  // section.amenities-zakuzi-fire
+
+  .amenities-other {
+    padding-top: 60px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    
+    @include responsive(large-screens) {
+      margin-top: 100px;
+    }
+
+    .other-desktop-flex {
+      @include responsive(large-screens) {
+        display: flex;
+      }
+
+      h3 {
+        display: inline-flex;
+        margin-bottom: 25px;
+        font-size: $mobile-title-main;
+
+        @include responsive(large-screens) {
+          display: block;
+          width: 25.35211267605634%;
+          font-size: $desktop-content-main;
+        }
+      }
+
+      .slide-icon-box {
+        width: $width-wide;
+
+        @include responsive(large-screens) {
+          width: 74.64788732394366%;
+        }
+
+        .amenities-img-slide {
+          // position: relative;
+          // height: 191px;
+          // height: 300px;
+
+          @include responsive(large-screens) {
+            // overflow: hidden;
+            width: 100%;
+            height: 268px;
+          }
+
+          .slide-box {
+            display: flex;
+            // width: 972px;
+            overflow-x: auto;
+            white-space: nowrap;
+            // font-size:0;
+            padding-bottom: 10px;
+
+            &::-webkit-scrollbar-track {
+              background-color: red;
+            }
+
+            @include responsive(large-screens) {
+              width: 100%;
+              white-space: nowrap;
+              overflow-x: auto;
+            }
+
+            li {
+              margin-right: 12px;
+
+              @include responsive(large-screens) {
+                margin-right: 20px;
+              }
+
+              img {
+                width: 243px;
+                height: 191px;
+
+                @include responsive(large-screens) {
+                  width: 340px;
+                  height: 268px;
+                }
+              }
+            }
+
+            // li
+
+            strong {
+              margin-top: 15px;
+              margin-bottom: 10px;
+              font-size: $mobie-content-sub2;
+            }
+          }
+
+          // .scroll-bar {
+          //   overflow-x: scroll;
+          //   height: 10%;z
+          //   width: 100%;
+          //   // background-color: aqua;
+          //   z-index: 100;
+
+          //   &::-webkit-scrollbar {
+          //     width: 100%;  
+          //   }
+
+          //   &::-webkit-scrollbar-thumb {
+          //     background: rgba(220, 20, 60); /* 스크롤바 색상 */
+          //     border-radius: 10px; /* 스크롤바 둥근 테두리 */
+          //   }
+
+          //   &::-webkit-scrollbar-track {
+          //     background: rgba(220, 20, 60, .1);  /*스크롤바 뒷 배경 색상*/
+          // }
+          // }
+        }
+
+        // 
+
+        // .slide-bar-btn {
+        //   display: none;
+
+        //   @include responsive(large-screens) {
+        //     display: block;
+        //     position: relative;
+        //   }
+
+        //   #slide-bar {
+        //     @include responsive(large-screens) {
+        //       position: absolute;
+        //       left: 0;
+        //       top: 30px;
+        //       width: 1060px;
+        //       height: 10px;
+        //       background-color: $color-main;
+        //       border-radius: 5px;
+        //       opacity: 0.3;
+        //     }
+        //   }
+
+        //   #slide-btn {
+        //     @include responsive(large-screens) {
+        //       position: absolute;
+        //       left: 0;
+        //       top: 30px;
+        //       width: 22.92452830188679%;
+        //       height: 10px;
+        //       background-color: $color-main;
+        //       border-radius: 5px;
+        //     }
+        //   }
+        // }
+      }
+
+      // slide-icon-box
+
+      //amenities-img-slide
+      .amenities-icon {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-gap: 12px;
+        align-items: center;
+        margin-top: 75px;
+        margin-bottom: 45px;
+
+        @include responsive(large-screens) {
+          width: 1050px;
+          grid-template-columns: repeat(6, 15.2%);
+          grid-gap: 12px 20px;
+          align-items: center;
+          padding-top: 50px;
+          margin-top: 75px;
+          margin-bottom: 45px;
+        }
+
+        li {
+          display: flex;
+          width: $width-wide;
+          align-items: center;
+
+          img {
+            width: 48px;
+            margin-right: 15px;
+          }
+        }
+      }
+
+      // amenities-icon
+    }
+
+    // other-desktop-flex
+  }
+
+  // amenities-other
+}
+
+// main
