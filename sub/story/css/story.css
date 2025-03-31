@@ -1,0 +1,416 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Noto Sans KR";
+  color: #1c1814;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #1c1814;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+span,
+strong {
+  display: block;
+  color: #1c1814;
+}
+
+address {
+  font-style: normal;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Gowun Batang";
+}
+
+h2 {
+  font-size: calc(24px + 0.3vw);
+  text-align: center;
+  color: #fff;
+  font-family: "Gowun Batang";
+  text-shadow: 1px 0 8px #252525;
+}
+
+h3 {
+  font-size: calc(24px + 0.5vw);
+  font-family: "Noto Sans KR";
+}
+
+h4 {
+  font-size: calc(18px + 0.5vw);
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(-100%, -50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translate(-50%, -50%); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@keyframes slide-lf-to-rt {
+  from {
+    transform: translateX(-50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateX(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@keyframes slide-rt-to-lf {
+  from {
+    transform: translateX(50%); /* 화면 오른쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateX(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+main {
+  margin-bottom: 230px;
+}
+main article.stroy {
+  position: relative;
+  height: 300px;
+  background: url(../images/goyohwa_stroy.jpg) no-repeat top;
+  background-size: cover;
+}
+@media (min-width: 1440px) {
+  main article.stroy {
+    height: 1200px;
+  }
+}
+main article.stroy .stroy-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+  font-family: "Gowun Batang";
+  font-size: calc(18px + 0.5vw);
+  color: #fff;
+  animation: main-animation 1.5s ease forwards; /* 애니메이션 적용 */
+}
+@keyframes main-animation {
+  from {
+    transform: translate(-100%, -50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translate(-50%, -50%); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@media (min-width: 1440px) {
+  main article.stroy .stroy-title {
+    font-size: 50px;
+    top: 500px;
+  }
+}
+main article.stroy .stroy-title h1 {
+  font-size: calc(24px + 0.3vw);
+}
+@media (min-width: 1440px) {
+  main article.stroy .stroy-title h1 {
+    font-size: calc(50px + 0.2vw);
+  }
+}
+main article.stroy .stroy-title p:first-child {
+  font-size: calc(12px + 0.5vw);
+}
+@media (min-width: 1440px) {
+  main article.stroy .stroy-title p:first-child {
+    font-size: calc(24px + 0.2vw);
+  }
+}
+main article.stroy .stroy-title p:last-child {
+  font-size: calc(14px + 0.2vw);
+}
+@media (min-width: 1440px) {
+  main article.stroy .stroy-title p:last-child {
+    font-size: calc(18px + 0.2vw);
+  }
+}
+main .title-logo {
+  position: relative;
+}
+main .title-logo .intro1 {
+  margin-bottom: 26px;
+}
+@media (min-width: 1440px) {
+  main .title-logo .intro1 {
+    margin-bottom: 245px;
+  }
+}
+main .title-logo .intro1 .rtg {
+  position: absolute;
+  width: 96%;
+  height: 212px;
+  top: -10%;
+  left: 0;
+  margin: 0 auto;
+  background-color: #1c1814;
+}
+@media (min-width: 1440px) {
+  main .title-logo .intro1 .rtg {
+    position: absolute;
+    width: 2150px;
+    height: 837px;
+    top: -274px;
+    left: -50%;
+  }
+}
+main .title-logo .intro1 .main-img {
+  animation: none;
+}
+main .title-logo .intro1 .main-img img {
+  width: 100%;
+}
+main .title-logo .intro1 .main-img.img-ani {
+  animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+}
+main .title-logo .intro1 .logo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: none;
+}
+@keyframes slide-lf-to-rt {
+  from {
+    transform: translateX(-50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateX(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+main .title-logo .intro1 .logo1 img {
+  width: 70px;
+  margin-top: 40px;
+  margin-bottom: 36px;
+}
+@media (min-width: 1440px) {
+  main .title-logo .intro1 .logo1 img {
+    display: none;
+  }
+}
+main .title-logo .intro1 .logo1.lf-ani {
+  animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+}
+main .title-logo .intro1 .logo2 {
+  position: relative;
+  display: none;
+}
+@media (min-width: 1440px) {
+  main .title-logo .intro1 .logo2 {
+    position: absolute;
+    display: block;
+    width: 140px;
+    height: 140px;
+    top: -210px;
+    opacity: 0.4;
+  }
+}
+main .title-logo .intro1 .logo2 img {
+  filter: invert(99%) sepia(100%) saturate(15%) hue-rotate(240deg) brightness(104%) contrast(100%);
+}
+main .title-logo .intro1 .title-intro {
+  animation: none;
+}
+@keyframes slide-rt-to-lf {
+  from {
+    transform: translateX(50%); /* 화면 오른쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateX(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@media (min-width: 1440px) {
+  main .title-logo .intro1 .title-intro {
+    position: absolute;
+    width: 800px;
+    top: -190px;
+    left: 250px;
+    color: #fff;
+  }
+}
+@media (min-width: 1440px) and (min-width: 1440px) {
+  main .title-logo .intro1 .title-intro p {
+    font-size: 16px;
+  }
+}
+main .title-logo .intro1 .title-intro.rt-ani {
+  animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+}
+main .title-logo .intro1 .intro2 h3 {
+  position: relative;
+  display: none;
+}
+@media (min-width: 1440px) {
+  main .title-logo .intro1 .intro2 h3 {
+    position: absolute;
+    display: block;
+    font-family: "Gowun Batang";
+    font-weight: 100;
+    top: 0px;
+    left: -35px;
+    white-space: normal; /* 줄바꿈을 유지하기 위해 */
+    writing-mode: vertical-rl; /* 세로로 글자를 표시 */
+    color: #fff;
+  }
+}
+main .title-logo2 .part1 {
+  display: flex;
+  justify-content: space-between;
+}
+main .title-logo2 .part1 li {
+  position: relative;
+  width: 32%;
+}
+@media (min-width: 1440px) {
+  main .title-logo2 .part1 li {
+    position: relative;
+    width: 33%;
+  }
+}
+main .title-logo2 .part1 li .part1-1 {
+  position: absolute;
+  left: -8px;
+  top: 145px;
+}
+@media (min-width: 1440px) {
+  main .title-logo2 .part1 li .part1-1 {
+    position: absolute;
+    width: 100%;
+    left: -8px;
+    top: 650px;
+  }
+}
+main .title-logo2 .part2 {
+  margin-top: 180px;
+}
+@media (min-width: 1440px) {
+  main .title-logo2 .part2 li {
+    display: flex;
+    width: 900px;
+    margin-top: 340px;
+  }
+}
+main .title-logo2 .part2 li img {
+  width: 262px;
+  display: none;
+}
+@media (min-width: 1440px) {
+  main .title-logo2 .part2 li img {
+    position: relative;
+    display: block;
+    width: 262px;
+    height: 260px;
+    top: 50px;
+    margin-right: 50px;
+    animation: none;
+  }
+  @keyframes slide-lf-to-rt {
+    from {
+      transform: translateX(-50%); /* 화면 왼쪽 밖으로 */
+      opacity: 0; /* 투명도 0 */
+    }
+    to {
+      transform: translateX(0); /* 정중앙으로 */
+      opacity: 1; /* 완전 불투명 */
+    }
+  }
+}
+main .title-logo2 .part2 li .part2-2 {
+  animation: none;
+}
+@keyframes slide-lf-to-rt {
+  from {
+    transform: translateX(-50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateX(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+main .title-logo2 .part2 li .part2-2 h3 {
+  font-size: calc(24px + 0.3vw);
+  font-family: "Noto Sans KR";
+  text-align: left;
+  margin-bottom: 10px;
+}
+@media (min-width: 1440px) {
+  main .title-logo2 .part2 li .part2-2 h3 {
+    font-size: calc(50px + 0.2vw);
+  }
+}
+@media (min-width: 1440px) {
+  main .title-logo2 .part2 li .part2-2 p {
+    font-size: 16px;
+  }
+}
+main .title-logo2 .part2 li .part2-2.anime {
+  animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+}
+main .title-logo2 .part2.ani {
+  animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+}
+
+footer {
+  margin-top: -150px;
+}
+@media (min-width: 1440px) {
+  footer {
+    margin-top: 0px;
+  }
+}/*# sourceMappingURL=story.css.map */
