@@ -1,0 +1,320 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Noto Sans KR";
+  color: #1c1814;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #1c1814;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+span,
+strong {
+  display: block;
+  color: #1c1814;
+}
+
+address {
+  font-style: normal;
+}
+
+h1 {
+  font-size: 16px;
+  font-family: "Gowun Batang";
+}
+
+h2 {
+  font-size: calc(24px + 0.3vw);
+  text-align: center;
+  color: #fff;
+  font-family: "Gowun Batang";
+  text-shadow: 1px 0 8px #252525;
+}
+
+h3 {
+  font-size: calc(24px + 0.5vw);
+  font-family: "Noto Sans KR";
+}
+
+h4 {
+  font-size: calc(18px + 0.5vw);
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(-100%, -50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translate(-50%, -50%); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@keyframes slide-r-l {
+  from {
+    transform: translateX(50px); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateX(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+main {
+  margin-bottom: 100px;
+}
+main article {
+  position: relative;
+  height: 250px;
+  background: url(../images/header.png) no-repeat top;
+  background-size: cover;
+}
+@media (min-width: 1440px) {
+  main article {
+    height: 500px;
+  }
+}
+main article h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Gowun Batang";
+  font-size: calc(24px + 0.3vw);
+  color: white;
+  animation: main-animation 1.5s ease forwards;
+}
+@media (min-width: 1440px) {
+  main article h2 {
+    font-size: calc(50px + 0.2vw);
+  }
+}
+main .notice-board {
+  margin-top: 100px;
+  animation: slide-r-l 1.5s ease forwards;
+}
+main .notice-board .search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .notice-board .search p {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0px;
+}
+@media (min-width: 1440px) {
+  main .notice-board .search p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+main .notice-board .search .search-box {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media (min-width: 1440px) {
+  main .notice-board .search .search-box {
+    width: 300px;
+    margin-bottom: 0px;
+  }
+}
+main .notice-board .search .search-box input[type=text] {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+main .notice-board .search .search-box .search-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+main .notice-board .search .search-box .search-icon img {
+  width: 23px;
+  height: 23px;
+}
+main .notice-board table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+main .notice-board table thead {
+  background-color: #a79277;
+  height: 4px;
+}
+@media (min-width: 1440px) {
+  main .notice-board table thead {
+    height: 50px;
+  }
+}
+main .notice-board table thead tr .notice-num {
+  display: none;
+}
+@media (min-width: 1440px) {
+  main .notice-board table thead tr .notice-num {
+    display: block;
+    font-size: 16px;
+    width: 100px;
+    padding: 20px;
+  }
+}
+main .notice-board table thead tr .divis {
+  font-size: 0;
+  width: 23vw;
+  padding: 0 5px;
+  text-align: center;
+}
+@media (min-width: 1440px) {
+  main .notice-board table thead tr .divis {
+    width: 130px;
+    padding: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  main .notice-board table thead tr .post-title {
+    width: 950px;
+  }
+}
+@media (min-width: 1440px) {
+  main .notice-board table thead tr .w-date {
+    width: 200px;
+  }
+}
+main .notice-board table thead tr th {
+  font-size: 0;
+}
+@media (min-width: 1440px) {
+  main .notice-board table thead tr th {
+    font-size: 16px;
+  }
+}
+main .notice-board table tbody tr {
+  height: 70px;
+}
+@media (min-width: 1440px) {
+  main .notice-board table tbody tr {
+    height: 60px;
+  }
+}
+main .notice-board table tbody tr:nth-child(even) {
+  background-color: #FFF1E0;
+}
+main .notice-board table tbody tr:nth-child(odd) {
+  background-color: #fffbf9;
+}
+main .notice-board table tbody tr .notice-num {
+  display: none;
+}
+@media (min-width: 1440px) {
+  main .notice-board table tbody tr .notice-num {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100px;
+    padding: 20px 0;
+    text-align: center;
+  }
+}
+main .notice-board table tbody tr .divis {
+  width: 23vw;
+  padding: 0 10px;
+  text-align: center;
+}
+@media (min-width: 1440px) {
+  main .notice-board table tbody tr .divis {
+    width: 130px;
+  }
+}
+main .notice-board table tbody tr .divis span {
+  display: inline-block;
+  width: 58px;
+  line-height: 25px;
+  background-color: #4b3a23;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+}
+main .notice-board table tbody tr .post-title:hover {
+  font-weight: 600;
+  font-size: 16px;
+}
+@media (min-width: 1440px) {
+  main .notice-board table tbody tr .post-title {
+    width: 990px;
+    font-size: 18px;
+    padding-left: 100px;
+  }
+  main .notice-board table tbody tr .post-title:hover {
+    font-weight: 600;
+    font-size: 19px;
+  }
+}
+main .notice-board table tbody tr .w-date {
+  display: none;
+}
+@media (min-width: 1440px) {
+  main .notice-board table tbody tr .w-date {
+    width: 200px;
+    display: block;
+    text-align: center;
+  }
+}
+main .notice-board .search-number {
+  display: flex;
+  justify-content: center;
+}
+main .notice-board .search-number a {
+  margin-top: 20px;
+  padding: 10px;
+  font-weight: bold;
+}
+main .notice-board .pc {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}/*# sourceMappingURL=about_notice.css.map */
