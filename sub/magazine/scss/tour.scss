@@ -1,0 +1,255 @@
+@import "../../../scss/style.scss";
+@import "../../../scss/reset.scss";
+@import "../../../scss/mixin.scss";
+
+@include main-ani;
+
+.container {
+    @include grid-sys-moblie;
+    @include responsive(large-screens) {
+        @include grid-sys-desktop;
+    }
+}
+
+main {
+    .title {
+        position: relative;
+        width: 100%; height: 250px;
+        margin-bottom: 35px;
+        background: url(../../../images/main_bg.webp);
+        background-size: cover;
+
+        @include responsive(large-screens) {
+            height: 500px;
+            margin-bottom: 150px;
+        }
+
+        .title-txt {
+            text-align: center;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+
+            @include main-ani;
+            animation: main-animation 1.5s ease forwards; /* 애니메이션 적용 */
+
+            h2 {
+                font-size: $mobile-title-main;
+                font-family: $font-sub;
+                font-weight: 400;
+                color: $color-white;
+
+                @include responsive(large-screens) {
+                    font-size: $desktop-title-main;
+                }
+            }
+            p {
+                font-size: $mobile-title-sub;
+                font-family: $font-sub;
+                font-weight: 400;
+                color: $color-white;
+
+                @include responsive(large-screens) {
+                    font-size: $desktop-title-sub;
+                }
+            }
+        } //title-txt
+    } //title
+
+    .place-intro {
+        margin-bottom: 100px;
+        .container {
+            h3 {
+                font-size: $mobie-content-main;
+                font-weight: 800;
+                margin-bottom: 30px;
+
+                @include responsive(large-screens) {
+                    font-size: $desktop-content-main;
+                    margin-bottom: 60px;
+                }
+
+            }
+            .sub-list {
+                width: 100%; height: 50px;
+                padding: 6px;
+                display: grid;
+                grid-template-columns: 30% 30% 30%;
+                grid-gap: 5%;
+                border-radius: 25px;
+                background-color: #e0e0e0;
+                margin-bottom: 40px;
+
+                @include responsive(large-screens) {
+                    margin-bottom: 80px;
+                }
+
+                li {
+                    width: 100%;
+                    
+                    a {
+                        width: 100%; height: 100%;
+                        text-align: center;
+                        border-radius: 19px;
+                        background-color: transparent; 
+
+                        p {
+                            font-size: calc(6px + 1vw);
+                            font-weight: 600;
+                            line-height: 38px;
+                            color: $color-main;
+                        }
+                    }
+
+                    &:first-child {
+                        a {
+                            background-color: $color-main;
+                            p {
+                                color: $color-white;
+                            }
+                        }
+                    }
+                }
+            } //sub-list
+
+            .intro {
+                width: 100%;
+                padding: 35px 0;
+                border: 4px solid $color-main;
+                border-right: none; border-left: none;
+
+                @include responsive(large-screens) {
+                    padding: 60px 0;
+                    position: relative;
+                }
+                #place-title {
+                    text-align: left;
+                    font-size: $mobie-content-sub1;
+                    font-weight: 600;
+                    font-family: $font-main;
+                    margin-bottom: 16px;
+
+                    @include responsive(large-screens) {
+                        font-size: $desktop-content-sub1;
+                        font-weight: 800;
+                        margin-bottom: 35px;
+                    }
+                }
+                .img-txt-box {
+                    @include responsive(large-screens) {    
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    #img-slide {
+                        width: 100%;
+                        height: calc(208px + 10vh);
+                        margin-bottom: 20px;
+
+                        @include responsive(large-screens) {
+                            width: 49.29%;
+                            height: calc(445px + 1vh);
+                        }
+                        
+                        .img-list {
+                            position: relative;
+                            width: 100%; height: 100%;
+                            margin-bottom: 20px;
+                            li {
+                                position: absolute;
+                                left: 0; top: 0;
+                                width: 100%; 
+                                height: 100%;
+
+                                &:first-child {
+                                    z-index: 6;
+                                }
+                                
+                                img {
+                                    position: absolute;
+                                    left: 0; top: 0;
+                                    width: 100%; height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                        .btn-container {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 200px;
+                            margin: 0 auto;
+                            // background-color: red;
+                            span {
+                                width: 14px; height: 14px;
+                                border-radius: 7px;
+                                background-color: $color-sub1;
+                                cursor: pointer;
+                            }
+                        } //btn-container
+                    } //#img-slide
+
+                    .text-list {
+                        margin-top: 70px;
+
+                        @include responsive(large-screens) {
+                            width: 49.5%;
+                            margin-top: 0;
+                        }
+
+                        li {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 17px;
+
+                            @include responsive(large-screens) {
+                                flex-direction: column;
+                                align-items: baseline;
+                                margin-bottom: 45px;
+                            }
+                            h5 {
+                                width: 35%;
+                                font-size:$mobie-content-sub2;
+                            }
+                            p {
+                                font-size: 14px;
+                            }
+                            &:last-child {
+                                margin-bottom: 30px;
+
+                                @include responsive(large-screens) {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        } //li
+                    } //text-list
+                } //img-txt-box
+                
+
+                .naver-place-btn {
+                    text-align: center;
+                    @include responsive(large-screens) {
+                        position: absolute;
+                        top: 10.7%; left: 13%;
+                        width: 100%;
+                        text-align: left;
+                    }
+                    button {
+                        width: 64.63%; height: 45px;
+                        padding: 10px;
+                        border: none;
+                        border-radius: 22.5px;
+                        color: #4EBB7F;
+                        border: 2px solid #4EBB7F;
+                        background: none;
+                        cursor: pointer;
+
+                        @include responsive(large-screens) {
+                            width: 12%; height: 30px;
+                            padding: 0 2%;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    } //place-intro
+}
